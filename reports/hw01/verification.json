@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "index_html_exists": true,
+    "script_js_exists": true,
+    "domain_schema_exists": true,
+    "agents_demo_exists": true,
+    "model_client_exists": true,
+    "hw1_client_exists": true,
+    "agent_md_exists": true,
+    "nondeterminism_input_exists": true,
+    "part3_json_exists": true,
+    "part3_csv_exists": true,
+    "part4_tokens_exists": true,
+    "metrics_exists": true,
+    "run_log_exists": true,
+    "ai_use_exists": true
+  }
+}

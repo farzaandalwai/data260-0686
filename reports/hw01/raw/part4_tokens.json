@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "input_tokens": 50,
+      "output_tokens": 416,
+      "total_tokens": 466
+    },
+    {
+      "turn": 2,
+      "input_tokens": 500,
+      "output_tokens": 435,
+      "total_tokens": 935
+    },
+    {
+      "turn": 3,
+      "input_tokens": 966,
+      "output_tokens": 256,
+      "total_tokens": 1222
+    },
+    {
+      "turn": 4,
+      "input_tokens": 1251,
+      "output_tokens": 486,
+      "total_tokens": 1737
+    },
+    {
+      "turn": 5,
+      "input_tokens": 1772,
+      "output_tokens": 458,
+      "total_tokens": 2230
+    }
+  ],
+  "total_turns": 5,
+  "cumulative_input_tokens": 4539,
+  "cumulative_output_tokens": 2051
+}

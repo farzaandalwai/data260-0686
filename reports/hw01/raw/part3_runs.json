@@ -1,0 +1,442 @@
+[
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Friendly"
+    ],
+    "summary": "Large backyard, swimming pool, and garage parking near downtown San Jose for families.",
+    "latency_ms": 2853.3,
+    "run": 1
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "Luxury Rental",
+      "San Jose Housing",
+      "Pool House"
+    ],
+    "summary": "Spacious 3 bedroom house in downtown San Jose with pool, AC, garage and large backyard.",
+    "latency_ms": 2872.65,
+    "run": 2
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Friendly"
+    ],
+    "summary": "Spacious 3 bedroom house near downtown San Jose with pool, AC, garage parking, and large backyard",
+    "latency_ms": 3280.71,
+    "run": 3
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house near downtown San Jose with pool, AC, garage parking, and large backyard",
+    "latency_ms": 3401.48,
+    "run": 4
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "3 Bedroom"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking near downtown San Jose.",
+    "latency_ms": 2824.15,
+    "run": 5
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Downtown Area"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2964.72,
+    "run": 6
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "3 Bedroom"
+    ],
+    "summary": "Cozy 3 bedroom house with pool, AC, garage parking near downtown San Jose",
+    "latency_ms": 2919.17,
+    "run": 7
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "City Living"
+    ],
+    "summary": "Spacious 3 bedroom house near downtown San Jose with pool and garage parking.",
+    "latency_ms": 2772.64,
+    "run": 8
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "3 Bedroom"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage and backyard in downtown San Jose.",
+    "latency_ms": 2941.37,
+    "run": 9
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Friendly"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking near downtown San Jose",
+    "latency_ms": 2645.64,
+    "run": 10
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Swimming Pool House",
+      "Downtown San Jose"
+    ],
+    "summary": "Luxurious 3-bedroom rental house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 3404.83,
+    "run": 11
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool Included",
+      "3 Bedroom House"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking near downtown San Jose.",
+    "latency_ms": 2978.28,
+    "run": 12
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "SanJoseRental",
+      "PoolHouse",
+      "FamilyFriendly"
+    ],
+    "summary": "Spacious 3 bed house in San Jose with pool, AC, garage parking, and large backyard near downtown.",
+    "latency_ms": 3225.1,
+    "run": 13
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Swimming Pool House",
+      "Family Friendly"
+    ],
+    "summary": "3 bedroom house with pool, AC, garage parking near downtown San Jose",
+    "latency_ms": 2696.32,
+    "run": 14
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Downtown Living"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking, and large backyard in San Jose near downtown.",
+    "latency_ms": 3193.64,
+    "run": 15
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Swimming Pool",
+      "Downtown Living"
+    ],
+    "summary": "Cozy 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2861.77,
+    "run": 16
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Downtown Living"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and backyard near downtown San Jose",
+    "latency_ms": 3034.2,
+    "run": 17
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Downtown Area"
+    ],
+    "summary": "Large 3 bedroom house with pool, AC, garage parking and backyard in San Jose near downtown.",
+    "latency_ms": 3574.76,
+    "run": 18
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "House for Rent",
+      "San Jose CA",
+      "Pool House"
+    ],
+    "summary": "Cozy 3 bedroom house in San Jose with pool, AC, garage parking, and large backyard near downtown area.",
+    "latency_ms": 3185.76,
+    "run": 19
+  },
+  {
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rental",
+      "Pool Access",
+      "3 Bedroom House"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, and garage parking near downtown San Jose.",
+    "latency_ms": 2854.21,
+    "run": 20
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2914.37,
+    "run": 1
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2688.89,
+    "run": 2
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2707.63,
+    "run": 3
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2637.58,
+    "run": 4
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2675.51,
+    "run": 5
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2665.54,
+    "run": 6
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2686.88,
+    "run": 7
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2714.76,
+    "run": 8
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2999.99,
+    "run": 9
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2826.66,
+    "run": 10
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2631.89,
+    "run": 11
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2722.09,
+    "run": 12
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2659.9,
+    "run": 13
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2731.4,
+    "run": 14
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2759.1,
+    "run": 15
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2679.05,
+    "run": 16
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2701.48,
+    "run": 17
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2679.19,
+    "run": 18
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 2757.02,
+    "run": 19
+  },
+  {
+    "temperature": 0.0,
+    "tags": [
+      "San Jose Rental",
+      "Pool House",
+      "Family Home"
+    ],
+    "summary": "Spacious 3 bedroom house with pool, AC, garage parking and large backyard near downtown San Jose.",
+    "latency_ms": 3116.13,
+    "run": 20
+  }
+]
