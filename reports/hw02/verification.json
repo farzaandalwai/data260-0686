@@ -1,0 +1,125 @@
+{
+  "homework": 2,
+  "SID4": "0686",
+  "commit_hash": "eabc88cefba12b31577aa9a72ab7619b5480b166",
+  "working_tree_dirty": false,
+  "working_tree_note": "Verification ran on a clean working tree",
+  "model": "llama3.2:latest",
+  "configuration": {
+    "PORT_BASE": 8686,
+    "PREFIX": "s0686",
+    "SEED": 686,
+    "VERIFY_SEED": 260686,
+    "DOMAIN_ID": 6
+  },
+  "verification_timestamp": "2026-09-14T14:05:24-07:00",
+  "checks": {
+    "required_files": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "All required files exist"
+    },
+    "fastapi_import": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "FastAPI app imported"
+    },
+    "fastapi_get_listings": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Status 200"
+    },
+    "fastapi_post_listing": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Statuses 201, 201"
+    },
+    "created_record_has_id": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Created ID 1"
+    },
+    "fastapi_search_property_title": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Matching IDs [1]"
+    },
+    "fastapi_search_location": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Matching IDs [2]"
+    },
+    "fastapi_update_id_1": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Status 200"
+    },
+    "fastapi_delete_listing": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Remaining IDs [1]"
+    },
+    "langgraph_import_compile": {
+      "status": "PASS",
+      "passed": true,
+      "detail": ""
+    },
+    "graph_smoke_test": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Status completed"
+    },
+    "graph_output_schema": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Tags ['Rental', 'Parking', 'San Jose'], summary words 5"
+    },
+    "loop_safety_fields": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Fields ['planner_attempts', 'status', 'turn_ceiling']"
+    },
+    "loop_safety_abandoned": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Status abandoned, attempts 2"
+    },
+    "reviewer_rejection_at_ceiling": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "Status abandoned, attempts 2"
+    },
+    "raw_experiment_json_valid": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "{'schema_validation_runs': 30, 'ceiling_2_runs': 20, 'ceiling_10_runs': 20, 'adversarial_runs': 5}"
+    },
+    "experiment_output_counts": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "{'schema_validation_runs': 30, 'ceiling_2_runs': 20, 'ceiling_10_runs': 20, 'adversarial_runs': 5}"
+    },
+    "metrics_nonempty": {
+      "status": "PASS",
+      "passed": true,
+      "detail": ""
+    },
+    "ai_use_complete": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "All four AI-use answers are present"
+    },
+    "run_log_part4": {
+      "status": "PASS",
+      "passed": true,
+      "detail": ""
+    },
+    "required_screenshots": {
+      "status": "PASS",
+      "passed": true,
+      "detail": "All required screenshots exist"
+    }
+  },
+  "overall": "PASS",
+  "overall_passed": true
+}
