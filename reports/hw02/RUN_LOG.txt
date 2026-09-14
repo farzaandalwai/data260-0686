@@ -1,0 +1,52 @@
+DATA 260 Homework 2 Run Log
+
+SID4: 0686
+PORT_BASE: 8686
+PREFIX: s0686
+SEED: 686
+VERIFY_SEED: 260686
+DOMAIN_ID: 6
+
+Commands and results:
+
+
+PART 4 - OUTPUT SCHEMA AND LOOP SAFETY
+Timestamp: 2026-09-14T13:01:23-07:00
+Command: python3.11 part4_experiment.py
+Model: llama3.2:latest
+Frozen input: reports/hw02/cases/schema_input.json
+
+Schema runs: 30 with ceiling 10
+Valid first attempt: 30
+Valid after 1 retry: 0
+Valid after 2+ retries: 0
+Hit turn ceiling: 0
+
+Ceiling comparison:
+20 runs at ceiling 2
+20 runs at ceiling 10
+
+Ceiling 2:
+20/20 completed
+Completion rate: 100.0%
+Mean latency: 2793.19 ms
+
+Ceiling 10:
+20/20 completed
+Completion rate: 100.0%
+Mean latency: 3916.19 ms
+
+Deployment ceiling selected: 2
+
+Adversarial runs: 5 with ceiling 2
+Adversarial ceiling hits: 0/5
+Observed ceiling-hit rate: 0.0%
+
+
+FINAL VERIFICATION
+Timestamp: <actual timestamp>
+Command: python3.11 verify_hw02.py
+Checks passed: 21
+Checks failed: 0
+Overall result: PASS
+Output: reports/hw02/verification.json

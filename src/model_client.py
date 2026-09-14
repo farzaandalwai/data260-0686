@@ -5,7 +5,7 @@ MODEL = "llama3.2:latest"
 URL = "http://localhost:11434/api/chat"
 
 
-def complete(messages, tools=None):
+def complete(messages, tools=None, temperature=None, json_output=False):
     data = {
         "model": MODEL,
         "messages": messages,
@@ -14,6 +14,12 @@ def complete(messages, tools=None):
 
     if tools:
         data["tools"] = tools
+
+    if temperature is not None:
+        data["options"] = {"temperature": temperature}
+
+    if json_output:
+        data["format"] = "json"
 
     req = urllib.request.Request(
         URL,

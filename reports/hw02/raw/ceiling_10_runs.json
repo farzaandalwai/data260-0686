@@ -1,0 +1,382 @@
+[
+  {
+    "experiment": "ceiling_10",
+    "run": 1,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 2890.01,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 2,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 2924.2,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 3,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3064.03,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 4,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3336.19,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 5,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3148.29,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 6,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3160.9,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 7,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3234.8,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 8,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3359.41,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 9,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3356.54,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 10,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3893.82,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 11,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3511.34,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 12,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3457.07,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 13,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 3599.98,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 14,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4818.29,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 15,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4149.01,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 16,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4355.42,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 17,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4288.77,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 18,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 7066.97,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 19,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4964.32,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "ceiling_10",
+    "run": 20,
+    "ceiling": 10,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 5744.44,
+    "final_tags": [
+      "San Jose Rental",
+      "3 Bedroom House",
+      "Pool Access"
+    ],
+    "final_summary": "Spacious 3 bedroom rental house near downtown San Jose with garage parking and pool access",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  }
+]

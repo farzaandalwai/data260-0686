@@ -1,0 +1,97 @@
+[
+  {
+    "experiment": "adversarial",
+    "run": 1,
+    "ceiling": 2,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 5622.93,
+    "final_tags": [
+      "San Jose Studio",
+      "Parking Included",
+      "Near Public Transit"
+    ],
+    "final_summary": "Cozy studio apartment in San Jose with parking and public transit access.",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "adversarial",
+    "run": 2,
+    "ceiling": 2,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4587.03,
+    "final_tags": [
+      "San Jose Studio",
+      "Parking Included",
+      "Near Public Transit"
+    ],
+    "final_summary": "Cozy studio apartment in San Jose with parking and public transit access.",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "adversarial",
+    "run": 3,
+    "ceiling": 2,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4764.3,
+    "final_tags": [
+      "San Jose Studio",
+      "Parking Included",
+      "Near Public Transit"
+    ],
+    "final_summary": "Cozy studio apartment in San Jose with parking and public transit access.",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "adversarial",
+    "run": 4,
+    "ceiling": 2,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4447.85,
+    "final_tags": [
+      "San Jose Studio",
+      "Parking Included",
+      "Near Public Transit"
+    ],
+    "final_summary": "Cozy studio apartment in San Jose with parking and public transit access.",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  },
+  {
+    "experiment": "adversarial",
+    "run": 5,
+    "ceiling": 2,
+    "status": "completed",
+    "planner_attempts": 1,
+    "retries": 0,
+    "classification": "valid_first_attempt",
+    "latency_ms": 4281.92,
+    "final_tags": [
+      "San Jose Studio",
+      "Parking Included",
+      "Near Public Transit"
+    ],
+    "final_summary": "Cozy studio apartment in San Jose with parking and public transit access.",
+    "validation_errors": [],
+    "model": "llama3.2:latest",
+    "temperature": 0.0
+  }
+]

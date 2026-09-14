@@ -1,0 +1,6 @@
+experiment,run,ceiling,status,planner_attempts,retries,classification,latency_ms,final_tags,final_summary,validation_errors,model,temperature
+adversarial,1,2,completed,1,0,valid_first_attempt,5622.93,"[""San Jose Studio"", ""Parking Included"", ""Near Public Transit""]",Cozy studio apartment in San Jose with parking and public transit access.,[],llama3.2:latest,0.0
+adversarial,2,2,completed,1,0,valid_first_attempt,4587.03,"[""San Jose Studio"", ""Parking Included"", ""Near Public Transit""]",Cozy studio apartment in San Jose with parking and public transit access.,[],llama3.2:latest,0.0
+adversarial,3,2,completed,1,0,valid_first_attempt,4764.3,"[""San Jose Studio"", ""Parking Included"", ""Near Public Transit""]",Cozy studio apartment in San Jose with parking and public transit access.,[],llama3.2:latest,0.0
+adversarial,4,2,completed,1,0,valid_first_attempt,4447.85,"[""San Jose Studio"", ""Parking Included"", ""Near Public Transit""]",Cozy studio apartment in San Jose with parking and public transit access.,[],llama3.2:latest,0.0
+adversarial,5,2,completed,1,0,valid_first_attempt,4281.92,"[""San Jose Studio"", ""Parking Included"", ""Near Public Transit""]",Cozy studio apartment in San Jose with parking and public transit access.,[],llama3.2:latest,0.0

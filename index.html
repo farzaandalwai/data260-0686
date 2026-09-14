@@ -15,7 +15,8 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            padding: 32px 0;
             font-family: "Trebuchet MS", Verdana, sans-serif;
             background: #f3eee7;
             color: #292929;
@@ -23,7 +24,7 @@
 
         .container {
             width: 92%;
-            max-width: 480px;
+            max-width: 600px;
             background: #fffdf9;
             padding: 29px 34px;
             border: 2px solid #6c8b83;
@@ -109,6 +110,134 @@
         button:hover {
             background: #485f57;
         }
+
+        .list-section {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #d8c8b8;
+        }
+
+        .list-section h2 {
+            margin: 0 0 16px;
+            color: #514365;
+            font-size: 22px;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .search-row input {
+            min-width: 0;
+            margin: 0;
+        }
+
+        .search-row button {
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .list-status {
+            margin: 0;
+            padding: 14px;
+            border-radius: 5px;
+            background: #f3eee7;
+            text-align: center;
+        }
+
+        .list-status.error {
+            background: #f8d9d3;
+            color: #842f24;
+        }
+
+        #listingsList {
+            display: grid;
+            gap: 14px;
+        }
+
+        .listing-card {
+            padding: 16px;
+            border: 1.5px solid #9c8eaa;
+            border-radius: 6px;
+            background: #fff;
+            overflow-wrap: anywhere;
+        }
+
+        .listing-card h3 {
+            margin: 0 0 8px;
+            color: #514365;
+            font-size: 18px;
+        }
+
+        .listing-card p {
+            margin: 6px 0;
+            line-height: 1.4;
+        }
+
+        .listing-meta {
+            color: #596f68;
+            font-weight: bold;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .card-actions button {
+            flex: 1;
+            width: auto;
+        }
+
+        .delete-button {
+            background: #9b4c43;
+            border-color: #76372f;
+        }
+
+        .delete-button:hover {
+            background: #843f37;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 12px 0;
+            }
+
+            .container {
+                width: calc(100% - 24px);
+                padding: 22px 18px;
+                box-shadow: 4px 5px 0 #d8c8b8;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 22px;
+            }
+
+            input,
+            textarea,
+            select {
+                min-height: 44px;
+                font-size: 16px;
+            }
+
+            button {
+                min-height: 46px;
+                font-size: 16px;
+            }
+
+            .list-section {
+                margin-top: 26px;
+                padding-top: 20px;
+            }
+
+            .list-section h2 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -174,6 +303,27 @@
 
             <button type="submit">Submit Listing</button>
         </form>
+
+        <section class="list-section" aria-labelledby="listingsHeading">
+            <h2 id="listingsHeading">Rental Listings</h2>
+            <div class="search-row">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search title or location"
+                    aria-label="Search listings"
+                >
+                <button type="button" id="searchButton">Search</button>
+                <button type="button" id="clearSearchButton">Clear</button>
+            </div>
+            <p
+                id="listingsStatus"
+                class="list-status"
+                role="status"
+                aria-live="polite"
+            >No listings found.</p>
+            <div id="listingsList"></div>
+        </section>
     </div>
 
     <script src="script.js"></script>
