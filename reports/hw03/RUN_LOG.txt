@@ -6,3 +6,56 @@ SID4: 0686
 PORT_BASE: 8686
 DOMAIN_ID: 6
 DOMAIN: Rental Housing Listings
+
+PART 1 - FASTAPI AUTHENTICATION
+Timestamp: 2026-09-21T11:12:30-07:00
+Command: python3.11 -m pip install -r requirements.txt
+Result: Installed jinja2 3.1.6, python-multipart 0.0.32, itsdangerous 2.2.0. fastapi, uvicorn, pydantic, and langgraph were already installed.
+
+Command: python3.11 -m uvicorn main:app --host 0.0.0.0 --port 8686
+Result: Application startup complete. Uvicorn running on http://0.0.0.0:8686.
+
+GET http://localhost:8686/ -> 200, logged-out home, Login visible
+GET http://localhost:8686/login -> 200, login form
+POST /login username=wrong password=wrong -> 401, Bootstrap alert: Invalid username or password.
+POST /login username=farzaan password=rental260 -> 303 location: /dashboard
+Set-Cookie: session=eyJ1c2VybmFtZSI6ICJmYXJ6YWFuIiwgIm5hbWUiOiAiRmFyemFhbiIsICJsYXN0X2FjdGl2aXR5IjogMTc5MDAxMzk3MS41MTg2MjF9.arFyEw.ELAPWuLFvecRRL9SFeZhkAMEeAE; path=/; Max-Age=3600; httponly; samesite=lax; secure
+GET /dashboard without cookie -> 303 location: /login
+GET /dashboard with session cookie -> 200, Welcome, Farzaan
+
+Logout reuse:
+POST /login -> 303 location: /dashboard
+GET /dashboard -> 200, Welcome, Farzaan
+GET /logout -> 303 location: /
+Set-Cookie: session=null; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure
+GET /dashboard with the same cookie jar -> 303 location: /login
+
+Idle timeout:
+POST /login -> 303 location: /dashboard
+GET /dashboard -> 200, Welcome, Farzaan
+Waited from 2026-09-21T11:06:43-0700 to 2026-09-21T11:07:44-0700
+GET /dashboard -> 303 location: /login
+
+Existing listing routes:
+GET /listings-ui -> 200
+GET /script.js -> 200
+GET /listings -> 200 []
+POST /listings -> 201 id 1
+PUT /listings/1 -> 200
+DELETE /listings/1 -> 200
+GET /listings -> 200 []
+
+PART 1 - UI REVISION
+Timestamp: 2026-09-21T11:31:51-07:00
+Part 1 UI was revised in the three auth templates.
+Routes re-tested successfully:
+GET / -> 200
+GET /login -> 200
+POST /login invalid -> 401, Invalid username or password.
+POST /login valid -> 303 location: /dashboard
+GET /dashboard -> 200, Welcome, Farzaan
+GET /logout -> 303 location: /
+GET /listings-ui -> 200
+After logout, GET /dashboard redirected to /login.
+After waiting from 2026-09-21T11:30:29-0700 to 2026-09-21T11:31:30-0700, GET /dashboard redirected to /login.
+Screenshots regenerated for the revised pages.

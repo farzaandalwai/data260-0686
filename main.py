@@ -5,9 +5,20 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
+from starlette.middleware.sessions import SessionMiddleware
+
+from routers.auth import router as auth_router
 
 
 app = FastAPI()
+app.add_middleware(
+    SessionMiddleware,
+    secret_key="s0686-rental-housing-dev",
+    max_age=3600,
+    same_site="lax",
+    https_only=True,
+)
+app.include_router(auth_router)
 base_path = Path(__file__).parent
 listings = []
 next_id = 1
@@ -34,8 +45,8 @@ class RentalListing(BaseModel):
     submissionDate: str
 
 
-@app.get("/", response_class=FileResponse)
-def read_home():
+@app.get("/listings-ui", response_class=FileResponse)
+def read_listings_ui():
     return FileResponse(base_path / "index.html")
 
 

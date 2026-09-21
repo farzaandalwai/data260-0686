@@ -1,0 +1,24 @@
+- id: q1
+  question: "If someone says a rental can be secured only by paying the application fee, deposit, or first month's rent through Western Union or MoneyGram, what does the FTC compare that payment to?"
+  expected_answer: "A wire transfer through Western Union or MoneyGram is like sending cash, and once the money is sent the renter probably cannot get it back."
+  expected_source: "ftc_rental_listing_scams.html"
+
+- id: q2
+  question: "As of July 1, 2024, what is the usual California limit on a residential security deposit, and which landlords may charge more?"
+  expected_answer: "Most landlords may charge no more than one month's rent as a security deposit. Only small landlords, defined as individuals or limited liability companies that own and rent one or two properties containing no more than 4 rental units, may charge up to two months' rent."
+  expected_source: "california_tenants_2026.pdf"
+
+- id: q3
+  question: "According to HUD's rental applicant screening guidance, what share of eviction cases are filed against Black renters, and which eviction records should housing providers and screening companies avoid?"
+  expected_answer: "Even though fewer than one in five renters are Black, over half of all eviction cases are filed against Black renters. Housing providers and tenant screening companies should not rely on eviction records that are old, incomplete, or irrelevant, or where a better measure of the applicant's behavior is available."
+  expected_source: "hud_rental_screening_guidance.pdf"
+
+- id: q4
+  question: "How many tenant screening complaints did the CFPB receive from January 2019 through September 2022, and what was the most common problem?"
+  expected_answer: "The CFPB received approximately 26,700 tenant screening complaints. More than 17,200 of them were about incorrect information on a prospective renter's report."
+  expected_source: "cfpb_tenant_background_consumer_snapshot.pdf"
+
+- id: q5
+  question: "Since 2020, how many rental scams and how much in losses did people report to the FTC, and what was the median reported loss?"
+  expected_answer: "People reported nearly 65,000 rental scams to the FTC with about $65 million in losses. For reports from January 2020 through June 2025, the median reported loss was $1,000."
+  expected_source: "ftc_rental_scams_data_spotlight.html"

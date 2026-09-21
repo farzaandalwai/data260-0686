@@ -1,0 +1,36 @@
+{
+  "total_files": 6,
+  "total_bytes": 9826091,
+  "files": [
+    {
+      "filename": "california_tenants_2026.pdf",
+      "byte_size": 3952345,
+      "sha256": "ed177b2b2c05f17f64eabe9a7a7ac4909103900cec1cfc53100c07c1d7a1688f"
+    },
+    {
+      "filename": "cfpb_tenant_background_consumer_snapshot.pdf",
+      "byte_size": 595377,
+      "sha256": "2201f9a1b4fb0c4d11b5cc315cf6b00ce4b327fe1fe51a97018673dd977fbe9a"
+    },
+    {
+      "filename": "cfpb_tenant_background_market_report.pdf",
+      "byte_size": 2914020,
+      "sha256": "552a474b99db23c40887c6dceee71bd27078c9b92ac8f3386883c0eecb8b0012"
+    },
+    {
+      "filename": "ftc_rental_listing_scams.html",
+      "byte_size": 492727,
+      "sha256": "2bb28bd81aeebe99657295e34d6402174528d6b09489b5cc5048034bf362ee62"
+    },
+    {
+      "filename": "ftc_rental_scams_data_spotlight.html",
+      "byte_size": 1009024,
+      "sha256": "9659f276b477f8f7333f1139d8218fe718df8c4b3ce9a8eadfeb694bcd88a02e"
+    },
+    {
+      "filename": "hud_rental_screening_guidance.pdf",
+      "byte_size": 862598,
+      "sha256": "56112db3f1e60c0c19ee75a56b00b2e903b4dd52320e29a78a39c9800aeb84bd"
+    }
+  ]
+}
