@@ -363,3 +363,33 @@ Personal configuration:
 - VERIFY_SEED: 260686
 - DOMAIN_ID: 6
 - DOMAIN: Rental Housing Listings
+
+Install dependencies:
+
+```bash
+python3.11 -m pip install -r requirements.txt
+```
+
+Part 1 starts the FastAPI application:
+
+```bash
+python3.11 -m uvicorn main:app --host 0.0.0.0 --port 8686
+```
+
+Part 2 is retrieval-only. It does not generate an answer with a language model. The embedding model is `sentence-transformers/all-MiniLM-L6-v2`.
+
+```bash
+python3.11 part2_retrieval.py
+```
+
+Summarize the saved retrieval results:
+
+```bash
+python3.11 summarize_hw03_results.py
+```
+
+Verify the homework files:
+
+```bash
+python3.11 verify_hw03.py
+```

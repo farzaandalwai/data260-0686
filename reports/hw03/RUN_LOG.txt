@@ -59,3 +59,31 @@ GET /listings-ui -> 200
 After logout, GET /dashboard redirected to /login.
 After waiting from 2026-09-21T11:30:29-0700 to 2026-09-21T11:31:30-0700, GET /dashboard redirected to /login.
 Screenshots regenerated for the revised pages.
+
+PART 2 - RETRIEVAL-ONLY PIPELINES
+Timestamp: 2026-09-21T13:00:31-07:00
+Command: python3.11 -m pip install -r requirements.txt
+Result: Installed llama-index 0.14.25, llama-index-embeddings-huggingface 0.8.0, sentence-transformers 6.1.0, faiss-cpu 1.15.1, numpy 2.4.6, pandas 3.0.6, and pypdf was already installed.
+
+Command: python3.11 part2_retrieval.py
+Model: sentence-transformers/all-MiniLM-L6-v2
+Seed: 686
+Top-k: 5
+token nodes 839 recall 1.0 mean latency 12.14 ms
+semantic nodes 286 recall 1.0 mean latency 7.48 ms
+sentence_window nodes 5538 recall 1.0 mean latency 47.62 ms
+Query embedding dimension: 384
+Wrong retrieval: semantic q3 rank 2, store score 0.723941, source cfpb_tenant_background_market_report.pdf, expected hud_rental_screening_guidance.pdf
+Wrote reports/hw03/raw/retrieval_runs.json
+Wrote reports/hw03/raw/retrieval_runs.csv
+Wrote reports/hw03/METRICS.md
+
+FINAL VERIFICATION
+Timestamp: 2026-09-21T14:06:59-07:00
+Command: python3.11 verify_hw03.py
+Result: overall_pass true
+Retrieval runs verified: 15
+Retrieval rows verified: 75
+Questions freeze verified: git diff def106c -- reports/hw03/questions.yaml was empty
+Final metrics checked: TokenTextSplitter 839 chunks, avg 1042.78; SemanticSplitterNodeParser 286 chunks, avg 2676.38; SentenceWindowNodeParser 5538 chunks, avg 138.22
+Wrote reports/hw03/verification.json

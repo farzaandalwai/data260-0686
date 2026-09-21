@@ -1,0 +1,29 @@
+{
+  "verify_seed": 260686,
+  "timestamp": "2026-09-21T14:12:49-07:00",
+  "overall_pass": true,
+  "checks": {
+    "sid4": true,
+    "port_base": true,
+    "prefix": true,
+    "seed": true,
+    "verify_seed": true,
+    "domain_id": true,
+    "reports_directory": true,
+    "required_files": true,
+    "questions_count": true,
+    "corpus_files": true,
+    "corpus_size": true,
+    "retrieval_runs": true,
+    "retrieval_rows": true,
+    "chunk_stats": true,
+    "metrics_table": true,
+    "wrong_retrieval_example": true,
+    "auth_router": true,
+    "templates": true,
+    "part1_screenshots": true,
+    "part2_retrieval_script": true,
+    "summary_script": true,
+    "questions_frozen": true
+  }
+}

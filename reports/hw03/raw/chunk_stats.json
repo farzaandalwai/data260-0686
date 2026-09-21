@@ -1,0 +1,14 @@
+{
+  "TokenTextSplitter": {
+    "chunks": 839,
+    "avg_chunk_length": 1042.78
+  },
+  "SemanticSplitterNodeParser": {
+    "chunks": 286,
+    "avg_chunk_length": 2676.38
+  },
+  "SentenceWindowNodeParser": {
+    "chunks": 5538,
+    "avg_chunk_length": 138.22
+  }
+}
