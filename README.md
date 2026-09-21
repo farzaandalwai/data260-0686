@@ -347,3 +347,19 @@ Run final verification:
 ```bash
 python3.11 verify_hw02.py
 ```
+
+---
+
+## Homework 3
+
+HW3 continues using the same FastAPI application. The application will run on port 8686.
+
+Personal configuration:
+
+- SID4: 0686
+- PORT_BASE: 8686
+- PREFIX: s0686
+- SEED: 686
+- VERIFY_SEED: 260686
+- DOMAIN_ID: 6
+- DOMAIN: Rental Housing Listings
