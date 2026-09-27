@@ -27,7 +27,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 13.37,
+        "latency_ms": 15.15,
         "recall_hit": true,
         "hits": [
           {
@@ -105,7 +105,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 12.6,
+        "latency_ms": 10.52,
         "recall_hit": true,
         "hits": [
           {
@@ -183,7 +183,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 10.79,
+        "latency_ms": 10.25,
         "recall_hit": true,
         "hits": [
           {
@@ -261,7 +261,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 12.06,
+        "latency_ms": 10.71,
         "recall_hit": true,
         "hits": [
           {
@@ -339,7 +339,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 11.88,
+        "latency_ms": 10.1,
         "recall_hit": true,
         "hits": [
           {
@@ -419,7 +419,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 8.15,
+        "latency_ms": 7.09,
         "recall_hit": true,
         "hits": [
           {
@@ -497,7 +497,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 7.88,
+        "latency_ms": 6.92,
         "recall_hit": true,
         "hits": [
           {
@@ -575,7 +575,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 7.17,
+        "latency_ms": 6.97,
         "recall_hit": true,
         "hits": [
           {
@@ -653,7 +653,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 7.25,
+        "latency_ms": 6.85,
         "recall_hit": true,
         "hits": [
           {
@@ -731,7 +731,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 6.94,
+        "latency_ms": 7.11,
         "recall_hit": true,
         "hits": [
           {
@@ -811,7 +811,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 50.71,
+        "latency_ms": 52.25,
         "recall_hit": true,
         "hits": [
           {
@@ -889,7 +889,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 47.95,
+        "latency_ms": 46.63,
         "recall_hit": true,
         "hits": [
           {
@@ -967,7 +967,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 45.95,
+        "latency_ms": 44.8,
         "recall_hit": true,
         "hits": [
           {
@@ -1045,7 +1045,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 46.96,
+        "latency_ms": 44.84,
         "recall_hit": true,
         "hits": [
           {
@@ -1123,7 +1123,7 @@
         "query_vector_shape": [
           384
         ],
-        "latency_ms": 46.53,
+        "latency_ms": 45.12,
         "recall_hit": true,
         "hits": [
           {
