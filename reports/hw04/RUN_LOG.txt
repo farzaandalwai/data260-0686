@@ -26,3 +26,55 @@ SELECT 1
 1
 SELECT DATABASE()
 s0686_rel
+
+SCHEMA INITIALIZATION
+Timestamp: 2026-09-27T15:12:58-0400
+Command: python3.11 init_hw04_db.py
+HW4 tables initialized
+
+Command: python3.11 -m py_compile models.py init_hw04_db.py
+Result: passed
+
+SQLAlchemy inspect table names:
+listing_notes
+rental_listings
+sessions
+users
+
+SHOW TABLES
+listing_notes
+rental_listings
+sessions
+users
+
+DESCRIBE rental_listings
+id int PRI auto_increment
+property_title varchar(255)
+location varchar(255)
+
+DESCRIBE listing_notes
+id int PRI auto_increment
+listing_id int MUL
+note varchar(255)
+
+DESCRIBE users
+id int PRI auto_increment
+name varchar(100)
+email varchar(255) UNI
+password_hash varchar(255)
+
+DESCRIBE sessions
+id varchar(128) PRI
+user_id int MUL
+created_at datetime
+expires_at datetime
+
+Foreign keys:
+listing_notes.listing_id -> rental_listings.id
+sessions.user_id -> users.id
+
+Row counts:
+rental_listings 0
+listing_notes 0
+users 0
+sessions 0
