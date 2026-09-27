@@ -78,3 +78,28 @@ rental_listings 0
 listing_notes 0
 users 0
 sessions 0
+
+HW4 EMAIL AUTHENTICATION
+Timestamp: 2026-09-27T15:23:05-0400
+Command: python3.11 seed_hw04_user.py
+Demo user created
+users row: id 1, name Farzaan, email farzaan@s0686.local, password_hash length 60
+
+Command: python3.11 -m py_compile routers/hw4_auth.py seed_hw04_user.py main.py
+Result: passed
+
+GET /api/auth/me with no cookie: 401 Login required
+POST /api/auth/login bad password: 401 Invalid email or password
+POST /api/auth/login valid: 200 Login successful
+Session row created: user_id 1, token_length 43, expires 3600 seconds after created_at
+Set-Cookie: hw4_session_token=[REDACTED]; HttpOnly; Max-Age=3600; Path=/; SameSite=lax
+GET /api/auth/me with cookie: 200 Farzaan farzaan@s0686.local
+POST /api/auth/logout: 200 Logged out
+sessions count after logout: 0
+GET /api/auth/me after logout: 401 Login required
+
+Legacy routes:
+GET / 200
+GET /login 200
+GET /listings 200
+GET /listings-ui 200
