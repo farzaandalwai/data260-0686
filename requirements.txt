@@ -12,3 +12,6 @@ faiss-cpu
 numpy
 pandas
 pypdf
+sqlalchemy
+pymysql
+python-dotenv

@@ -1,0 +1,28 @@
+# HW4 Run Log
+
+MYSQL AND SQLALCHEMY FOUNDATION
+Timestamp: 2026-09-27T14:18:59-0400
+Python: Python 3.11.14
+MySQL version: 8.4.6
+Current database: s0686_rel
+Current user: s0686_app@127.0.0.1
+SQLAlchemy: 2.0.54
+PyMySQL: 1.2.3
+python-dotenv: 1.2.3
+
+Command: mysql as s0686_app against s0686_rel
+SELECT VERSION();
+8.4.6
+SELECT DATABASE();
+s0686_rel
+SELECT CURRENT_USER();
+s0686_app@127.0.0.1
+
+Command: python3.11 -m py_compile database.py
+Result: passed
+
+SQLAlchemy engine variable: db_session_basede26
+SELECT 1
+1
+SELECT DATABASE()
+s0686_rel
