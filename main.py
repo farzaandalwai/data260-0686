@@ -9,6 +9,7 @@ from starlette.middleware.sessions import SessionMiddleware
 
 from routers.auth import router as auth_router
 from routers.hw4_auth import router as hw4_auth_router
+from routers.hw4_listings import router as hw4_listings_router
 
 
 app = FastAPI()
@@ -21,6 +22,7 @@ app.add_middleware(
 )
 app.include_router(auth_router)
 app.include_router(hw4_auth_router)
+app.include_router(hw4_listings_router)
 base_path = Path(__file__).parent
 listings = []
 next_id = 1

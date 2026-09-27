@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "HW4 Rental Listings",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "listing_id",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"farzaan@s0686.local\",\n  \"password\": \"rental260\"\n}"
+        },
+        "url": "http://127.0.0.1:8686/api/auth/login"
+      }
+    },
+    {
+      "name": "Create Listing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"property_title\": \"Postman Test Apartment\",\n  \"location\": \"San Jose, CA\"\n}"
+        },
+        "url": "http://127.0.0.1:8686/api/listings"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "pm.collectionVariables.set(\"listing_id\", data.id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get All Listings",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/listings"
+      }
+    },
+    {
+      "name": "Get Listing By ID",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/listings/{{listing_id}}"
+      }
+    },
+    {
+      "name": "Update Listing",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"property_title\": \"Postman Updated Apartment\",\n  \"location\": \"Santa Clara, CA\"\n}"
+        },
+        "url": "http://127.0.0.1:8686/api/listings/{{listing_id}}"
+      }
+    },
+    {
+      "name": "Delete Listing",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:8686/api/listings/{{listing_id}}"
+      }
+    }
+  ]
+}

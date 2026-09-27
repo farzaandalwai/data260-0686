@@ -103,3 +103,37 @@ GET / 200
 GET /login 200
 GET /listings 200
 GET /listings-ui 200
+
+HW4 LISTING CRUD
+Timestamp: 2026-09-27T15:32:50-0400
+GET /api/listings with no cookie: 401 Login required
+POST /api/auth/login: 200 Login successful
+POST /api/listings: 201 id 2 property_title HW4 Test Apartment location San Jose, CA
+PUT /api/listings/2: 200 HW4 Updated Apartment, Santa Clara, CA
+FastAPI restarted on 127.0.0.1:8686
+POST /api/auth/login after restart: 200
+GET /api/listings after restart: 200 id 2 HW4 Updated Apartment, Santa Clara, CA
+GET /api/listings/2 after restart: 200 HW4 Updated Apartment, Santa Clara, CA
+DELETE /api/listings/2: 200 Listing deleted
+GET /api/listings/2 after delete: 404 Listing not found
+SELECT id, property_title, location FROM rental_listings: 0 rows
+
+Legacy routes:
+GET / 200
+GET /login 200
+GET /listings 200
+GET /listings-ui 200
+
+HW4 POSTMAN
+Timestamp: 2026-09-27T15:51:31-0400
+Postman login = 200
+Postman POST = 201
+Postman GET all = 200
+Postman GET ID = 200
+Postman PUT = 200
+Postman DELETE = 200
+Final deleted ID GET = 404
+Create Listing test script stored the returned id in collection variable listing_id.
+GET by that variable returned id 3 before delete.
+SELECT COUNT(*) FROM rental_listings after delete: 0
+Cookie values were not recorded.
