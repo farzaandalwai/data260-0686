@@ -185,7 +185,11 @@ checks["verify_seed"] = f"VERIFY_SEED: {VERIFY_SEED}" in readme_text and VERIFY_
 checks["domain_id"] = f"DOMAIN_ID: {DOMAIN_ID}" in readme_text and DOMAIN_ID == 6
 
 database_text = Path("database.py").read_text() if Path("database.py").exists() else ""
-checks["engine_variable"] = "db_session_basede26 = create_engine" in database_text
+checks["engine_variable"] = (
+    "db_engine = create_engine" in database_text
+    and "bind=db_engine" in database_text
+    and "db_session_basede26" not in database_text
+)
 
 checks["source_files"] = all(path.is_file() for path in source_files)
 checks["report_files"] = all(path.is_file() and path.stat().st_size > 0 for path in report_files)

@@ -5,7 +5,7 @@ from sqlalchemy import event, select
 from sqlalchemy.orm import Session as DbSession
 from sqlalchemy.orm import selectinload
 
-from database import db_session_basede26, get_db
+from database import db_engine, get_db
 from models import ListingNote, RentalListing, User
 from routers.hw4_auth import get_current_user
 
@@ -21,7 +21,7 @@ def count_sql_statement(conn, cursor, statement, parameters, context, executeman
     sql_statement_count.set(current + 1)
 
 
-event.listen(db_session_basede26, "before_cursor_execute", count_sql_statement)
+event.listen(db_engine, "before_cursor_execute", count_sql_statement)
 
 
 def note_json(note):
