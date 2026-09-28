@@ -22,3 +22,22 @@ Part 3 benchmark. 30 real HTTP requests per configuration. 180 total. Percentile
 | 10 | 1.167x | 14.298% |
 | 50 | 2.630x | 61.975% |
 | 200 | 5.257x | 80.977% |
+
+Index `idx_rental_listings_property_title` on `rental_listings(property_title)`.
+
+Query:
+
+```sql
+SELECT id, property_title, location
+FROM rental_listings
+WHERE property_title = 'Rental Listing 2500';
+```
+
+| EXPLAIN field | Before index | After index |
+| --- | --- | --- |
+| type | ALL | ref |
+| possible_keys | NULL | idx_rental_listings_property_title |
+| key | NULL | idx_rental_listings_property_title |
+| rows | 4980 | 1 |
+| filtered | 10.0 | 100.0 |
+| Extra | Using where | NULL |

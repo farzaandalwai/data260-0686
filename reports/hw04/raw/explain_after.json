@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "select_type": "SIMPLE",
+  "table": "rental_listings",
+  "partitions": null,
+  "type": "ref",
+  "possible_keys": "idx_rental_listings_property_title",
+  "key": "idx_rental_listings_property_title",
+  "key_len": "1022",
+  "ref": "const",
+  "rows": 1,
+  "filtered": 100.0,
+  "Extra": null
+}
