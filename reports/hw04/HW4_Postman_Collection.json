@@ -93,6 +93,48 @@
         "method": "DELETE",
         "url": "http://127.0.0.1:8686/api/listings/{{listing_id}}"
       }
+    },
+    {
+      "name": "N+1 Naive - 10",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/measure/listings/naive?page_size=10"
+      }
+    },
+    {
+      "name": "N+1 Fixed - 10",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/measure/listings/fixed?page_size=10"
+      }
+    },
+    {
+      "name": "N+1 Naive - 50",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/measure/listings/naive?page_size=50"
+      }
+    },
+    {
+      "name": "N+1 Fixed - 50",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/measure/listings/fixed?page_size=50"
+      }
+    },
+    {
+      "name": "N+1 Naive - 200",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/measure/listings/naive?page_size=200"
+      }
+    },
+    {
+      "name": "N+1 Fixed - 200",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8686/api/measure/listings/fixed?page_size=200"
+      }
     }
   ]
 }

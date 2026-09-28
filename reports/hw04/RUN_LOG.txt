@@ -157,3 +157,18 @@ GET / 200
 GET /login 200
 GET /listings 200
 GET /listings-ui 200
+
+HW4 N+1 SEED AND ENDPOINTS
+Timestamp: 2026-09-28T00:15:25-0400
+seed = 686
+rental_listings = 5000
+listing_notes = 200
+orphan notes = 0
+GET /api/measure/listings/naive?page_size=10 without login: 401
+naive page 10: status 200, returned 10, sql_statements 11
+fixed page 10: status 200, returned 10, sql_statements 2
+naive page 50: status 200, returned 50, sql_statements 51
+fixed page 50: status 200, returned 50, sql_statements 2
+naive page 200: status 200, returned 200, sql_statements 201
+fixed page 200: status 200, returned 200, sql_statements 2
+naive/fixed listing JSON equal for page sizes 10, 50, and 200
