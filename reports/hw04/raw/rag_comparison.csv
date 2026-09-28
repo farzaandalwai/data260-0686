@@ -1,0 +1,113 @@
+question_id,category,configuration,question,answer,retrieved_sources,candidate_sources,selected_sources,grounded_sources_or_citations,refused,latency_ms
+q1,one_chunk,no_rag,"According to the FTC rental listing scam guidance, why should a renter be suspicious if someone asks them to wire money using Western Union or MoneyGram?","According to the FTC's rental listing scam guidance, a renter should be suspicious if someone asks them to wire money using Western Union or MoneyGram because these payment methods are often used by scammers to steal money from victims. Here are some reasons why:
+
+1. **Lack of consumer protection**: Western Union and MoneyGram are not regulated by the same consumer protection laws as other payment methods, such as credit cards or bank transfers. This means that if a scammer sends money through Western Union or MoneyGram, it can be difficult to get it back if something goes wrong.
+2. **No recourse**: If a renter sends money through Western Union or MoneyGram and realizes they've been scammed, they often have limited recourse. The sender can dispute the transaction, but the recipient may not be able to recover their losses.
+3. **No protection for the renter**: In contrast, many credit cards and bank transfers offer some level of protection for the renter, such as the right to dispute a charge or receive a refund.
+4. **Red flag for scams**: The use of Western Union or MoneyGram to send money is often a red flag for rental scams. Scammers may use these payment methods to avoid detection by law enforcement or to make it harder for victims to recover their losses.
+
+Overall, the FTC recommends that renters be cautious when dealing with payment requests from unknown sources, especially if they involve wire transfers or other non-traditional payment methods.",,,,,False,7280.933
+q1,one_chunk,basic_rag,"According to the FTC rental listing scam guidance, why should a renter be suspicious if someone asks them to wire money using Western Union or MoneyGram?","According to the FTC rental listing scam guidance, a renter should be suspicious if someone asks them to wire money using Western Union or MoneyGram because wiring money, sending gift cards, or paying by cryptocurrency is the same as sending cash - once it's gone, it's likely irretrievable. This is a red flag that the person on the other end may be a scammer trying to steal their money.",ftc_rental_listing_scams.html | ftc_rental_listing_scams.html | ftc_rental_listing_scams.html,,ftc_rental_listing_scams.html | ftc_rental_listing_scams.html | ftc_rental_listing_scams.html,,False,5423.32
+q1,one_chunk,context_rag,"According to the FTC rental listing scam guidance, why should a renter be suspicious if someone asks them to wire money using Western Union or MoneyGram?","According to the FTC, if someone asks a renter to wire money using Western Union or MoneyGram, it's a red flag because wiring money, sending gift cards, or paying by cryptocurrency is the same as sending cash, and once it's gone, it's likely irretrievable [1].",ftc_rental_listing_scams.html | ftc_rental_listing_scams.html | ftc_rental_scams_data_spotlight.html,ftc_rental_listing_scams.html | ftc_rental_listing_scams.html | ftc_rental_listing_scams.html | ftc_rental_scams_data_spotlight.html | ftc_rental_scams_data_spotlight.html,ftc_rental_listing_scams.html | ftc_rental_listing_scams.html | ftc_rental_scams_data_spotlight.html,[1],False,7907.968
+q2,two_chunks,no_rag,What does the rental-housing document collection say about both California security-deposit limits and the FTC's reported scale of rental-scam losses?,I can't provide information on the rental-housing document collection. Is there anything else I can help you with?,,,,,False,761.033
+q2,two_chunks,basic_rag,What does the rental-housing document collection say about both California security-deposit limits and the FTC's reported scale of rental-scam losses?,"The rental-housing document collection does not explicitly mention California security-deposit limits. However, it does provide information on the limits of the security deposit that the landlord can require, which is up to two months' rent for anyone other than a service member.
+
+Regarding the FTC's reported scale of rental-scam losses, the document collection does not provide any information on this topic.",california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,,False,5316.398
+q2,two_chunks,context_rag,What does the rental-housing document collection say about both California security-deposit limits and the FTC's reported scale of rental-scam losses?,I cannot answer this question from the provided documents,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,,True,4077.571
+q3,similar_across_documents,no_rag,"What problems can tenant screening reports contain, and why can those problems matter to renters?","Tenant screening reports can contain several problems that can affect renters. Here are some common issues and their potential impact on renters:
+
+1. **Inaccurate or outdated information**: Tenant screening reports may contain outdated or inaccurate information about a tenant's rental history, employment, or credit history. This can lead to false positives or false negatives, causing renters to be incorrectly rejected or accepted for a rental property.
+2. **Lack of transparency**: Some tenant screening reports may not provide clear explanations for the reasons behind a tenant's credit score or rental history. This lack of transparency can make it difficult for renters to understand why they were rejected or accepted.
+3. **Biased algorithms**: Some tenant screening companies use biased algorithms that may discriminate against certain groups of people, such as minorities or individuals with a history of renting in low-income neighborhoods.
+4. **Inconsistent reporting**: Tenant screening reports may contain inconsistent or contradictory information, which can make it difficult for renters to understand their rental history or creditworthiness.
+5. **Lack of verification**: Tenant screening reports may not verify the accuracy of the information provided, which can lead to false positives or false negatives.
+6. **Over-reliance on credit scores**: Tenant screening reports may rely too heavily on credit scores, which can be influenced by factors such as credit card debt, medical bills, or other financial obligations.
+7. **Inadequate consideration of non-traditional credit**: Tenant screening reports may not consider non-traditional credit sources, such as rent payments, utility bills, or other forms of payment history.
+8. **Lack of disclosure**: Tenant screening reports may not disclose the sources of the information used to generate the report, which can make it difficult for renters to understand how their creditworthiness was evaluated.
+9. **Inaccurate or outdated employment information**: Tenant screening reports may contain outdated or inaccurate employment information, which can lead to false positives or false negatives.
+10. **Lack of consideration of local laws and regulations**: Tenant screening reports may not take into account local laws and regulations, such as rent control or fair housing laws.
+
+These problems can matter to renters because they can:
+
+* Affect their ability to rent a property
+* Impact their credit score or creditworthiness
+* Lead to false positives or false negatives
+* Cause unnecessary stress or anxiety
+* Result in unfair or discriminatory treatment
+* Fail to provide accurate or transparent information about a tenant's rental history or creditworthiness.
+
+Rental property owners and managers should be aware of these potential problems and take steps to mitigate them, such as:
+
+* Verifying the accuracy of tenant screening reports
+* Using multiple sources of information to evaluate a tenant's creditworthiness
+* Considering non-traditional credit sources
+* Disclosing the sources of the information used to generate the report
+* Following local laws and regulations
+* Using fair and unbiased algorithms
+* Providing transparent and accurate information to renters.",,,,,False,14391.884
+q3,similar_across_documents,basic_rag,"What problems can tenant screening reports contain, and why can those problems matter to renters?","Tenant screening reports can contain a variety of problems, including:
+
+1. Inaccurate, outdated, and misleading information: Tenant screening companies often use automated and unsatisfactory methods to collect data, leading to errors in the reports.
+2. Inconsistent or incomplete information: The procedures utilized by many tenant screening companies can lead to inconsistencies or omissions in the reports, making it difficult for applicants to dispute errors.
+3. Over-inclusion of negative information: Tenant screening companies may over-include less verified negative information on a report, even if that information might be inaccurate, leading to an overstatement of the risk of renting to a given applicant.
+4. Lack of transparency: Tenant screening companies may not provide clear explanations for the information included in the reports, making it difficult for applicants to understand the basis for the recommendations.
+5. Inequitable pricing: Tenant screening companies charge application fees to prospective tenants, which can be high, especially for multiple landlords. This can create a barrier to safe and affordable housing.
+
+These problems can matter to renters because they can lead to:
+
+1. Loss of housing opportunities: Overly negative tenant screening reports can lead to prospective tenants being rejected for housing, even if they are qualified.
+2. Financial burden: Application fees and add-on charges can be expensive, especially for those who are already struggling financially.
+3. Time-consuming and stressful application process: The need to dispute errors or navigate complex procedures can be time-consuming and stressful for prospective tenants.
+4. Inaccurate or misleading information: Inaccurate or misleading information in tenant screening reports can lead to incorrect assumptions about a prospective tenant's creditworthiness, rental history, or other factors.
+
+Overall, the problems with tenant screening reports can create barriers to safe and affordable housing, leading to negative impacts on renters' lives, including physical and mental health problems, poorer educational outcomes, employment disruptions, and declining social networks.",cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_consumer_snapshot.pdf | cfpb_tenant_background_market_report.pdf,,cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_consumer_snapshot.pdf | cfpb_tenant_background_market_report.pdf,,False,12628.478
+q3,similar_across_documents,context_rag,"What problems can tenant screening reports contain, and why can those problems matter to renters?","Tenant screening reports can include a variety of information about an applicant, such as credit histories, rental histories, and criminal records. [2] However, the efficacy of these reports in predicting future renter behavior remains unproven.",cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_consumer_snapshot.pdf | cfpb_tenant_background_market_report.pdf,cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_consumer_snapshot.pdf | cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_consumer_snapshot.pdf,cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_consumer_snapshot.pdf | cfpb_tenant_background_market_report.pdf,[2],False,5980.054
+q4,ambiguous,no_rag,What should a housing provider consider when screening a rental applicant?,"When screening a rental applicant, a housing provider should consider the following factors:
+
+1. **Credit Score**: Evaluate the applicant's credit history and score to assess their creditworthiness and ability to pay rent on time.
+2. **Income**: Verify the applicant's income and employment status to ensure they can afford the rent and utilities.
+3. **Employment History**: Check the applicant's employment history to ensure they have a stable income and can commit to the lease.
+4. **Rent Payment History**: Review the applicant's rent payment history to ensure they have a track record of on-time payments.
+5. **Eviction History**: Check the applicant's eviction history to ensure they have not been evicted from previous rentals.
+6. **Rental History**: Ask for references from previous landlords or property managers to assess the applicant's rental history.
+7. **Income Stability**: Verify the applicant's income stability by checking their pay stubs, W-2 forms, and tax returns.
+8. **Debt-to-Income Ratio**: Calculate the applicant's debt-to-income ratio to ensure they can afford the rent and other debt obligations.
+9. **Co-Signer Information**: If applicable, verify the co-signer's information and credit score to ensure they can also afford the rent.
+10. **Application Completeness**: Ensure the applicant has completed the rental application form thoroughly and accurately.
+11. **Background Check**: Consider running a background check to verify the applicant's identity and check for any outstanding warrants or convictions.
+12. **Rent Increase History**: Review the applicant's rent increase history to ensure they have not increased their rent significantly in the past.
+13. **Pet Information**: If applicable, verify the applicant's pet information to ensure they can provide adequate care for any pets.
+14. **Smoking Policy**: Verify the applicant's smoking policy to ensure they comply with the property's smoking policy.
+15. **Lease Terms**: Review the applicant's lease terms to ensure they understand the terms and conditions of the lease.
+
+By considering these factors, a housing provider can make an informed decision about whether to approve or deny a rental application.",,,,,False,10386.186
+q4,ambiguous,basic_rag,What should a housing provider consider when screening a rental applicant?,"When screening a rental applicant, a housing provider should consider the following:
+
+1. Be transparent with applicants: Provide clear, complete information about the screening process, including what records will be considered, what incidents will be disqualifying, and how far back the screening will look.
+2. Publicize screening policies: Make tenant screening policies publicly available, including the link to a website, and provide applicants with a copy of the policies before applying.
+3. Ensure applicants understand the process: Give applicants information about how to submit evidence of mitigating circumstances, request a reasonable accommodation for a disability, and contest an inaccurate, incomplete, or irrelevant record.
+4. Denial letters: Provide detailed information about the reasons for denial, including the specific standard(s) that the applicant did not meet and how they fell short.
+5. Avoid discriminatory practices: Ensure that tenant screening practices do not unjustifiably exclude people from housing opportunities in discriminatory ways.
+6. Use technology responsibly: Be aware of the potential for technology, such as machine learning and artificial intelligence, to lead to a less transparent process and avoid using these technologies in a discriminatory manner.
+7. Comply with the Fair Housing Act: Ensure that tenant screening practices comply with the Fair Housing Act, which applies to housing decisions regardless of what technology is used.
+
+By considering these factors, housing providers can ensure that their tenant screening practices are fair, transparent, and compliant with the law.",hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf,,hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf,,False,10569.846
+q4,ambiguous,context_rag,What should a housing provider consider when screening a rental applicant?,"According to the provided context, a housing provider should consider the following when screening a rental applicant:
+
+* The Fair Housing Act applies to housing decisions regardless of what technology is used [1]
+* Tenant screening companies have a responsibility to avoid using technologies in a discriminatory manner [1]
+* Tenant screening companies often market their services as a necessary, efficient, and effective tool to screen out problem tenants [3]
+* Tenant screening reports vary in features, content, and price [3]
+* Tenant screening companies often advise housing providers to screen for credit, eviction, and criminal records, along with other items in applicants' backgrounds [3]
+
+I cannot answer this question from the provided documents",hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf,hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf,hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf | hud_rental_screening_guidance.pdf,[1] [3],False,6843.617
+q5,not_in_documents,no_rag,What is the maximum security deposit a landlord may charge in Nevada in 2026?,"I can't provide information on the maximum security deposit a landlord may charge in Nevada in 2026. However, I can provide information on the current security deposit laws in Nevada.
+
+In Nevada, the maximum security deposit that a landlord can charge is equal to two months' worth of rent. This is specified in Nevada Revised Statutes (NRS) 40.350.
+
+It's worth noting that the security deposit laws in Nevada may be subject to change, and it's always a good idea to check with the Nevada Attorney General's office or a local landlord-tenant authority for the most up-to-date information.",,,,,False,3116.865
+q5,not_in_documents,basic_rag,What is the maximum security deposit a landlord may charge in Nevada in 2026?,"Based on the context, the maximum security deposit a landlord may charge in Nevada in 2026 is up to two months' rent for tenants who are not service members, and up to one month's rent for small landlords (as defined on page 35) who are required to charge a service member up to one month's rent.",california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,,False,5270.75
+q5,not_in_documents,context_rag,What is the maximum security deposit a landlord may charge in Nevada in 2026?,I cannot answer this question from the provided documents,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,california_tenants_2026.pdf | california_tenants_2026.pdf | california_tenants_2026.pdf,,True,4260.621
+q6,unrelated,no_rag,What is the capital city of Japan?,The capital city of Japan is Tokyo.,,,,,False,349.035
+q6,unrelated,basic_rag,What is the capital city of Japan?,"The capital city of Japan is not mentioned in the provided context. The context appears to be related to the rental market, tenant screening reports, and the legal rights of tenants and guests in the United States, particularly in relation to hotels and residential hotels.",cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_market_report.pdf | california_tenants_2026.pdf,,cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_market_report.pdf | california_tenants_2026.pdf,,False,4397.057
+q6,unrelated,context_rag,What is the capital city of Japan?,I cannot answer this question from the provided documents,,cfpb_tenant_background_market_report.pdf | cfpb_tenant_background_market_report.pdf | california_tenants_2026.pdf | cfpb_tenant_background_market_report.pdf | california_tenants_2026.pdf,,,True,640.206

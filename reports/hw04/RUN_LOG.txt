@@ -238,3 +238,73 @@ q3 expected CFPB sources in top 3: yes. HUD guidance was not in the top 3.
 q4 HUD guidance in top 3: yes. Question is intentionally broad.
 q5 unsupported. Nearest chunks were still returned. Not treated as a correct answer.
 q6 unsupported. Nearest chunks were still returned. Scores were low. Not treated as a correct answer.
+
+HW4 RAG GENERATION
+Timestamp: 2026-09-28T11:58:14-0400
+Command: python3.11 rag.py --compare
+Model: llama3.2:latest
+Temperature: 0.0
+Comparison rows: 18 (6 questions x 3 configurations)
+K-sweep rows: 3 (q2 at k=1, 3, and 5)
+Score threshold: 0.40
+Duplicate Jaccard: 0.55
+Context candidates: 5
+Final context limit: 3
+q2 FTC scam-loss source in top 5: no
+
+q1: No RAG gave a generic wire warning. Basic and Context RAG used the FTC cash-wire warning. Context RAG did not cite a source number.
+q2: Basic top 3 and Context top 5 were only california_tenants_2026.pdf. Basic misstated a two-month rule. Context RAG refused.
+q3: Basic and Context RAG used the CFPB screening-problem chunks. Context RAG did not cite.
+q4: Basic RAG followed the HUD transparency and fair-housing points. Context RAG added "number of children," which was not in the chunks.
+q5: No RAG stated a Nevada statute. Basic RAG applied California deposit text to Nevada. Context RAG refused.
+q6: No RAG answered Tokyo. Basic RAG said the capital was not in the context. Context RAG refused. All q6 candidate scores were below 0.40.
+
+q2 k sweep: FTC loss source absent at k=1, k=3, and k=5.
+k=1 said deposit limits were not mentioned.
+k=3 repeated the two-month misreading.
+k=5 listed the deposit-limit cross-reference and also included other tenant rights.
+k=5 was the least misleading. None of the three answered both parts.
+
+Context refusal q5: PASS
+Context refusal q6: PASS
+
+Evaluation: python3.11 rag.py --evaluate
+No RAG accuracy 0/6, faithfulness 0/6, format 6/6, robustness 0/3
+Basic RAG accuracy 4/6, faithfulness 4/6, format 6/6, robustness 2/3
+Context RAG accuracy 4/6, faithfulness 5/6, format 3/6, robustness 2/3
+
+Raw files:
+reports/hw04/raw/rag_comparison.json
+reports/hw04/raw/rag_comparison.csv
+reports/hw04/raw/rag_k_sweep.json
+reports/hw04/raw/rag_evaluation.csv
+reports/hw04/raw/rag_evaluation.json
+reports/hw04/RAG_ANALYSIS.md word count: 494
+
+HW4 RAG CONTEXT CLEANUP
+Timestamp: 2026-09-28T12:38:54-0400
+Command: python3.11 rag.py --regen-context
+Only Context RAG q1, q3, and q4 were regenerated.
+Retrieval was not rerun.
+q2 k sweep was not rerun.
+Context q2, q5, and q6 outputs were unchanged.
+No RAG and Basic RAG outputs were unchanged.
+Model: llama3.2:latest
+Temperature: 0.0
+Saved selected chunks were reused. Thresholds stayed 0.40 and Jaccard 0.55.
+
+Citation validation:
+q1 PASS, repair call no
+q3 PASS, repair call yes
+q4 PASS, repair call no
+q4 answer does not contain "number of children"
+q4 answer appends the exact refusal sentence after cited bullets
+q5 exact refusal PASS, unchanged
+q6 exact refusal PASS, unchanged
+
+Corrected metrics:
+No RAG accuracy 4/6, faithfulness 0/6, format 6/6, robustness 1/3
+Basic RAG accuracy 4/6, faithfulness 4/6, format 6/6, robustness 2/3
+Context RAG accuracy 5/6, faithfulness 6/6, format 5/6, robustness 3/3
+Robustness counts q4 correct_answer plus q5 and q6 refused_when_needed.
+reports/hw04/RAG_ANALYSIS.md word count after cleanup: 484

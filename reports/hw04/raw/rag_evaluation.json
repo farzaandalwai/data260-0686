@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "q1",
+    "configuration": "no_rag",
+    "correct_retrieval": "n/a",
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "The suspicion warning is factually right. No context was supplied, so it is not grounded."
+  },
+  {
+    "question_id": "q1",
+    "configuration": "basic_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "The FTC listing-scams chunk supports the cash-wire warning."
+  },
+  {
+    "question_id": "q1",
+    "configuration": "context_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "The cited [1] chunk says a Western Union or MoneyGram wire is like sending cash and is hard to recover."
+  },
+  {
+    "question_id": "q2",
+    "configuration": "no_rag",
+    "correct_retrieval": "n/a",
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true,
+    "notes": "The model declined and did not state the deposit limit or the FTC loss totals."
+  },
+  {
+    "question_id": "q2",
+    "configuration": "basic_rag",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "California chunks only. The answer misstates a two-month rule and has no FTC loss figure."
+  },
+  {
+    "question_id": "q2",
+    "configuration": "context_rag",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": true,
+    "refused_when_needed": false,
+    "format_compliance": true,
+    "notes": "The exact refusal matches the incomplete window. The question itself is answerable, so this is not an unsupported-question refusal."
+  },
+  {
+    "question_id": "q3",
+    "configuration": "no_rag",
+    "correct_retrieval": "n/a",
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "Inaccurate screening reports are a real problem. The answer is not grounded because no context was supplied."
+  },
+  {
+    "question_id": "q3",
+    "configuration": "basic_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "CFPB chunks support inaccurate reports and housing harm."
+  },
+  {
+    "question_id": "q3",
+    "configuration": "context_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "One repair call added [2]. That chunk says report contents vary and predictive value is unproven."
+  },
+  {
+    "question_id": "q4",
+    "configuration": "no_rag",
+    "correct_retrieval": "n/a",
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "A broad screening checklist answers the ambiguous question. It is not grounded in supplied chunks."
+  },
+  {
+    "question_id": "q4",
+    "configuration": "basic_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "HUD chunks support transparency, denial reasons, and fair housing."
+  },
+  {
+    "question_id": "q4",
+    "configuration": "context_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": false,
+    "notes": "No number-of-children claim. The Fair Housing sentences are in selected chunk [2], but the answer labels them [1] and then appends the refusal sentence."
+  },
+  {
+    "question_id": "q5",
+    "configuration": "no_rag",
+    "correct_retrieval": "n/a",
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true,
+    "notes": "It stated a Nevada two-month limit and a statute. That is not a correct answer."
+  },
+  {
+    "question_id": "q5",
+    "configuration": "basic_rag",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true,
+    "notes": "It treated California deposit text as a Nevada answer and did not recognize the missing evidence."
+  },
+  {
+    "question_id": "q5",
+    "configuration": "context_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "Exact refusal. The California chunks do not state a Nevada limit."
+  },
+  {
+    "question_id": "q6",
+    "configuration": "no_rag",
+    "correct_retrieval": "n/a",
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true,
+    "notes": "Tokyo is factually correct and ungrounded. It did not refuse the unsupported question."
+  },
+  {
+    "question_id": "q6",
+    "configuration": "basic_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "It correctly said the capital is not in the retrieved rental text, without the exact refusal sentence."
+  },
+  {
+    "question_id": "q6",
+    "configuration": "context_rag",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true,
+    "notes": "All five scores were below 0.40, so the context was empty and the model used the exact refusal."
+  }
+]

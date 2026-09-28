@@ -60,3 +60,19 @@ Top-k: 3
 | q4 | ambiguous | hud_rental_screening_guidance.pdf | Yes for HUD guidance. The question is broad, and the CFPB reports were not in the top 3. |
 | q5 | not_in_documents | california_tenants_2026.pdf | Not applicable / unsupported question |
 | q6 | unrelated | cfpb_tenant_background_market_report.pdf, california_tenants_2026.pdf | Not applicable / unsupported question |
+
+Part 4 generation. Model `llama3.2:latest`, temperature 0.0. No outside web lookup.
+
+Context RAG used a top-5 candidate pool, a score cutoff of 0.40, near-duplicate removal at Jaccard 0.55, at most 3 final chunks, and one-chunk-per-source preference before filling the remaining slots. The duplicate cutoff removed no chunks. q2's top 5 did not contain `ftc_rental_scams_data_spotlight.html`.
+
+Formulas after the citation cleanup: accuracy = correct_answer / 6. Faithfulness = grounded / 6. No RAG has no supplied context, so those six grounded values stay false. Format compliance = format_compliance / 6. Robustness = (q4 correct_answer + q5 refused_when_needed + q6 refused_when_needed) / 3. Factual correctness and grounding are scored separately. No RAG retrieval is not applicable, so it is not in the accuracy formula.
+
+Only Context RAG q1, q3, and q4 were regenerated. q3 needed one citation repair call. q1 and q4 did not. q4 no longer says "number of children." Its answer still appends the refusal sentence, so its format check fails.
+
+| Configuration | Accuracy | Faithfulness | Format compliance | Robustness |
+| --- | --- | --- | --- | --- |
+| No RAG | 4/6 | 0/6 | 6/6 | 1/3 |
+| Basic RAG | 4/6 | 4/6 | 6/6 | 2/3 |
+| Context RAG | 5/6 | 6/6 | 5/6 | 3/3 |
+
+q2 k sweep, basic prompt. The FTC loss page was absent at k = 1, 3, and 5. k = 5 was the least misleading partial answer. It still did not cover both parts of the question.
