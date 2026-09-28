@@ -1,0 +1,78 @@
+{
+  "started": "2026-09-28T00:25:05-0400",
+  "finished": "2026-09-28T00:25:07-0400",
+  "measured_requests": 180,
+  "configurations": [
+    {
+      "page_size": 10,
+      "version": "naive",
+      "sql_statements_per_request": 11,
+      "p50_ms": 5.217687503318302,
+      "p95_ms": 7.052452453353904,
+      "p99_ms": 7.764064176008105
+    },
+    {
+      "page_size": 10,
+      "version": "fixed",
+      "sql_statements_per_request": 2,
+      "p50_ms": 4.471646498132031,
+      "p95_ms": 5.060435346240411,
+      "p99_ms": 5.151964386750478
+    },
+    {
+      "page_size": 50,
+      "version": "naive",
+      "sql_statements_per_request": 51,
+      "p50_ms": 10.207333994912915,
+      "p95_ms": 16.279554649372574,
+      "p99_ms": 34.03436806664106
+    },
+    {
+      "page_size": 50,
+      "version": "fixed",
+      "sql_statements_per_request": 2,
+      "p50_ms": 3.881312506564427,
+      "p95_ms": 4.477754353865748,
+      "p99_ms": 4.860088798450306
+    },
+    {
+      "page_size": 200,
+      "version": "naive",
+      "sql_statements_per_request": 201,
+      "p50_ms": 28.554750002513174,
+      "p95_ms": 29.074044044682523,
+      "p99_ms": 34.66063463580213
+    },
+    {
+      "page_size": 200,
+      "version": "fixed",
+      "sql_statements_per_request": 2,
+      "p50_ms": 5.431958998087794,
+      "p95_ms": 6.265939399600029,
+      "p99_ms": 13.39994943642524
+    }
+  ],
+  "speedup": [
+    {
+      "page_size": 10,
+      "naive_p50_ms": 5.217687503318302,
+      "fixed_p50_ms": 4.471646498132031,
+      "speedup_x": 1.1668380999030041,
+      "latency_reduction_percent": 14.298307530142612
+    },
+    {
+      "page_size": 50,
+      "naive_p50_ms": 10.207333994912915,
+      "fixed_p50_ms": 3.881312506564427,
+      "speedup_x": 2.6298665664383756,
+      "latency_reduction_percent": 61.975257119059904
+    },
+    {
+      "page_size": 200,
+      "naive_p50_ms": 28.554750002513174,
+      "fixed_p50_ms": 5.431958998087794,
+      "speedup_x": 5.256805143883684,
+      "latency_reduction_percent": 80.97703885479748
+    }
+  ]
+}

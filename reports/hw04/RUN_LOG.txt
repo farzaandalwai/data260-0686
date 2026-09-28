@@ -172,3 +172,24 @@ fixed page 50: status 200, returned 50, sql_statements 2
 naive page 200: status 200, returned 200, sql_statements 201
 fixed page 200: status 200, returned 200, sql_statements 2
 naive/fixed listing JSON equal for page sizes 10, 50, and 200
+
+HW4 N+1 BENCHMARK
+Timestamp: 2026-09-28T00:25:07-0400
+Dataset before run: rental_listings = 5000, listing_notes = 200
+Benchmark start: 2026-09-28T00:25:05-0400
+Benchmark end: 2026-09-28T00:25:07-0400
+Total measurements = 180
+Each configuration = 30
+10 naive SQL = 11, p50 = 5.218 ms, p95 = 7.052 ms, p99 = 7.764 ms
+10 fixed SQL = 2, p50 = 4.472 ms, p95 = 5.060 ms, p99 = 5.152 ms
+50 naive SQL = 51, p50 = 10.207 ms, p95 = 16.280 ms, p99 = 34.034 ms
+50 fixed SQL = 2, p50 = 3.881 ms, p95 = 4.478 ms, p99 = 4.860 ms
+200 naive SQL = 201, p50 = 28.555 ms, p95 = 29.074 ms, p99 = 34.661 ms
+200 fixed SQL = 2, p50 = 5.432 ms, p95 = 6.266 ms, p99 = 13.400 ms
+Speed-up page 10 = 1.167x, latency reduction = 14.298%
+Speed-up page 50 = 2.630x, latency reduction = 61.975%
+Speed-up page 200 = 5.257x, latency reduction = 80.977%
+Raw JSON: reports/hw04/raw/nplus1_runs.json
+Raw CSV: reports/hw04/raw/nplus1_runs.csv
+Summary JSON: reports/hw04/raw/nplus1_summary.json
+validation passed
