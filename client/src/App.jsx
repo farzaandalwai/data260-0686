@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
 import { getJson, postEmpty } from "./api";
 import Navbar from "./components/Navbar";
 import CreateRecord from "./pages/CreateRecord";
@@ -7,6 +7,18 @@ import DeleteRecord from "./pages/DeleteRecord";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import UpdateRecord from "./pages/UpdateRecord";
+
+function LoginRequired() {
+  return (
+    <section className="card">
+      <h1>Login required</h1>
+      <p>Sign in to view rental listings.</p>
+      <Link className="btn primary" to="/login">
+        Go to Login
+      </Link>
+    </section>
+  );
+}
 
 function AppShell() {
   const [user, setUser] = useState(null);
@@ -55,11 +67,26 @@ function AppShell() {
               element={<Home user={user} listings={listings} setListings={setListings} />}
             />
             <Route path="/login" element={<Login setUser={setUser} />} />
-            <Route path="/create" element={<CreateRecord onAdd={handleAdd} />} />
-            <Route path="/update" element={<UpdateRecord onUpdate={handleUpdate} />} />
-            <Route path="/update/:id" element={<UpdateRecord onUpdate={handleUpdate} />} />
-            <Route path="/delete" element={<DeleteRecord onDelete={handleDelete} />} />
-            <Route path="/delete/:id" element={<DeleteRecord onDelete={handleDelete} />} />
+            <Route
+              path="/create"
+              element={user ? <CreateRecord onAdd={handleAdd} /> : <LoginRequired />}
+            />
+            <Route
+              path="/update"
+              element={user ? <UpdateRecord onUpdate={handleUpdate} /> : <LoginRequired />}
+            />
+            <Route
+              path="/update/:id"
+              element={user ? <UpdateRecord onUpdate={handleUpdate} /> : <LoginRequired />}
+            />
+            <Route
+              path="/delete"
+              element={user ? <DeleteRecord onDelete={handleDelete} /> : <LoginRequired />}
+            />
+            <Route
+              path="/delete/:id"
+              element={user ? <DeleteRecord onDelete={handleDelete} /> : <LoginRequired />}
+            />
           </Routes>
         )}
       </main>

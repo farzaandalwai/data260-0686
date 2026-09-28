@@ -42,7 +42,7 @@ WHERE property_title = 'Rental Listing 2500';
 | filtered | 10.0 | 100.0 |
 | Extra | Using where | NULL |
 
-Part 4 retrieval setup. No answers were generated.
+Part 4 retrieval setup. Answer generation is recorded in the section below.
 
 Documents: 6
 Chunks: 415
