@@ -41,3 +41,22 @@ WHERE property_title = 'Rental Listing 2500';
 | rows | 4980 | 1 |
 | filtered | 10.0 | 100.0 |
 | Extra | Using where | NULL |
+
+Part 4 retrieval setup. No answers were generated.
+
+Documents: 6
+Chunks: 415
+Chunk size: 500
+Overlap: 50
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Embedding dimension: 384
+Top-k: 3
+
+| Question | Category | Top-3 sources | Expected source found? |
+| --- | --- | --- | --- |
+| q1 | one_chunk | ftc_rental_listing_scams.html | Yes |
+| q2 | two_chunks | california_tenants_2026.pdf | No. California guide only. FTC data spotlight was not in the top 3. |
+| q3 | similar_across_documents | cfpb_tenant_background_market_report.pdf, cfpb_tenant_background_consumer_snapshot.pdf | Yes for the two CFPB reports. HUD guidance was not in the top 3. |
+| q4 | ambiguous | hud_rental_screening_guidance.pdf | Yes for HUD guidance. The question is broad, and the CFPB reports were not in the top 3. |
+| q5 | not_in_documents | california_tenants_2026.pdf | Not applicable / unsupported question |
+| q6 | unrelated | cfpb_tenant_background_market_report.pdf, california_tenants_2026.pdf | Not applicable / unsupported question |

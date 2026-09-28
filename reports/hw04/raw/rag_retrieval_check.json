@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1",
+    "expected_source_in_top3": true,
+    "top_sources": [
+      "ftc_rental_listing_scams.html",
+      "ftc_rental_listing_scams.html",
+      "ftc_rental_listing_scams.html"
+    ],
+    "notes": "Expected source in top 3: ftc_rental_listing_scams.html"
+  },
+  {
+    "id": "q2",
+    "expected_source_in_top3": false,
+    "top_sources": [
+      "california_tenants_2026.pdf",
+      "california_tenants_2026.pdf",
+      "california_tenants_2026.pdf"
+    ],
+    "notes": "Missing from top 3: ftc_rental_scams_data_spotlight.html"
+  },
+  {
+    "id": "q3",
+    "expected_source_in_top3": true,
+    "top_sources": [
+      "cfpb_tenant_background_market_report.pdf",
+      "cfpb_tenant_background_consumer_snapshot.pdf",
+      "cfpb_tenant_background_market_report.pdf"
+    ],
+    "notes": "Expected source in top 3: cfpb_tenant_background_consumer_snapshot.pdf, cfpb_tenant_background_market_report.pdf"
+  },
+  {
+    "id": "q4",
+    "expected_source_in_top3": true,
+    "top_sources": [
+      "hud_rental_screening_guidance.pdf",
+      "hud_rental_screening_guidance.pdf",
+      "hud_rental_screening_guidance.pdf"
+    ],
+    "notes": "Expected source in top 3: hud_rental_screening_guidance.pdf The question is intentionally broad."
+  },
+  {
+    "id": "q5",
+    "expected_source_in_top3": false,
+    "top_sources": [
+      "california_tenants_2026.pdf",
+      "california_tenants_2026.pdf",
+      "california_tenants_2026.pdf"
+    ],
+    "notes": "Unsupported question. Vector search still returned the nearest chunks."
+  },
+  {
+    "id": "q6",
+    "expected_source_in_top3": false,
+    "top_sources": [
+      "cfpb_tenant_background_market_report.pdf",
+      "cfpb_tenant_background_market_report.pdf",
+      "california_tenants_2026.pdf"
+    ],
+    "notes": "Unsupported question. Vector search still returned the nearest chunks."
+  }
+]

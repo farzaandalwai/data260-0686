@@ -203,3 +203,38 @@ EXPLAIN before: type ALL, possible_keys NULL, key NULL, rows 4980, filtered 10.0
 Index name: idx_rental_listings_property_title
 EXPLAIN after: type ref, possible_keys idx_rental_listings_property_title, key idx_rental_listings_property_title, rows 1, filtered 100.0, Extra NULL
 Before the index, MySQL scanned the table. After the index, MySQL used idx_rental_listings_property_title and estimated 1 row.
+
+HW4 RAG RETRIEVAL
+Timestamp: 2026-09-28T00:57:18-0400
+Command: python3.11 rag.py --retrieve-only
+Corpus path: corpus/hw03
+Document count: 6
+Filenames:
+california_tenants_2026.pdf
+cfpb_tenant_background_consumer_snapshot.pdf
+cfpb_tenant_background_market_report.pdf
+ftc_rental_listing_scams.html
+ftc_rental_scams_data_spotlight.html
+hud_rental_screening_guidance.pdf
+Chunk size: 500
+Overlap: 50
+Total chunks: 415
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Dimension: 384
+Top-k: 3
+No Ollama call. No answers generated.
+
+q1 top 3: ftc_rental_listing_scams.html, ftc_rental_listing_scams.html, ftc_rental_listing_scams.html
+q2 top 3: california_tenants_2026.pdf, california_tenants_2026.pdf, california_tenants_2026.pdf
+q3 top 3: cfpb_tenant_background_market_report.pdf, cfpb_tenant_background_consumer_snapshot.pdf, cfpb_tenant_background_market_report.pdf
+q4 top 3: hud_rental_screening_guidance.pdf, hud_rental_screening_guidance.pdf, hud_rental_screening_guidance.pdf
+q5 top 3: california_tenants_2026.pdf, california_tenants_2026.pdf, california_tenants_2026.pdf
+q6 top 3: cfpb_tenant_background_market_report.pdf, cfpb_tenant_background_market_report.pdf, california_tenants_2026.pdf
+
+Retrieval check:
+q1 expected source in top 3: yes
+q2 both expected sources in top 3: no. Missing ftc_rental_scams_data_spotlight.html
+q3 expected CFPB sources in top 3: yes. HUD guidance was not in the top 3.
+q4 HUD guidance in top 3: yes. Question is intentionally broad.
+q5 unsupported. Nearest chunks were still returned. Not treated as a correct answer.
+q6 unsupported. Nearest chunks were still returned. Scores were low. Not treated as a correct answer.

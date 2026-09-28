@@ -1,0 +1,45 @@
+- id: q1
+  category: one_chunk
+  question: "According to the FTC rental listing scam guidance, why should a renter be suspicious if someone asks them to wire money using Western Union or MoneyGram?"
+  expected_sources:
+    - ftc_rental_listing_scams.html
+  answerable: true
+
+- id: q2
+  category: two_chunks
+  question: "What does the rental-housing document collection say about both California security-deposit limits and the FTC's reported scale of rental-scam losses?"
+  expected_sources:
+    - california_tenants_2026.pdf
+    - ftc_rental_scams_data_spotlight.html
+  answerable: true
+
+- id: q3
+  category: similar_across_documents
+  question: "What problems can tenant screening reports contain, and why can those problems matter to renters?"
+  expected_sources:
+    - cfpb_tenant_background_consumer_snapshot.pdf
+    - cfpb_tenant_background_market_report.pdf
+    - hud_rental_screening_guidance.pdf
+  answerable: true
+
+- id: q4
+  category: ambiguous
+  question: "What should a housing provider consider when screening a rental applicant?"
+  expected_sources:
+    - hud_rental_screening_guidance.pdf
+    - cfpb_tenant_background_consumer_snapshot.pdf
+    - cfpb_tenant_background_market_report.pdf
+  answerable: true
+  note: "The question is intentionally ambiguous."
+
+- id: q5
+  category: not_in_documents
+  question: "What is the maximum security deposit a landlord may charge in Nevada in 2026?"
+  expected_sources: []
+  answerable: false
+
+- id: q6
+  category: unrelated
+  question: "What is the capital city of Japan?"
+  expected_sources: []
+  answerable: false
