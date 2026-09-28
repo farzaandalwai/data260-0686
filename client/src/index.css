@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f7;
+  color: #1c2430;
+}
+
+.navbar {
+  background: #243044;
+  color: #ffffff;
+}
+
+.nav-inner,
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-inner {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-user {
+  color: #d5dde8;
+}
+
+.page {
+  padding-top: 28px;
+  padding-bottom: 48px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.login-card,
+.form-card {
+  max-width: 520px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.muted {
+  margin: 0;
+  color: #5c6775;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c5ced8;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #1d4e89;
+  color: #ffffff;
+}
+
+.btn.secondary {
+  background: #e8edf2;
+  color: #1c2430;
+  border-color: #c5ced8;
+}
+
+.btn.danger {
+  background: #9b2c2c;
+  color: #ffffff;
+}
+
+.button-row,
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.error {
+  color: #9b2c2c;
+  margin: 0 0 12px;
+}
+
+.empty {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e6ebf0;
+}
+
+th {
+  background: #f7f9fb;
+}
+
+.confirm-line {
+  margin: 8px 0;
+}
+
+@media (max-width: 700px) {
+  .page-header,
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

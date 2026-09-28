@@ -137,3 +137,23 @@ Create Listing test script stored the returned id in collection variable listing
 GET by that variable returned id 3 before delete.
 SELECT COUNT(*) FROM rental_listings after delete: 0
 Cookie values were not recorded.
+
+HW4 REACT CLIENT
+Timestamp: 2026-09-27T23:59:22-0400
+React dev URL: http://127.0.0.1:5173
+FastAPI URL: http://127.0.0.1:8686
+logged-out home works
+login works
+create works
+update works
+delete works
+logout works
+Created listing id: 4
+npm build passes
+final rental_listings count: 0
+
+Legacy backend routes:
+GET / 200
+GET /login 200
+GET /listings 200
+GET /listings-ui 200
