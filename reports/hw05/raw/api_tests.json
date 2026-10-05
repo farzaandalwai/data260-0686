@@ -1,0 +1,692 @@
+{
+  "timestamp": "2026-10-04T13:59:47.576717-07:00",
+  "overall_pass": true,
+  "test_note": "Initial compatibility test used /api/measure/naive and returned 404. Corrected to the actual /api/measure/listings/naive?page_size=2; no implementation change.",
+  "results": [
+    {
+      "name": "Existing database login",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "Unauthenticated listings denied",
+      "method": "GET",
+      "path": "/api/listings",
+      "request_body": null,
+      "status": 401,
+      "expected_status": 401,
+      "passed": true,
+      "response": {
+        "detail": "Login required"
+      }
+    },
+    {
+      "name": "Unauthenticated managers denied",
+      "method": "GET",
+      "path": "/api/property-managers",
+      "request_body": null,
+      "status": 401,
+      "expected_status": 401,
+      "passed": true,
+      "response": {
+        "detail": "Login required"
+      }
+    },
+    {
+      "name": "Manager create",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "request_body": {
+        "first_name": "HW5",
+        "last_name": "Updated Integration Manager",
+        "email": "hw5-test-480e6820@example.com"
+      },
+      "status": 201,
+      "expected_status": 201,
+      "passed": true,
+      "response": {
+        "first_name": "HW5",
+        "last_name": "Integration Manager",
+        "email": "hw5-test-480e6820@example.com",
+        "id": 2,
+        "created_at": "2026-10-04T13:58:58",
+        "updated_at": "2026-10-04T13:58:58"
+      }
+    },
+    {
+      "name": "Manager list pagination",
+      "method": "GET",
+      "path": "/api/property-managers?page=1&page_size=2",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "items": [
+          {
+            "first_name": "Initial",
+            "last_name": "Manager",
+            "email": "hw5-manager@example.com",
+            "id": 1,
+            "created_at": "2026-10-04T13:55:00",
+            "updated_at": "2026-10-04T13:55:00"
+          },
+          {
+            "first_name": "HW5",
+            "last_name": "Integration Manager",
+            "email": "hw5-test-480e6820@example.com",
+            "id": 2,
+            "created_at": "2026-10-04T13:58:58",
+            "updated_at": "2026-10-04T13:58:58"
+          }
+        ],
+        "total": 2,
+        "page": 1,
+        "page_size": 2
+      }
+    },
+    {
+      "name": "Manager GET by ID",
+      "method": "GET",
+      "path": "/api/property-managers/2",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "first_name": "HW5",
+        "last_name": "Integration Manager",
+        "email": "hw5-test-480e6820@example.com",
+        "id": 2,
+        "created_at": "2026-10-04T13:58:58",
+        "updated_at": "2026-10-04T13:58:58"
+      }
+    },
+    {
+      "name": "Manager update",
+      "method": "PUT",
+      "path": "/api/property-managers/2",
+      "request_body": {
+        "first_name": "HW5",
+        "last_name": "Updated Integration Manager",
+        "email": "hw5-test-480e6820@example.com"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "first_name": "HW5",
+        "last_name": "Updated Integration Manager",
+        "email": "hw5-test-480e6820@example.com",
+        "id": 2,
+        "created_at": "2026-10-04T13:58:58",
+        "updated_at": "2026-10-04T20:58:59"
+      }
+    },
+    {
+      "name": "Duplicate manager email",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "request_body": {
+        "first_name": "HW5",
+        "last_name": "Updated Integration Manager",
+        "email": "hw5-test-480e6820@example.com"
+      },
+      "status": 409,
+      "expected_status": 409,
+      "passed": true,
+      "response": {
+        "detail": "Property manager email already exists"
+      }
+    },
+    {
+      "name": "Invalid manager email",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "request_body": {
+        "first_name": "HW5",
+        "last_name": "Updated Integration Manager",
+        "email": "invalid-email"
+      },
+      "status": 422,
+      "expected_status": 422,
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "value_error",
+            "loc": [
+              "body",
+              "email"
+            ],
+            "msg": "value is not a valid email address: An email address must have an @-sign.",
+            "input": "invalid-email",
+            "ctx": {
+              "reason": "An email address must have an @-sign."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Listing create (default units)",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91001",
+        "property_manager_id": 2,
+        "available_units": 2
+      },
+      "status": 201,
+      "expected_status": 201,
+      "passed": true,
+      "response": {
+        "property_title": "HW5 API Test Apartment",
+        "location": "San Jose",
+        "listing_code": "RH-0686-91001",
+        "available_units": 1,
+        "property_manager_id": 2,
+        "id": 5001,
+        "created_at": "2026-10-04T13:58:58",
+        "updated_at": "2026-10-04T13:58:58"
+      }
+    },
+    {
+      "name": "Listing list pagination",
+      "method": "GET",
+      "path": "/api/listings?page=1&page_size=2",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "items": [
+          {
+            "property_title": "Rental Listing 0001",
+            "location": "Milpitas, CA",
+            "listing_code": "RH-0686-00001",
+            "available_units": 1,
+            "property_manager_id": 1,
+            "id": 1,
+            "created_at": "2026-10-04T20:55:00",
+            "updated_at": "2026-10-04T20:55:00"
+          },
+          {
+            "property_title": "Rental Listing 0002",
+            "location": "Milpitas, CA",
+            "listing_code": "RH-0686-00002",
+            "available_units": 1,
+            "property_manager_id": 1,
+            "id": 2,
+            "created_at": "2026-10-04T20:55:00",
+            "updated_at": "2026-10-04T20:55:00"
+          }
+        ],
+        "total": 5001,
+        "page": 1,
+        "page_size": 2
+      }
+    },
+    {
+      "name": "Listing GET by ID",
+      "method": "GET",
+      "path": "/api/listings/5001",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "property_title": "HW5 API Test Apartment",
+        "location": "San Jose",
+        "listing_code": "RH-0686-91001",
+        "available_units": 1,
+        "property_manager_id": 2,
+        "id": 5001,
+        "created_at": "2026-10-04T13:58:58",
+        "updated_at": "2026-10-04T13:58:58"
+      }
+    },
+    {
+      "name": "Listing update",
+      "method": "PUT",
+      "path": "/api/listings/5001",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91001",
+        "property_manager_id": 2,
+        "available_units": 2
+      },
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91001",
+        "available_units": 2,
+        "property_manager_id": 2,
+        "id": 5001,
+        "created_at": "2026-10-04T13:58:58",
+        "updated_at": "2026-10-04T20:58:59"
+      }
+    },
+    {
+      "name": "Manager listings relationship",
+      "method": "GET",
+      "path": "/api/property-managers/2/listings",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "items": [
+          {
+            "property_title": "HW5 Updated API Apartment",
+            "location": "Santa Clara",
+            "listing_code": "RH-0686-91001",
+            "available_units": 2,
+            "property_manager_id": 2,
+            "id": 5001,
+            "created_at": "2026-10-04T13:58:58",
+            "updated_at": "2026-10-04T20:58:59"
+          }
+        ],
+        "total": 1,
+        "page": 1,
+        "page_size": 20
+      }
+    },
+    {
+      "name": "Referenced manager deletion restricted",
+      "method": "DELETE",
+      "path": "/api/property-managers/2",
+      "request_body": null,
+      "status": 409,
+      "expected_status": 409,
+      "passed": true,
+      "response": {
+        "detail": "Property manager still has listings"
+      }
+    },
+    {
+      "name": "Duplicate listing code",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91001",
+        "property_manager_id": 2,
+        "available_units": 2
+      },
+      "status": 409,
+      "expected_status": 409,
+      "passed": true,
+      "response": {
+        "detail": "Listing code already exists or related record changed"
+      }
+    },
+    {
+      "name": "Negative units rejected",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91002",
+        "property_manager_id": 2,
+        "available_units": -1
+      },
+      "status": 422,
+      "expected_status": 422,
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "body",
+              "available_units"
+            ],
+            "msg": "Input should be greater than or equal to 0",
+            "input": -1,
+            "ctx": {
+              "ge": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fractional units rejected",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91002",
+        "property_manager_id": 2,
+        "available_units": 1.5
+      },
+      "status": 422,
+      "expected_status": 422,
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "int_type",
+            "loc": [
+              "body",
+              "available_units"
+            ],
+            "msg": "Input should be a valid integer",
+            "input": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Invalid listing code rejected",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "BAD-CODE",
+        "property_manager_id": 2,
+        "available_units": 2
+      },
+      "status": 422,
+      "expected_status": 422,
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "string_pattern_mismatch",
+            "loc": [
+              "body",
+              "listing_code"
+            ],
+            "msg": "String should match pattern '^RH-0686-[0-9]{5,}$'",
+            "input": "BAD-CODE",
+            "ctx": {
+              "pattern": "^RH-0686-[0-9]{5,}$"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Missing manager rejected",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Updated API Apartment",
+        "location": "Santa Clara",
+        "listing_code": "RH-0686-91002",
+        "property_manager_id": 2147483647,
+        "available_units": 2
+      },
+      "status": 404,
+      "expected_status": 404,
+      "passed": true,
+      "response": {
+        "detail": "Property manager not found"
+      }
+    },
+    {
+      "name": "Missing listing",
+      "method": "GET",
+      "path": "/api/listings/2147483647",
+      "request_body": null,
+      "status": 404,
+      "expected_status": 404,
+      "passed": true,
+      "response": {
+        "detail": "Listing not found"
+      }
+    },
+    {
+      "name": "Missing manager",
+      "method": "GET",
+      "path": "/api/property-managers/2147483647",
+      "request_body": null,
+      "status": 404,
+      "expected_status": 404,
+      "passed": true,
+      "response": {
+        "detail": "Property manager not found"
+      }
+    },
+    {
+      "name": "Existing listing with notes protected",
+      "method": "DELETE",
+      "path": "/api/listings/1",
+      "request_body": null,
+      "status": 409,
+      "expected_status": 409,
+      "passed": true,
+      "response": {
+        "detail": "Listing has notes and cannot be deleted"
+      }
+    },
+    {
+      "name": "Legacy UI preserved",
+      "method": "GET",
+      "path": "/listings-ui",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "html_page_loaded": true
+      }
+    },
+    {
+      "name": "Legacy script preserved",
+      "method": "GET",
+      "path": "/script.js",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "html_page_loaded": true
+      }
+    },
+    {
+      "name": "Legacy listings preserved",
+      "method": "GET",
+      "path": "/listings",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": []
+    },
+    {
+      "name": "HW4 naive measurement preserved",
+      "method": "GET",
+      "path": "/api/measure/listings/naive?page_size=2",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "page_size": 2,
+        "returned": 2,
+        "sql_statements": 3,
+        "listings": [
+          {
+            "id": 1,
+            "property_title": "Rental Listing 0001",
+            "location": "Milpitas, CA",
+            "notes": [
+              {
+                "id": 1,
+                "note": "Related note 001"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "property_title": "Rental Listing 0002",
+            "location": "Milpitas, CA",
+            "notes": [
+              {
+                "id": 2,
+                "note": "Related note 002"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "HW4 fixed measurement preserved",
+      "method": "GET",
+      "path": "/api/measure/listings/fixed?page_size=2",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "page_size": 2,
+        "returned": 2,
+        "sql_statements": 2,
+        "listings": [
+          {
+            "id": 1,
+            "property_title": "Rental Listing 0001",
+            "location": "Milpitas, CA",
+            "notes": [
+              {
+                "id": 1,
+                "note": "Related note 001"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "property_title": "Rental Listing 0002",
+            "location": "Milpitas, CA",
+            "notes": [
+              {
+                "id": 2,
+                "note": "Related note 002"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Delete test manager setup",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "request_body": {
+        "first_name": "HW5",
+        "last_name": "Delete Test",
+        "email": "hw5-delete-6694b31f@example.com"
+      },
+      "status": 201,
+      "expected_status": 201,
+      "passed": true,
+      "response": {
+        "first_name": "HW5",
+        "last_name": "Delete Test",
+        "email": "hw5-delete-6694b31f@example.com",
+        "id": 4,
+        "created_at": "2026-10-04T13:59:47",
+        "updated_at": "2026-10-04T13:59:47"
+      }
+    },
+    {
+      "name": "Delete test listing setup",
+      "method": "POST",
+      "path": "/api/listings",
+      "request_body": {
+        "property_title": "HW5 Temporary Delete Test",
+        "location": "San Jose",
+        "listing_code": "RH-0686-91003",
+        "property_manager_id": 4
+      },
+      "status": 201,
+      "expected_status": 201,
+      "passed": true,
+      "response": {
+        "property_title": "HW5 Temporary Delete Test",
+        "location": "San Jose",
+        "listing_code": "RH-0686-91003",
+        "available_units": 1,
+        "property_manager_id": 4,
+        "id": 5003,
+        "created_at": "2026-10-04T13:59:47",
+        "updated_at": "2026-10-04T13:59:47"
+      }
+    },
+    {
+      "name": "Listing delete",
+      "method": "DELETE",
+      "path": "/api/listings/5003",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "message": "Listing deleted"
+      }
+    },
+    {
+      "name": "Deleted listing absent",
+      "method": "GET",
+      "path": "/api/listings/5003",
+      "request_body": null,
+      "status": 404,
+      "expected_status": 404,
+      "passed": true,
+      "response": {
+        "detail": "Listing not found"
+      }
+    },
+    {
+      "name": "Unreferenced manager delete",
+      "method": "DELETE",
+      "path": "/api/property-managers/4",
+      "request_body": null,
+      "status": 200,
+      "expected_status": 200,
+      "passed": true,
+      "response": {
+        "message": "Property manager deleted"
+      }
+    },
+    {
+      "name": "Deleted manager absent",
+      "method": "GET",
+      "path": "/api/property-managers/4",
+      "request_body": null,
+      "status": 404,
+      "expected_status": 404,
+      "passed": true,
+      "response": {
+        "detail": "Property manager not found"
+      }
+    },
+    {
+      "name": "Logout invalidates session",
+      "method": "GET",
+      "path": "/api/listings",
+      "request_body": null,
+      "status": 401,
+      "expected_status": 401,
+      "passed": true,
+      "response": {
+        "detail": "Login required"
+      }
+    }
+  ]
+}

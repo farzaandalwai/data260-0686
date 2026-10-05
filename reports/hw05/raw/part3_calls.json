@@ -1,0 +1,2102 @@
+[
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 1,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 48.16649999702349
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 2,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.10191699443385
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 3,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.0080420072190464
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 4,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7911670147441328
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 5,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.022417029365897
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 6,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7523329588584602
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 7,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.8229169654659927
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 8,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5887920162640512
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 9,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4852500171400607
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 10,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.748334034346044
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 11,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.9319579587318003
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 12,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.5749999913387
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 13,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.3987079728394747
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 14,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.2987080262973905
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 15,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.2863330193795264
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 16,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4820409705862403
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 17,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5395000227726996
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 18,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.539750024676323
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 19,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1550000053830445
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 20,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.160499989055097
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 21,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6474999720230699
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 22,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7682919860817492
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 23,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5825830050744116
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 24,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6365830088034272
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 25,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5816669911146164
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 26,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.451082993298769
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 27,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5031250077299774
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 28,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5962920151650906
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 29,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6060000052675605
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 30,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.3544159485027194
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 31,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.9018750172108412
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 32,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.272624998819083
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 33,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1589170317165554
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 34,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4331249985843897
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 35,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5207089600153267
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 36,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.2225410318933427
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 37,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.314332999754697
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 38,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9723329567350447
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 39,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.2739580124616623
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 40,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.966541982255876
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 41,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1742499773390591
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 42,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.878958020824939
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 43,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9300839737989008
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 44,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9953750413842499
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 45,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9670419967733324
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 46,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4763330109417439
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 47,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1197089916095138
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 48,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0407079826109111
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 49,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0127080022357404
+  },
+  {
+    "seed": 260686,
+    "rate": 0.0,
+    "call": 50,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1192079982720315
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 1,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.09570799395442
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 2,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0133750038221478
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 3,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9542920161038637
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 4,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9997920133173466
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 5,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.068082987330854
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 6,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0748750064522028
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 7,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 0.9988749516196549
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 8,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0092910379171371
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 9,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0768749634735286
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 10,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.080416957847774
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 11,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1270830291323364
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 12,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0682909633032978
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 13,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.0105000110343099
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 14,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 22.179874998982996
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 15,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 25.15825000591576
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 16,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.333417044952512
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 17,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.2559590288437903
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 18,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 25.48350003780797
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 19,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.260125009343028
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 20,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.8316250061616302
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 21,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4649999793618917
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 22,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.766832965426147
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 23,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.051084008533508
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 24,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.3295829994603992
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 25,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.3538749772123992
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 26,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.521624997258186
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 27,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.648415985982865
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 28,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.40787499351427
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 29,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.8967079813592136
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 30,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.07512496272102
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 31,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.69566700933501
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 32,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.8751669558696449
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 33,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.339749946258962
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 34,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.154959016479552
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 35,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.275999984703958
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 36,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.3458750220015645
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 37,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.9284579902887344
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 38,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.7564580058679
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 39,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4689170056954026
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 40,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.2102500186301768
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 41,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.1256670113652945
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 42,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 23.267167038284242
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 43,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6956670442596078
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 44,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6545840189792216
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 45,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.2164590191096067
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 46,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.747874998021871
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 47,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7471250030212104
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 48,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4097079983912408
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 49,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 25.232541956938803
+  },
+  {
+    "seed": 260686,
+    "rate": 0.2,
+    "call": 50,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.253665996249765
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 1,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6632500337436795
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 2,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.069666978903115
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 3,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 28.08004099642858
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 4,
+    "failure_plan": [
+      true,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 3,
+    "latency_ms": 72.0016669947654
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 5,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.619499946013093
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 6,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7637499840930104
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 7,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.8576669972389936
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 8,
+    "failure_plan": [
+      true,
+      true,
+      true
+    ],
+    "ok": false,
+    "error": "injected failure",
+    "attempts_used": 3,
+    "latency_ms": 61.934957979246974
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 9,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.51870796782896
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 10,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.394750015810132
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 11,
+    "failure_plan": [
+      true,
+      true,
+      true
+    ],
+    "ok": false,
+    "error": "injected failure",
+    "attempts_used": 3,
+    "latency_ms": 69.36583301285282
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 12,
+    "failure_plan": [
+      true,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 3,
+    "latency_ms": 68.19008401362225
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 13,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.4309170073829591
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 14,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.943625030573457
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 15,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 25.295666011516005
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 16,
+    "failure_plan": [
+      true,
+      true,
+      true
+    ],
+    "ok": false,
+    "error": "injected failure",
+    "attempts_used": 3,
+    "latency_ms": 66.9960419763811
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 17,
+    "failure_plan": [
+      true,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 3,
+    "latency_ms": 70.34608401590958
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 18,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.43587498459965
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 19,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.5921249869279563
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 20,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.3895840384066105
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 21,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.004958014003932
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 22,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 25.528416968882084
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 23,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.65850001014769
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 24,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.9855839782394469
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 25,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7640410223975778
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 26,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.981250055134296
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 27,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.1084999898448586
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 28,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 27.534542023204267
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 29,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 3.192625008523464
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 30,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 28.02858396898955
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 31,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 23.60883296933025
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 32,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.6599170048721135
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 33,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.3710420462302864
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 34,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.3914169976487756
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 35,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.79479098878801
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 36,
+    "failure_plan": [
+      false,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.739167026244104
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 37,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 22.930750041268766
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 38,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.22308296849951
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 39,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7954169888980687
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 40,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.469917013309896
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 41,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.282584027852863
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 42,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.14670801954344
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 43,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.96733302436769
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 44,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.135333023034036
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 45,
+    "failure_plan": [
+      false,
+      true,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.7226249910891056
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 46,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 24.195041973143816
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 47,
+    "failure_plan": [
+      true,
+      false,
+      false
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 23.464082973077893
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 48,
+    "failure_plan": [
+      false,
+      true,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 2.1189170074649155
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 49,
+    "failure_plan": [
+      true,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 2,
+    "latency_ms": 26.601165998727083
+  },
+  {
+    "seed": 260686,
+    "rate": 0.5,
+    "call": 50,
+    "failure_plan": [
+      false,
+      false,
+      true
+    ],
+    "ok": true,
+    "error": null,
+    "attempts_used": 1,
+    "latency_ms": 1.755499979481101
+  }
+]

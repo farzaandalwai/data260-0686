@@ -17,3 +17,5 @@ pymysql
 python-dotenv
 bcrypt
 requests
+email-validator
+mcp[cli]<2

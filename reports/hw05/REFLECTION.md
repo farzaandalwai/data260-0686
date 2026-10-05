@@ -1,0 +1,7 @@
+This reflection uses the multi_step record written at 2026-10-05T14:06:24-07:00. The user request was "Find rental listings in San Jose and then give me details for one of them." The harness limit was 4 steps. The run used 3 steps, made 2 tool calls, and stopped with normal_completion.
+
+On step 1 the model returned action "tool", name search_listings, and inputs query "San Jose" with limit 5. execute_tool returned ok true and five listings, ids 5, 10, 14, 16, and 20. Their locations were San Jose, CA, and each available_units value was 1. The harness continued because the request also asked for details and the model had not returned a final answer.
+
+On step 2 the model selected detail_lookup with listing_id 5, the first id from the search. The tool returned ok true. The listing is Rental Listing 0005 in San Jose, CA, code RH-0686-00005, with available_units 1 and property_manager_id 1. The manager is id 1, first name Initial, last name Manager. The notes list has one note, id 5, with the text "Related note 005". available_units was 1, so the unavailable-listing safety rule did not apply.
+
+On step 3 the model returned action "final". The answer said the listing is in San Jose, CA, the property manager is Initial Manager, and there is one available unit. Those statements match the detail result. The answer did not add a street address. The harness treated the final action as a normal completion and did not take another step.

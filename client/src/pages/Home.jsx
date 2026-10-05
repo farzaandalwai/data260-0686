@@ -1,18 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getJson } from "../api";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteListing, fetchListings } from "../features/listings/listingsSlice";
 
-function Home({ user, listings, setListings }) {
-  const [error, setError] = useState("");
+function Home({ user }) {
+  const dispatch = useDispatch();
+  const { items: listings, total, page, page_size: pageSize, status, error } = useSelector((state) => state.listings);
 
   useEffect(() => {
     if (!user) {
       return;
     }
-    getJson("/api/listings")
-      .then((data) => setListings(data))
-      .catch((err) => setError(err.message));
-  }, [user, setListings]);
+    dispatch(fetchListings());
+  }, [user, dispatch]);
+
+  async function handleDelete(id) {
+    try {
+      await dispatch(deleteListing(id)).unwrap();
+      await dispatch(fetchListings(listings.length === 1 && page > 1 ? page - 1 : page));
+    } catch {
+      return;
+    }
+  }
 
   if (!user) {
     return (
@@ -38,7 +47,8 @@ function Home({ user, listings, setListings }) {
         </Link>
       </div>
       {error ? <p className="error">{error}</p> : null}
-      {listings.length === 0 ? (
+      {status === "loading" ? <p>Loading listings...</p> : null}
+      {status !== "loading" && listings.length === 0 ? (
         <p className="empty">No listings yet.</p>
       ) : (
         <div className="table-wrap">
@@ -48,6 +58,9 @@ function Home({ user, listings, setListings }) {
                 <th>ID</th>
                 <th>Property Title</th>
                 <th>Location</th>
+                <th>Listing Code</th>
+                <th>Available Units</th>
+                <th>Manager ID</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -57,14 +70,17 @@ function Home({ user, listings, setListings }) {
                   <td>{listing.id}</td>
                   <td>{listing.property_title}</td>
                   <td>{listing.location}</td>
+                  <td>{listing.listing_code}</td>
+                  <td>{listing.available_units}</td>
+                  <td>{listing.property_manager_id}</td>
                   <td>
                     <div className="actions">
                       <Link className="btn secondary" to={"/update/" + listing.id}>
                         Update
                       </Link>
-                      <Link className="btn danger" to={"/delete/" + listing.id}>
+                      <button className="btn danger" type="button" disabled={status === "loading"} onClick={() => handleDelete(listing.id)}>
                         Delete
-                      </Link>
+                      </button>
                     </div>
                   </td>
                 </tr>
@@ -73,6 +89,11 @@ function Home({ user, listings, setListings }) {
           </table>
         </div>
       )}
+      <div className="button-row">
+        <button className="btn secondary" disabled={page <= 1 || status === "loading"} onClick={() => dispatch(fetchListings(page - 1))}>Previous</button>
+        <span>Page {page} of {Math.max(1, Math.ceil(total / pageSize))} · {total} listings</span>
+        <button className="btn secondary" disabled={page * pageSize >= total || status === "loading"} onClick={() => dispatch(fetchListings(page + 1))}>Next</button>
+      </div>
     </section>
   );
 }

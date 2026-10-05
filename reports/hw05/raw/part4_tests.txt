@@ -1,0 +1,11 @@
+Farzaan Dalwai - DATA 260 HW5
+PASS: search valid
+PASS: search invalid
+PASS: detail valid
+PASS: detail invalid
+PASS: aggregate valid
+PASS: aggregate invalid
+PASS: unknown tool
+PASS: safety blocks unavailable listing
+PASS: mock agent reaches max_steps
+9/9 tests passed

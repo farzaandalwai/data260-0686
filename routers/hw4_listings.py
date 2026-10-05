@@ -1,36 +1,15 @@
-from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel, field_validator
-from sqlalchemy import select
+from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import func, select
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session as DbSession
 
 from database import get_db
-from models import RentalListing
-from models import User
+from hw5_schemas import ListingRequest, ListingResponse, ListingsPage
+from models import ListingNote, PropertyManager, RentalListing, User
 from routers.hw4_auth import get_current_user
 
 
 router = APIRouter(prefix="/api/listings")
-
-
-class ListingRequest(BaseModel):
-    property_title: str
-    location: str
-
-    @field_validator("property_title", "location")
-    @classmethod
-    def required_text(cls, value):
-        cleaned = value.strip()
-        if not cleaned:
-            raise ValueError("must not be empty")
-        return cleaned
-
-
-def listing_json(listing):
-    return {
-        "id": listing.id,
-        "property_title": listing.property_title,
-        "location": listing.location,
-    }
 
 
 def find_listing(db, listing_id):
@@ -40,38 +19,58 @@ def find_listing(db, listing_id):
     return listing
 
 
-@router.post("", status_code=201)
+def check_manager(db, manager_id):
+    if db.get(PropertyManager, manager_id) is None:
+        raise HTTPException(status_code=404, detail="Property manager not found")
+
+
+def save_listing(db, listing):
+    try:
+        db.commit()
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Listing code already exists or related record changed")
+    db.refresh(listing)
+    return listing
+
+
+@router.post("", response_model=ListingResponse, status_code=201)
 def create_listing(
     data: ListingRequest,
     db: DbSession = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    listing = RentalListing(property_title=data.property_title, location=data.location)
+    check_manager(db, data.property_manager_id)
+    listing = RentalListing(**data.model_dump())
     db.add(listing)
-    db.commit()
-    db.refresh(listing)
-    return listing_json(listing)
+    return save_listing(db, listing)
 
 
-@router.get("")
+@router.get("", response_model=ListingsPage)
 def get_listings(
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=20, ge=1, le=100),
     db: DbSession = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    rows = db.scalars(select(RentalListing).order_by(RentalListing.id)).all()
-    return [listing_json(listing) for listing in rows]
+    total = db.scalar(select(func.count()).select_from(RentalListing))
+    rows = db.scalars(
+        select(RentalListing).order_by(RentalListing.id)
+        .offset((page - 1) * page_size).limit(page_size)
+    ).all()
+    return {"items": rows, "total": total, "page": page, "page_size": page_size}
 
 
-@router.get("/{listing_id}")
+@router.get("/{listing_id}", response_model=ListingResponse)
 def get_listing(
     listing_id: int,
     db: DbSession = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    return listing_json(find_listing(db, listing_id))
+    return find_listing(db, listing_id)
 
 
-@router.put("/{listing_id}")
+@router.put("/{listing_id}", response_model=ListingResponse)
 def update_listing(
     listing_id: int,
     data: ListingRequest,
@@ -79,11 +78,10 @@ def update_listing(
     current_user: User = Depends(get_current_user),
 ):
     listing = find_listing(db, listing_id)
-    listing.property_title = data.property_title
-    listing.location = data.location
-    db.commit()
-    db.refresh(listing)
-    return listing_json(listing)
+    check_manager(db, data.property_manager_id)
+    for field, value in data.model_dump().items():
+        setattr(listing, field, value)
+    return save_listing(db, listing)
 
 
 @router.delete("/{listing_id}")
@@ -93,6 +91,12 @@ def delete_listing(
     current_user: User = Depends(get_current_user),
 ):
     listing = find_listing(db, listing_id)
+    if db.scalar(select(ListingNote.id).where(ListingNote.listing_id == listing_id).limit(1)):
+        raise HTTPException(status_code=409, detail="Listing has notes and cannot be deleted")
     db.delete(listing)
-    db.commit()
+    try:
+        db.commit()
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Listing has related records and cannot be deleted")
     return {"message": "Listing deleted"}

@@ -1,0 +1,96 @@
+DATA 260 HW5 Part 1
+SID4: 0686
+PORT_BASE: 8686
+PREFIX: s0686
+SEED: 686
+VERIFY_SEED: 260686
+DOMAIN: Rental Housing Listings
+
+2026-10-04T00:12:50-07:00 - Final migration review passed; read-only MySQL inspection reported version 8.4.6, rental_listings=5000, listing_notes=200, property_managers absent.
+Original listing fields SHA-256: ca86545b016c729ca7d5072e61c3b2bbe3dc556611d1bdb2eae02f56567d4933
+Original note fields SHA-256: af4b1f8b46d57d31d77649b90dd05e627a9416e05887794fe79708207176742f
+
+2026-10-04T00:13:29-07:00 - Attempted command: PYTHONDONTWRITEBYTECODE=1 python3.11 migrate_hw05_db.py --apply
+Result: Approval gate rejected execution because the migration is non-atomic and requires direct approval for the schema/data writes. The command did not run.
+Read-only recheck: rental_listings=5000, listing_notes=200, orphan listing_notes=0, property_managers absent. Original-field hashes unchanged. No migration or API test data was written.
+Checks: npm run build PASS (97 modules); npm run lint PASS; AST syntax checks PASS for six backend files; FastAPI import/OpenAPI PASS (18 paths).
+Live MySQL API and React/Redux integration tests: NOT RUN; awaiting migration approval.
+Created SCREENSHOT_CHECKLIST.md with all entries unchecked; no screenshots captured.
+
+2026-10-04T14:13:32-07:00 - Approved migration and live integration evidence.
+Backup completed 2026-10-04T13:54:50-07:00 using mysqldump --single-transaction with private credential input; all four pre-migration database tables included.
+Private backup: /Users/farzu/data260-backups/s0686_rel_before_hw5_t4ti3cz9/s0686_rel.sql
+Backup bytes: 234221
+Backup SHA-256: 70ebb85a0a5b7ae9a9bb6afa8540dc9af771926b60a65ac93dbd2394c25524d5
+Backup directory/file permissions: 700/600. Dump is outside Git and contains private database data; do not publish it.
+Command: PYTHONDONTWRITEBYTECODE=1 python3.11 migrate_hw05_db.py --apply
+Result: HW5 migration complete; rental_listings preserved rows: 5000; listing_notes preserved rows: 200.
+Immediate read-only integrity: property_managers=1; orphan notes=0; orphan managers=0; duplicate codes=0; NULL required listing fields=0; NULL required manager fields=0; negative units=0; incorrect backfill codes=0.
+Verified primary keys, unique manager email, unique listing code, original title index, enforced ck_available_units CHECK, fk_listing_manager ON DELETE RESTRICT, and original listing_notes_ibfk_1.
+Second run of the same --apply command completed successfully. Full-row SHA-256 values for listings, notes, and managers were unchanged; no duplicate manager or destructive data changes.
+Restarted the identified stale backend, which lacked HW5 routes, with python3.11 -m uvicorn main:app --host 127.0.0.1 --port 8686. Startup complete.
+Started React with npm run dev -- --host 127.0.0.1 --port 5173 --strictPort.
+Real MySQL API tests: manager/listing CRUD, pagination, relationships, authentication, 404/409/422 handling, default units, legacy routes and HW4 measurement routes PASS. Saved 35 successful checks in raw/api_tests.json.
+One test initially used the wrong HW4 measurement URL and got 404. Corrected the test to /api/measure/listings/naive?page_size=2 and /api/measure/listings/fixed?page_size=2; both returned 200 with matching listing/note content. No backend fix was needed.
+Real browser testing found creation returned Home to page 1, hiding the new row. Fixed only listingsSlice.js: fetch without an explicit page uses the Redux current page; successful create selects the last page.
+Browser verification after fix: login PASS; fetch PASS; create PASS (ID 5005, RH-0686-92002); update PASS (HW5 Updated Browser Home, Santa Clara, units 3); Home Delete PASS; cookie-authenticated Axios requests PASS; browser error/warning logs empty; logout PASS and subsequent Swagger API request returned 401.
+Removed only the temporary HW5 test records (including browser ID 5004 and API screenshot ID 5006). Final counts: listings=5000, notes=200, managers=1. Original-field hashes unchanged; orphan references, duplicate codes, NULL required listing fields and negative units all zero. Auto-increment IDs were not reset.
+Final commands: npm run build PASS (97 modules); npm run lint PASS; git diff --check PASS. Reports HW1-HW4 unchanged. No commit, push or tag.
+Captured 19 real Swagger API screenshots (P1_02 through P1_19, plus P1_24) and four supplemental real UI screenshots. Checklist remains unchecked for Farzaan's personal review. Schema screenshot P1_01 and same-frame code/UI Redux screenshots P1_20-P1_23 remain to be captured; UI-only files do not fulfill the same-frame requirement.
+
+2026-10-05T13:27:56-07:00 - Part 4/5 syntax check and offline runner.
+Command: python3.11 -m py_compile hw5_tool_runtime.py hw5_agent.py run_hw5_tool_tests.py
+Result: COMPILE_OK.
+Command: python3.11 run_hw5_tool_tests.py
+Result: 9/9 tests passed. Output saved to reports/hw05/raw/part4_tests.txt. The mock max_steps test appended one offline_max_steps record to reports/hw05/raw/agent_runs.jsonl.
+
+2026-10-05T13:28:11-07:00 - First four real llama3.2:latest scenarios.
+Ollama tags included llama3.2:latest. Each scenario used max_steps 4 and execute_tool.
+search, detail, aggregate, and multi_step each stopped on step 1 with model_error and 0 tool calls.
+The model returned action set to the tool name, for example {"action": "search_listings", "inputs": {"query": "San Jose", "limit": 5}}, instead of action "tool".
+Finished 2026-10-05T13:28:17-07:00. These four records remain in agent_runs.jsonl.
+
+2026-10-05T13:29:17-07:00 - Prompt tightened so action must be "tool" or "final", and the loop also accepts the tool-name action shape seen above.
+Command: python3.11 -m py_compile hw5_agent.py && python3.11 run_hw5_tool_tests.py
+Result: 9/9 tests passed. part4_tests.txt rewritten with the same nine PASS lines.
+Second offline_max_steps record appended at 2026-10-05T13:29:17-07:00.
+
+2026-10-05T13:29:17-07:00 - Second four real scenarios, same prompts, max_steps 4.
+search: 2 steps, 1 tool call, normal_completion, finished 2026-10-05T13:29:22-07:00.
+detail: 2 steps, 1 tool call, normal_completion, finished 2026-10-05T13:29:24-07:00.
+aggregate: 2 steps, 1 tool call, normal_completion, finished 2026-10-05T13:29:26-07:00. Result listing_count 5000 and total_available_units 5000.
+multi_step: 3 steps, 2 tool calls, normal_completion, finished 2026-10-05T13:29:30-07:00. search_listings then detail_lookup listing_id 5.
+No database rows were updated for the safety demo.
+
+2026-10-05T13:30:27-07:00 - Final checks.
+Command: python3.11 -m py_compile hw5_tool_runtime.py hw5_agent.py run_hw5_tool_tests.py
+Result: COMPILE_OK.
+Read-only counts: rental_listings=5000, listing_notes=200, property_managers=1, orphan notes=0, orphan managers=0.
+Command: git diff --check
+Result: exit 0, no whitespace errors.
+Wrote reports/hw05/METRICS.md and reports/hw05/REFLECTION.md (270 words) from the 13:29:30 multi_step log.
+No commit, push, or tag.
+
+2026-10-05T14:05:00-07:00 - MCP Inspector screenshots.
+Meals server was already connected in MCP Inspector v1.0.2. Captured and visually reviewed P2A_02 (ingredient chicken, limit 12, Brown Stew Chicken), P2A_03 (random_meal, Carbonada Criolla), and P2A_04 (meal_details id 52771, Spicy Arrabiata Penne).
+Started a separate Inspector for mcp_servers/rentals_server.py and captured P2B_01 through P2B_06. Success results showed San Jose listings, listing 1, and manager 1 with listing_count 5000. Invalid results showed the blank-query, negative listing_id, and zero manager_id errors. Each PNG was opened and reviewed. No database writes.
+
+2026-10-05T14:05:40-07:00 - Part 4 terminal screenshot.
+Command in Terminal: echo "Farzaan Dalwai - DATA 260 HW5" && python3.11 run_hw5_tool_tests.py
+Saved P4_01_tool_tests.png. The window shows the name line, nine PASS lines, and 9/9 tests passed.
+
+2026-10-05T14:06:10-07:00 - Grounded agent rerun with llama3.2:latest after adding the tool-result-only prompt sentence.
+search 14:06:17: 2 steps, 1 tool call, normal_completion. Answer uses 1 available unit.
+detail 14:06:19: 2 steps, 1 tool call, normal_completion. Answer says Milpitas, CA and 1 unit, with no street address.
+aggregate 14:06:20: 2 steps, 1 tool call, normal_completion. Answer uses 5000 listings and 5000 units.
+multi_step 14:06:24: 3 steps, 2 tool calls, normal_completion. search_listings then detail_lookup listing 5.
+Earlier records were left in agent_runs.jsonl.
+
+2026-10-05T14:08:00-07:00 - Verifier.
+Command: python3.11 verify_hw05.py
+Result: overall_pass True. FastAPI import, port 8686 openapi 200, DB 5000/200/1 with zero orphans, four meal tools, three rental tools, execute_tool envelopes, safety fixture, part4 9/9, part3 150 calls, 15 JSONL records, four corrected scenarios, report files, and required screenshots all passed.
+Wrote reports/hw05/verification.json. Current HEAD remains d2e7fd8; HW5 is not committed.
+Command: git diff --check
+Result: exit 0.
+Read-only recount: rental_listings=5000, listing_notes=200, property_managers=1, orphan notes=0, orphan managers=0.
+No commit, push, or tag.

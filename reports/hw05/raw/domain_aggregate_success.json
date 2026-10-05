@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "data": {
+    "manager_id": 1,
+    "first_name": "Initial",
+    "last_name": "Manager",
+    "email": "hw5-manager@example.com",
+    "listing_count": 5000,
+    "total_available_units": 5000
+  },
+  "error": null
+}

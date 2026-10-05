@@ -7,6 +7,8 @@ import DeleteRecord from "./pages/DeleteRecord";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import UpdateRecord from "./pages/UpdateRecord";
+import { useDispatch } from "react-redux";
+import { clearListings } from "./features/listings/listingsSlice";
 
 function LoginRequired() {
   return (
@@ -23,7 +25,7 @@ function LoginRequired() {
 function AppShell() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [listings, setListings] = useState([]);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,24 +35,10 @@ function AppShell() {
       .finally(() => setLoading(false));
   }, []);
 
-  function handleAdd(listing) {
-    setListings((current) => [...current, listing]);
-  }
-
-  function handleUpdate(listing) {
-    setListings((current) =>
-      current.map((item) => (item.id === listing.id ? listing : item))
-    );
-  }
-
-  function handleDelete(id) {
-    setListings((current) => current.filter((item) => item.id !== id));
-  }
-
   async function handleLogout() {
     await postEmpty("/api/auth/logout");
     setUser(null);
-    setListings([]);
+    dispatch(clearListings());
     navigate("/login");
   }
 
@@ -64,28 +52,28 @@ function AppShell() {
           <Routes>
             <Route
               path="/"
-              element={<Home user={user} listings={listings} setListings={setListings} />}
+              element={<Home user={user} />}
             />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route
               path="/create"
-              element={user ? <CreateRecord onAdd={handleAdd} /> : <LoginRequired />}
+              element={user ? <CreateRecord /> : <LoginRequired />}
             />
             <Route
               path="/update"
-              element={user ? <UpdateRecord onUpdate={handleUpdate} /> : <LoginRequired />}
+              element={user ? <UpdateRecord /> : <LoginRequired />}
             />
             <Route
               path="/update/:id"
-              element={user ? <UpdateRecord onUpdate={handleUpdate} /> : <LoginRequired />}
+              element={user ? <UpdateRecord /> : <LoginRequired />}
             />
             <Route
               path="/delete"
-              element={user ? <DeleteRecord onDelete={handleDelete} /> : <LoginRequired />}
+              element={user ? <DeleteRecord /> : <LoginRequired />}
             />
             <Route
               path="/delete/:id"
-              element={user ? <DeleteRecord onDelete={handleDelete} /> : <LoginRequired />}
+              element={user ? <DeleteRecord /> : <LoginRequired />}
             />
           </Routes>
         )}

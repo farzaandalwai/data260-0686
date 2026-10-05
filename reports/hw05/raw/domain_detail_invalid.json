@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "data": null,
+  "error": "listing_id must be positive."
+}

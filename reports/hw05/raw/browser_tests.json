@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-04T14:13:32-07:00",
+  "frontend": "http://127.0.0.1:5173",
+  "backend": "http://127.0.0.1:8686",
+  "database": "s0686_rel",
+  "overall_pass": true,
+  "checks": {
+    "existing_login": true,
+    "redux_listing_fetch": true,
+    "redux_listing_create_visible_on_home": true,
+    "redux_listing_update_visible_on_home": true,
+    "home_delete_removes_record": true,
+    "cookie_authenticated_axios_requests": true,
+    "no_browser_error_or_warning_logs": true,
+    "browser_logout": true,
+    "api_denied_after_logout": true,
+    "temporary_records_removed": true
+  },
+  "test_record": {
+    "id": 5005,
+    "listing_code": "RH-0686-92002",
+    "created_title": "HW5 Verified Browser Apartment",
+    "updated_title": "HW5 Updated Browser Home",
+    "updated_location": "Santa Clara",
+    "updated_available_units": 3,
+    "deleted": true
+  },
+  "fix": "Preserve current Redux page when fetching without a page argument; select the last page after creation.",
+  "report_evidence_note": "UI-only screenshots were captured. Same-frame code/UI Redux screenshots remain pending and are not marked complete."
+}

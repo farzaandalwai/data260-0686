@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getJson, sendJson } from "../api";
+import { getJson } from "../api";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteListing } from "../features/listings/listingsSlice";
 
-function DeleteRecord({ onDelete }) {
+function DeleteRecord() {
   const { id } = useParams();
   const [listing, setListing] = useState(null);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const deleting = useSelector((state) => state.listings.status === "loading");
 
   useEffect(() => {
     if (!id) {
@@ -20,11 +24,10 @@ function DeleteRecord({ onDelete }) {
   async function handleDelete() {
     setError("");
     try {
-      await sendJson("/api/listings/" + id, "DELETE");
-      onDelete(Number(id));
+      await dispatch(deleteListing(Number(id))).unwrap();
       navigate("/");
     } catch (err) {
-      setError(err.message);
+      setError(typeof err === "string" ? err : err.message);
     }
   }
 
@@ -54,7 +57,7 @@ function DeleteRecord({ onDelete }) {
         <p>Loading listing...</p>
       )}
       <div className="button-row">
-        <button className="btn danger" type="button" onClick={handleDelete}>
+        <button className="btn danger" type="button" disabled={!listing || deleting} onClick={handleDelete}>
           Delete Listing
         </button>
         <Link className="btn secondary" to="/">

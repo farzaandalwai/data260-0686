@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "id": 5,
+      "property_title": "Rental Listing 0005",
+      "location": "San Jose, CA",
+      "listing_code": "RH-0686-00005",
+      "available_units": 1,
+      "property_manager_id": 1
+    },
+    {
+      "id": 10,
+      "property_title": "Rental Listing 0010",
+      "location": "San Jose, CA",
+      "listing_code": "RH-0686-00010",
+      "available_units": 1,
+      "property_manager_id": 1
+    },
+    {
+      "id": 14,
+      "property_title": "Rental Listing 0014",
+      "location": "San Jose, CA",
+      "listing_code": "RH-0686-00014",
+      "available_units": 1,
+      "property_manager_id": 1
+    },
+    {
+      "id": 16,
+      "property_title": "Rental Listing 0016",
+      "location": "San Jose, CA",
+      "listing_code": "RH-0686-00016",
+      "available_units": 1,
+      "property_manager_id": 1
+    },
+    {
+      "id": 20,
+      "property_title": "Rental Listing 0020",
+      "location": "San Jose, CA",
+      "listing_code": "RH-0686-00020",
+      "available_units": 1,
+      "property_manager_id": 1
+    }
+  ],
+  "error": null
+}

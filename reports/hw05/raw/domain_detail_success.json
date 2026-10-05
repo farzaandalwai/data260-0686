@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "data": {
+    "id": 1,
+    "property_title": "Rental Listing 0001",
+    "location": "Milpitas, CA",
+    "listing_code": "RH-0686-00001",
+    "available_units": 1,
+    "property_manager_id": 1,
+    "manager": {
+      "id": 1,
+      "first_name": "Initial",
+      "last_name": "Manager",
+      "email": "hw5-manager@example.com"
+    },
+    "notes": [
+      {
+        "id": 1,
+        "note": "Related note 001"
+      }
+    ]
+  },
+  "error": null
+}

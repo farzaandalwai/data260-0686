@@ -1,0 +1,38 @@
+SELECT
+  DATABASE() AS database_name,
+  (SELECT COUNT(*) FROM rental_listings) AS rental_listings,
+  (SELECT COUNT(*) FROM listing_notes) AS listing_notes,
+  (SELECT COUNT(*) FROM property_managers) AS property_managers;
+
+SHOW COLUMNS FROM rental_listings;
+SHOW COLUMNS FROM property_managers;
+
+SELECT TABLE_NAME, INDEX_NAME, NON_UNIQUE,
+       GROUP_CONCAT(COLUMN_NAME ORDER BY SEQ_IN_INDEX) AS indexed_columns
+FROM information_schema.STATISTICS
+WHERE TABLE_SCHEMA = 's0686_rel'
+  AND TABLE_NAME IN ('rental_listings', 'property_managers')
+GROUP BY TABLE_NAME, INDEX_NAME, NON_UNIQUE
+ORDER BY TABLE_NAME, INDEX_NAME;
+
+SELECT tc.TABLE_NAME, tc.CONSTRAINT_NAME, cc.CHECK_CLAUSE, tc.ENFORCED
+FROM information_schema.TABLE_CONSTRAINTS tc
+JOIN information_schema.CHECK_CONSTRAINTS cc
+  ON cc.CONSTRAINT_SCHEMA = tc.CONSTRAINT_SCHEMA
+ AND cc.CONSTRAINT_NAME = tc.CONSTRAINT_NAME
+WHERE tc.CONSTRAINT_SCHEMA = 's0686_rel'
+  AND tc.TABLE_NAME = 'rental_listings'
+  AND tc.CONSTRAINT_TYPE = 'CHECK';
+
+SELECT k.TABLE_NAME, k.COLUMN_NAME,
+       k.REFERENCED_TABLE_NAME AS referenced_table,
+       k.REFERENCED_COLUMN_NAME AS referenced_column,
+       r.DELETE_RULE
+FROM information_schema.KEY_COLUMN_USAGE k
+JOIN information_schema.REFERENTIAL_CONSTRAINTS r
+  ON r.CONSTRAINT_SCHEMA = k.CONSTRAINT_SCHEMA
+ AND r.TABLE_NAME = k.TABLE_NAME
+ AND r.CONSTRAINT_NAME = k.CONSTRAINT_NAME
+WHERE k.CONSTRAINT_SCHEMA = 's0686_rel'
+  AND k.TABLE_NAME IN ('rental_listings', 'listing_notes')
+  AND k.REFERENCED_TABLE_NAME IS NOT NULL;
