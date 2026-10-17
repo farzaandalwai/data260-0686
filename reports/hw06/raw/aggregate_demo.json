@@ -1,0 +1,29 @@
+{
+  "user_id": "demo-260686-memory",
+  "daily_message_counts": [
+    {
+      "date": "2026-10-17",
+      "message_count": 20
+    }
+  ],
+  "recent_summaries": [
+    {
+      "scope": "session",
+      "session_id": "demo-260686-session",
+      "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.\n- I need an in-unit washer and dryer.\n- I have one indoor cat, so the building must allow cats.\n- I need a smoke-free property.\n- I prefer to live near light rail.\n- Which city did I say I prefer for my rental search?",
+      "created_at": "2026-10-17T04:10:26.605000+00:00"
+    },
+    {
+      "scope": "user",
+      "session_id": null,
+      "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.\n- I need an in-unit washer and dryer.\n- I have one indoor cat, so the building must allow cats.\n- I need a smoke-free property.\n- I prefer to live near light rail.\n- Which city did I say I prefer for my rental search?",
+      "created_at": "2026-10-17T04:10:26.605000+00:00"
+    },
+    {
+      "scope": "session",
+      "session_id": "demo-260686-session",
+      "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.",
+      "created_at": "2026-10-17T04:09:58.698000+00:00"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 import json
+import os
+import time
 import urllib.request
 
-MODEL = "llama3.2:latest"
-URL = "http://localhost:11434/api/chat"
+MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:latest")
+URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434/api/chat")
 
 
-def complete(messages, tools=None, temperature=None, json_output=False):
+def complete(messages, tools=None, temperature=None, json_output=False, model=None):
     data = {
-        "model": MODEL,
+        "model": model or MODEL,
         "messages": messages,
         "stream": False
     }
@@ -27,11 +29,15 @@ def complete(messages, tools=None, temperature=None, json_output=False):
         headers={"Content-Type": "application/json"}
     )
 
-    with urllib.request.urlopen(req) as response:
+    started = time.perf_counter()
+    with urllib.request.urlopen(req, timeout=180) as response:
         result = json.loads(response.read().decode())
+    latency_ms = round((time.perf_counter() - started) * 1000, 3)
 
     return {
         "message": result["message"]["content"],
         "input_tokens": result.get("prompt_eval_count", 0),
-        "output_tokens": result.get("eval_count", 0)
+        "output_tokens": result.get("eval_count", 0),
+        "latency_ms": latency_ms,
+        "model": result.get("model", model or MODEL),
     }

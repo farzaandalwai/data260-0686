@@ -1,0 +1,1013 @@
+[
+  {
+    "turn": 1,
+    "message": "I prefer to search for rentals in Santa Clara, California.",
+    "response": {
+      "reply": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 0,
+        "short_term_messages": [],
+        "session_summary": null,
+        "lifetime_summary": null,
+        "episodic_facts": [],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898223+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 1,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2482,
+        "completion_tokens": 51,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 14,
+        "episodic_fact_tokens": 14,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9912.097,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 2,
+    "message": "My maximum monthly rental budget is $3,500.",
+    "response": {
+      "reply": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 2,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer to search for rentals in Santa Clara, California.",
+            "created_at": "2026-10-17T04:09:20.189000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+            "created_at": "2026-10-17T04:09:35.761000+00:00"
+          }
+        ],
+        "session_summary": null,
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.499234
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "My maximum monthly rental budget is $3,500",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:40.581376+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 2,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2563,
+        "completion_tokens": 160,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 79,
+        "episodic_fact_tokens": 32,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 4357.872,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 3,
+    "message": "I need a two-bedroom apartment.",
+    "response": {
+      "reply": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 4,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer to search for rentals in Santa Clara, California.",
+            "created_at": "2026-10-17T04:09:20.189000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+            "created_at": "2026-10-17T04:09:35.761000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "My maximum monthly rental budget is $3,500.",
+            "created_at": "2026-10-17T04:09:35.937000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:40.424000+00:00"
+          }
+        ],
+        "session_summary": null,
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "My maximum monthly rental budget is $3,500",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:40.581000+00:00",
+            "similarity": 0.514659
+          },
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.456311
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276933+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 3,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2754,
+        "completion_tokens": 189,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 258,
+        "episodic_fact_tokens": 51,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 5466.811,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 4,
+    "message": "I prefer a commute under 30 minutes to downtown San Jose.",
+    "response": {
+      "reply": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 6,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer to search for rentals in Santa Clara, California.",
+            "created_at": "2026-10-17T04:09:20.189000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+            "created_at": "2026-10-17T04:09:35.761000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "My maximum monthly rental budget is $3,500.",
+            "created_at": "2026-10-17T04:09:35.937000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:40.424000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a two-bedroom apartment.",
+            "created_at": "2026-10-17T04:09:40.587000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:46.063000+00:00"
+          }
+        ],
+        "session_summary": null,
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.443158
+          },
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.234282
+          },
+          {
+            "fact": "My maximum monthly rental budget is $3,500",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:40.581000+00:00",
+            "similarity": 0.223901
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I prefer a commute under 30 minutes to downtown San Jose",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:52.911033+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 4,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 2976,
+        "completion_tokens": 217,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 458,
+        "episodic_fact_tokens": 65,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 6386.063,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 5,
+    "message": "I want one covered parking space.",
+    "response": {
+      "reply": "Based on your request for one covered parking space, I will use the `parking_type` value from the durable fact memory to guide my response. The `parking_type` value is currently set to `one covered space` with a confidence level of 0.80.\n\nI will also use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 8,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer to search for rentals in Santa Clara, California.",
+            "created_at": "2026-10-17T04:09:20.189000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+            "created_at": "2026-10-17T04:09:35.761000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "My maximum monthly rental budget is $3,500.",
+            "created_at": "2026-10-17T04:09:35.937000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:40.424000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a two-bedroom apartment.",
+            "created_at": "2026-10-17T04:09:40.587000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:46.063000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I prefer a commute under 30 minutes to downtown San Jose.",
+            "created_at": "2026-10-17T04:09:46.284000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:52.685000+00:00"
+          }
+        ],
+        "session_summary": null,
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.418984
+          },
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.360051
+          },
+          {
+            "fact": "My maximum monthly rental budget is $3,500",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:40.581000+00:00",
+            "similarity": 0.318765
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:58.696024+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 5,
+          "session_created": true,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3205,
+        "completion_tokens": 174,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 694,
+        "episodic_fact_tokens": 65,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 5345.62,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 6,
+    "message": "I need an in-unit washer and dryer.",
+    "response": {
+      "reply": "Based on your request for an in-unit washer and dryer, I will add this criterion to the search filter. I will also note that this is a new criterion that was not previously mentioned.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 10,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer to search for rentals in Santa Clara, California.",
+            "created_at": "2026-10-17T04:09:20.189000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+            "created_at": "2026-10-17T04:09:35.761000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "My maximum monthly rental budget is $3,500.",
+            "created_at": "2026-10-17T04:09:35.937000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:40.424000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a two-bedroom apartment.",
+            "created_at": "2026-10-17T04:09:40.587000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:46.063000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I prefer a commute under 30 minutes to downtown San Jose.",
+            "created_at": "2026-10-17T04:09:46.284000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:52.685000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I want one covered parking space.",
+            "created_at": "2026-10-17T04:09:52.932000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for one covered parking space, I will use the `parking_type` value from the durable fact memory to guide my response. The `parking_type` value is currently set to `one covered space` with a confidence level of 0.80.\n\nI will also use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:58.294000+00:00"
+          }
+        ],
+        "session_summary": {
+          "scope": "session",
+          "session_id": "demo-260686-session",
+          "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.",
+          "created_at": "2026-10-17T04:09:58.698000+00:00"
+        },
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.267845
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:58.696000+00:00",
+            "similarity": 0.238414
+          },
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.168021
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I need an in-unit washer and dryer",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:10:05.499367+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 6,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3441,
+        "completion_tokens": 127,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 78,
+        "short_term_window_tokens": 881,
+        "episodic_fact_tokens": 60,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 6560.598,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 7,
+    "message": "I have one indoor cat, so the building must allow cats.",
+    "response": {
+      "reply": "Based on your updated request, I will add the criterion of \"pet household: one indoor cat\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 12,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer to search for rentals in Santa Clara, California.",
+            "created_at": "2026-10-17T04:09:20.189000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference, I will use the `preferred_city` value from the durable fact memory to guide my response. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.",
+            "created_at": "2026-10-17T04:09:35.761000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "My maximum monthly rental budget is $3,500.",
+            "created_at": "2026-10-17T04:09:35.937000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:40.424000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a two-bedroom apartment.",
+            "created_at": "2026-10-17T04:09:40.587000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:46.063000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I prefer a commute under 30 minutes to downtown San Jose.",
+            "created_at": "2026-10-17T04:09:46.284000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:52.685000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I want one covered parking space.",
+            "created_at": "2026-10-17T04:09:52.932000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for one covered parking space, I will use the `parking_type` value from the durable fact memory to guide my response. The `parking_type` value is currently set to `one covered space` with a confidence level of 0.80.\n\nI will also use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:58.294000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need an in-unit washer and dryer.",
+            "created_at": "2026-10-17T04:09:58.706000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for an in-unit washer and dryer, I will add this criterion to the search filter. I will also note that this is a new criterion that was not previously mentioned.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:05.278000+00:00"
+          }
+        ],
+        "session_summary": {
+          "scope": "session",
+          "session_id": "demo-260686-session",
+          "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.",
+          "created_at": "2026-10-17T04:09:58.698000+00:00"
+        },
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.377799
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:58.696000+00:00",
+            "similarity": 0.282299
+          },
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.253787
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I have one indoor cat, so the building must allow cats",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:10:09.433078+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 7,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3586,
+        "completion_tokens": 122,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 78,
+        "short_term_window_tokens": 1019,
+        "episodic_fact_tokens": 61,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3852.527,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 8,
+    "message": "I need a smoke-free property.",
+    "response": {
+      "reply": "Based on your updated request, I will add the criterion of \"smoke free\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n* Smoke free: Required\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 12,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "My maximum monthly rental budget is $3,500.",
+            "created_at": "2026-10-17T04:09:35.937000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your maximum monthly rental budget of $3,500, I will provide you with rental listings that match these criteria.\n\nUsing the `max_monthly_budget` value from the durable fact memory, I will filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:40.424000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a two-bedroom apartment.",
+            "created_at": "2026-10-17T04:09:40.587000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:46.063000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I prefer a commute under 30 minutes to downtown San Jose.",
+            "created_at": "2026-10-17T04:09:46.284000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:52.685000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I want one covered parking space.",
+            "created_at": "2026-10-17T04:09:52.932000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for one covered parking space, I will use the `parking_type` value from the durable fact memory to guide my response. The `parking_type` value is currently set to `one covered space` with a confidence level of 0.80.\n\nI will also use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:58.294000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need an in-unit washer and dryer.",
+            "created_at": "2026-10-17T04:09:58.706000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for an in-unit washer and dryer, I will add this criterion to the search filter. I will also note that this is a new criterion that was not previously mentioned.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:05.278000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I have one indoor cat, so the building must allow cats.",
+            "created_at": "2026-10-17T04:10:05.509000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your updated request, I will add the criterion of \"pet household: one indoor cat\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:09.374000+00:00"
+          }
+        ],
+        "session_summary": {
+          "scope": "session",
+          "session_id": "demo-260686-session",
+          "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.",
+          "created_at": "2026-10-17T04:09:58.698000+00:00"
+        },
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:58.696000+00:00",
+            "similarity": 0.382797
+          },
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.382543
+          },
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.263465
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I need a smoke-free property",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:10:16.256872+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 8,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3652,
+        "completion_tokens": 125,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 78,
+        "short_term_window_tokens": 1081,
+        "episodic_fact_tokens": 62,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 6742.226,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 9,
+    "message": "I prefer to live near light rail.",
+    "response": {
+      "reply": "Based on your updated request, I will add the criterion of \"transit: near light rail\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n* Smoke free: Required\n* Transit: Near light rail\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 12,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I need a two-bedroom apartment.",
+            "created_at": "2026-10-17T04:09:40.587000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for a two-bedroom apartment, I will use the `bedrooms` value from the durable fact memory to guide my response. The `bedrooms` value is currently set to `two` with a confidence level of 0.90.\n\nI will also use the `property_type` value to ensure that the search results are limited to apartments. The `property_type` value is currently set to `apartment` with a confidence level of 0.85.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:46.063000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I prefer a commute under 30 minutes to downtown San Jose.",
+            "created_at": "2026-10-17T04:09:46.284000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:52.685000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I want one covered parking space.",
+            "created_at": "2026-10-17T04:09:52.932000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for one covered parking space, I will use the `parking_type` value from the durable fact memory to guide my response. The `parking_type` value is currently set to `one covered space` with a confidence level of 0.80.\n\nI will also use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:58.294000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need an in-unit washer and dryer.",
+            "created_at": "2026-10-17T04:09:58.706000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for an in-unit washer and dryer, I will add this criterion to the search filter. I will also note that this is a new criterion that was not previously mentioned.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:05.278000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I have one indoor cat, so the building must allow cats.",
+            "created_at": "2026-10-17T04:10:05.509000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your updated request, I will add the criterion of \"pet household: one indoor cat\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:09.374000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a smoke-free property.",
+            "created_at": "2026-10-17T04:10:09.442000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your updated request, I will add the criterion of \"smoke free\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n* Smoke free: Required\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:16.195000+00:00"
+          }
+        ],
+        "session_summary": {
+          "scope": "session",
+          "session_id": "demo-260686-session",
+          "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.",
+          "created_at": "2026-10-17T04:09:58.698000+00:00"
+        },
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.326026
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:58.696000+00:00",
+            "similarity": 0.315335
+          },
+          {
+            "fact": "I prefer a commute under 30 minutes to downtown San Jose",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:52.911000+00:00",
+            "similarity": 0.286594
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:10:23.085281+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 9,
+          "session_created": false,
+          "lifetime_created": false
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3615,
+        "completion_tokens": 135,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 78,
+        "short_term_window_tokens": 1028,
+        "episodic_fact_tokens": 60,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 6750.685,
+        "model": "llama3.2:latest"
+      }
+    }
+  },
+  {
+    "turn": 10,
+    "message": "Which city did I say I prefer for my rental search?",
+    "response": {
+      "reply": "You prefer to search for rentals in Santa Clara, California.",
+      "user_id": "demo-260686-memory",
+      "session_id": "demo-260686-session",
+      "memory_used": {
+        "short_term_count": 12,
+        "short_term_messages": [
+          {
+            "role": "user",
+            "content": "I prefer a commute under 30 minutes to downtown San Jose.",
+            "created_at": "2026-10-17T04:09:46.284000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preference to search for rentals in Santa Clara, California, and your commute preference of under 30 minutes to downtown San Jose, I will use the `commute` value from the durable fact memory to guide my response. The `commute` value is currently set to `under 30 minutes` with a confidence level of 0.80.\n\nI will also use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California. The `preferred_city` value is currently set to `Santa Clara, CA` with a confidence level of 0.95.\n\nAdditionally, I will use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:52.685000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I want one covered parking space.",
+            "created_at": "2026-10-17T04:09:52.932000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for one covered parking space, I will use the `parking_type` value from the durable fact memory to guide my response. The `parking_type` value is currently set to `one covered space` with a confidence level of 0.80.\n\nI will also use the `max_monthly_budget` value to filter the search results to include only listings with a maximum monthly budget of $3,500 or less.\n\nAdditionally, I will use the `preferred_city` value to ensure that the search results are limited to rentals in Santa Clara, California.\n\nPlease note that the search results will be provided in a list format, with each listing including relevant details such as property type, bedrooms, commute time, and amenities.\n\nWould you like me to proceed with the search and provide you with the list of rental listings that match your criteria?",
+            "created_at": "2026-10-17T04:09:58.294000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need an in-unit washer and dryer.",
+            "created_at": "2026-10-17T04:09:58.706000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your request for an in-unit washer and dryer, I will add this criterion to the search filter. I will also note that this is a new criterion that was not previously mentioned.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:05.278000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I have one indoor cat, so the building must allow cats.",
+            "created_at": "2026-10-17T04:10:05.509000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your updated request, I will add the criterion of \"pet household: one indoor cat\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:09.374000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I need a smoke-free property.",
+            "created_at": "2026-10-17T04:10:09.442000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your updated request, I will add the criterion of \"smoke free\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n* Smoke free: Required\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:16.195000+00:00"
+          },
+          {
+            "role": "user",
+            "content": "I prefer to live near light rail.",
+            "created_at": "2026-10-17T04:10:16.267000+00:00"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your updated request, I will add the criterion of \"transit: near light rail\" to the search filter.\n\nThe updated search criteria are:\n\n* Preferred city: Santa Clara, California\n* Maximum monthly budget: $3,500\n* Property type: Apartment\n* Bedrooms: 2\n* Commute: Under 30 minutes to downtown San Jose\n* Parking type: One covered space\n* Amenities: In-unit washer and dryer\n* Pet household: One indoor cat\n* Smoke free: Required\n* Transit: Near light rail\n\nI will proceed with the search and provide you with the list of rental listings that match these criteria.",
+            "created_at": "2026-10-17T04:10:23.029000+00:00"
+          }
+        ],
+        "session_summary": {
+          "scope": "session",
+          "session_id": "demo-260686-session",
+          "text": "- I prefer to search for rentals in Santa Clara, California.\n- My maximum monthly rental budget is $3,500.\n- I need a two-bedroom apartment.\n- I prefer a commute under 30 minutes to downtown San Jose.\n- I want one covered parking space.",
+          "created_at": "2026-10-17T04:09:58.698000+00:00"
+        },
+        "lifetime_summary": null,
+        "episodic_facts": [
+          {
+            "fact": "I prefer to search for rentals in Santa Clara, California",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:35.898000+00:00",
+            "similarity": 0.637858
+          },
+          {
+            "fact": "I need a two-bedroom apartment",
+            "importance": 0.9,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:46.276000+00:00",
+            "similarity": 0.45522
+          },
+          {
+            "fact": "My maximum monthly rental budget is $3,500",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:09:40.581000+00:00",
+            "similarity": 0.445567
+          }
+        ],
+        "facts_saved_after_retrieval": [
+          {
+            "fact": "Which city did I say I prefer for my rental search",
+            "importance": 0.8,
+            "session_id": "demo-260686-session",
+            "created_at": "2026-10-17T04:10:26.602949+00:00"
+          }
+        ],
+        "summary_refresh": {
+          "user_message_count": 10,
+          "session_created": true,
+          "lifetime_created": true
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3569,
+        "completion_tokens": 13,
+        "system_primer_tokens": 2431,
+        "long_term_summary_tokens": 78,
+        "short_term_window_tokens": 963,
+        "episodic_fact_tokens": 67,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3457.561,
+        "model": "llama3.2:latest"
+      }
+    }
+  }
+]

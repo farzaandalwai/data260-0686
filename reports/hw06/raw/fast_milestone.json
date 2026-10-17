@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-17T04:10:26.707733+00:00",
+  "checks": {
+    "part1_crud_tests_pass": true,
+    "ten_message_session": true,
+    "sliding_window_observed": true,
+    "session_summary_exists": true,
+    "lifetime_summary_exists": true,
+    "episode_embeddings_nonempty": true,
+    "relevant_earlier_fact_retrieved": true,
+    "assistant_grounded_in_memory": true,
+    "existing_mysql_behavior_available": true
+  },
+  "all_pass": true
+}

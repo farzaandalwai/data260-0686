@@ -1,0 +1,42 @@
+rubric:
+  5: All expected criteria are explicitly present and correct.
+  4: At least three quarters of the expected criteria are present with no contradiction.
+  3: At least half of the expected criteria are present with no contradiction.
+  2: Some relevant detail is present, but fewer than half of the criteria are supported.
+  1: No expected criterion is present, or the answer contradicts the stored preference.
+probes:
+  - id: probe_1
+    question: Which city and maximum monthly rent should you use for my search?
+    expected_criteria:
+      - label: Santa Clara
+        any_of: ["santa clara"]
+      - label: maximum budget of $3,500
+        any_of: ["$3,500", "3500", "3,500"]
+  - id: probe_2
+    question: What property type and bedroom count do I prefer?
+    expected_criteria:
+      - label: apartment
+        any_of: ["apartment"]
+      - label: two bedrooms
+        any_of: ["two-bedroom", "two bedroom", "2-bedroom", "2 bedroom"]
+  - id: probe_3
+    question: What pet and smoke-related constraints must the rental satisfy?
+    expected_criteria:
+      - label: one indoor cat
+        any_of: ["indoor cat", "one cat", "cat"]
+      - label: smoke-free
+        any_of: ["smoke-free", "smoke free", "non-smoking", "nonsmoking"]
+  - id: probe_4
+    question: What transit and commute preferences did I give you?
+    expected_criteria:
+      - label: near light rail
+        any_of: ["light rail"]
+      - label: commute under 30 minutes
+        any_of: ["under 30", "less than 30", "30 minutes or less", "within 30"]
+  - id: probe_5
+    question: When do I want to move, and when can I attend viewings?
+    expected_criteria:
+      - label: December 1, 2026 move date
+        any_of: ["december 1, 2026", "december 1st, 2026", "2026-12-01", "dec 1, 2026"]
+      - label: Saturday morning viewings
+        any_of: ["saturday morning", "saturday mornings"]

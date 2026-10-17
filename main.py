@@ -13,6 +13,8 @@ from routers.hw4_auth import router as hw4_auth_router
 from routers.hw4_listings import router as hw4_listings_router
 from routers.hw4_measure import router as hw4_measure_router
 from routers.hw5_managers import router as hw5_managers_router
+from routers.hw6_documents import router as hw6_documents_router
+from routers.hw6_memory import router as hw6_memory_router
 
 
 app = FastAPI()
@@ -35,6 +37,8 @@ app.include_router(hw4_auth_router)
 app.include_router(hw4_listings_router)
 app.include_router(hw4_measure_router)
 app.include_router(hw5_managers_router)
+app.include_router(hw6_documents_router)
+app.include_router(hw6_memory_router)
 base_path = Path(__file__).parent
 listings = []
 next_id = 1

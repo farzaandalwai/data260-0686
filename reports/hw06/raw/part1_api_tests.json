@@ -1,0 +1,187 @@
+{
+  "timestamp": "2026-10-17T04:09:10.614682+00:00",
+  "base_url": "http://127.0.0.1:8686",
+  "all_pass": true,
+  "results": [
+    {
+      "name": "create",
+      "status": 201,
+      "expected_status": 201,
+      "pass": true,
+      "body": {
+        "id": "6ad2f4e6b88173274700a618",
+        "title": "HW6 Temporary API Test Rental",
+        "description": "Temporary record deleted by the test runner.",
+        "status": "available",
+        "property_type": "apartment",
+        "available_from": "2026-12-01T17:00:00Z",
+        "created_at": "2026-10-17T04:09:10.592000Z",
+        "updated_at": "2026-10-17T04:09:10.592000Z"
+      }
+    },
+    {
+      "name": "retrieve_all",
+      "status": 200,
+      "expected_status": 200,
+      "pass": true,
+      "body": [
+        {
+          "id": "6ad2f4e6b88173274700a618",
+          "title": "HW6 Temporary API Test Rental",
+          "description": "Temporary record deleted by the test runner.",
+          "status": "available",
+          "property_type": "apartment",
+          "available_from": "2026-12-01T17:00:00Z",
+          "created_at": "2026-10-17T04:09:10.592000Z",
+          "updated_at": "2026-10-17T04:09:10.592000Z"
+        }
+      ]
+    },
+    {
+      "name": "retrieve_one",
+      "status": 200,
+      "expected_status": 200,
+      "pass": true,
+      "body": {
+        "id": "6ad2f4e6b88173274700a618",
+        "title": "HW6 Temporary API Test Rental",
+        "description": "Temporary record deleted by the test runner.",
+        "status": "available",
+        "property_type": "apartment",
+        "available_from": "2026-12-01T17:00:00Z",
+        "created_at": "2026-10-17T04:09:10.592000Z",
+        "updated_at": "2026-10-17T04:09:10.592000Z"
+      }
+    },
+    {
+      "name": "update",
+      "status": 200,
+      "expected_status": 200,
+      "pass": true,
+      "body": {
+        "id": "6ad2f4e6b88173274700a618",
+        "title": "HW6 Temporary API Test Rental",
+        "description": "Temporary record deleted by the test runner.",
+        "status": "pending",
+        "property_type": "apartment",
+        "available_from": "2026-12-01T17:00:00Z",
+        "created_at": "2026-10-17T04:09:10.592000Z",
+        "updated_at": "2026-10-17T04:09:10.602000Z"
+      }
+    },
+    {
+      "name": "missing_required_field",
+      "status": 422,
+      "expected_status": 422,
+      "pass": true,
+      "body": {
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "title"
+            ],
+            "msg": "Field required",
+            "input": {
+              "property_type": "house"
+            }
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "available_from"
+            ],
+            "msg": "Field required",
+            "input": {
+              "property_type": "house"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "invalid_enum",
+      "status": 422,
+      "expected_status": 422,
+      "pass": true,
+      "body": {
+        "detail": [
+          {
+            "type": "enum",
+            "loc": [
+              "body",
+              "status"
+            ],
+            "msg": "Input should be 'available', 'pending' or 'rented'",
+            "input": "archived",
+            "ctx": {
+              "expected": "'available', 'pending' or 'rented'"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "incorrect_data_type",
+      "status": 422,
+      "expected_status": 422,
+      "pass": true,
+      "body": {
+        "detail": [
+          {
+            "type": "datetime_type",
+            "loc": [
+              "body",
+              "available_from"
+            ],
+            "msg": "Input should be a valid datetime",
+            "input": [
+              "not",
+              "a",
+              "date"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "invalid_object_id",
+      "status": 400,
+      "expected_status": 400,
+      "pass": true,
+      "body": {
+        "detail": "Invalid document listing ID"
+      }
+    },
+    {
+      "name": "missing_resource",
+      "status": 404,
+      "expected_status": 404,
+      "pass": true,
+      "body": {
+        "detail": "Document listing not found"
+      }
+    },
+    {
+      "name": "empty_update",
+      "status": 400,
+      "expected_status": 400,
+      "pass": true,
+      "body": {
+        "detail": "At least one update field is required"
+      }
+    },
+    {
+      "name": "delete",
+      "status": 200,
+      "expected_status": 200,
+      "pass": true,
+      "body": {
+        "message": "Document listing deleted",
+        "id": "6ad2f4e6b88173274700a618"
+      }
+    }
+  ]
+}

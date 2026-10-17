@@ -12,6 +12,9 @@ faiss-cpu
 numpy
 pandas
 pypdf
+pymongo
+reportlab
+pdfplumber
 sqlalchemy
 pymysql
 python-dotenv
