@@ -1,0 +1,56 @@
+<!-- last-consolidated: 2026-10-14T08:00:00+00:00 -->
+- key=domain | value=Rental Housing Listings | observed=2026-08-20T10:00:00+00:00 | confidence=1.00
+- key=port_base | value=8686 | observed=2026-08-20T10:00:00+00:00 | confidence=1.00
+- key=relational_database | value=s0686_rel | observed=2026-08-20T10:00:00+00:00 | confidence=1.00
+- key=document_database | value=s0686_doc | observed=2026-10-14T08:00:00+00:00 | confidence=1.00
+- key=chat_model | value=llama3.2:latest | observed=2026-10-14T08:00:00+00:00 | confidence=1.00
+- key=embedding_model | value=all-MiniLM-L6-v2 | observed=2026-10-14T08:00:00+00:00 | confidence=1.00
+- key=preferred_city | value=San Jose, CA | observed=2026-09-01T10:00:00+00:00 | confidence=0.70
+- key=max_monthly_budget | value=$3,200 | observed=2026-09-01T10:00:00+00:00 | confidence=0.90
+- key=property_type | value=apartment | observed=2026-09-02T10:00:00+00:00 | confidence=0.85
+- key=bedrooms | value=two | observed=2026-09-02T10:05:00+00:00 | confidence=0.90
+- key=commute | value=under 30 minutes | observed=2026-09-03T10:00:00+00:00 | confidence=0.80
+- key=amenity_balcony | value=preferred | observed=2026-09-03T10:05:00+00:00 | confidence=0.75
+- key=pet_household | value=no pets | observed=2026-09-04T10:00:00+00:00 | confidence=0.80
+- key=lease_length | value=12 months | observed=2026-09-04T10:05:00+00:00 | confidence=0.80
+- key=move_date | value=2026-12-01 | observed=2026-09-05T10:00:00+00:00 | confidence=0.85
+- key=income_documents | value=ready | observed=2026-09-05T10:05:00+00:00 | confidence=0.70
+- key=contact_channel | value=email | observed=2026-09-06T10:00:00+00:00 | confidence=0.70
+- key=viewing_time | value=Saturday mornings | observed=2026-09-06T10:05:00+00:00 | confidence=0.80
+- key=parking_type | value=one covered space | observed=2026-09-07T10:00:00+00:00 | confidence=0.80
+- key=laundry | value=in-unit | observed=2026-09-07T10:05:00+00:00 | confidence=0.85
+- key=smoke_free | value=required | observed=2026-09-08T10:00:00+00:00 | confidence=0.95
+- key=furnished | value=unfurnished | observed=2026-09-08T10:05:00+00:00 | confidence=0.75
+- key=accessibility | value=elevator preferred | observed=2026-09-09T10:00:00+00:00 | confidence=0.65
+- key=neighborhood | value=walkable | observed=2026-09-09T10:05:00+00:00 | confidence=0.75
+- key=schools | value=not a deciding factor | observed=2026-09-10T10:00:00+00:00 | confidence=0.70
+- key=transit | value=near light rail | observed=2026-09-10T10:05:00+00:00 | confidence=0.85
+- key=noise | value=quiet after 10 PM | observed=2026-09-11T10:00:00+00:00 | confidence=0.80
+- key=utilities | value=water included preferred | observed=2026-09-11T10:05:00+00:00 | confidence=0.70
+- key=application_fee | value=under $60 | observed=2026-09-12T10:00:00+00:00 | confidence=0.65
+- key=deposit | value=up to one month rent | observed=2026-09-12T10:05:00+00:00 | confidence=0.75
+- key=roommate | value=none | observed=2026-09-13T10:00:00+00:00 | confidence=0.80
+- key=renewal | value=renewal option preferred | observed=2026-09-13T10:05:00+00:00 | confidence=0.65
+- key=floor | value=second floor or higher | observed=2026-09-14T10:00:00+00:00 | confidence=0.60
+- key=elevator | value=required above second floor | observed=2026-09-14T10:05:00+00:00 | confidence=0.75
+- key=natural_light | value=important | observed=2026-09-15T10:00:00+00:00 | confidence=0.70
+- key=preferred_city | value=Santa Clara, CA | observed=2026-10-10T10:00:00+00:00 | confidence=0.95
+- key=max_monthly_budget | value=$3,500 | observed=2026-10-11T10:00:00+00:00 | confidence=0.90
+- key=pet_household | value=one indoor cat | observed=2026-10-12T10:00:00+00:00 | confidence=0.80
+- key=domain | value=Rental Housing Listings | observed=2026-08-20T10:00:00+00:00 | confidence=1.00
+- key=port_base | value=8686 | observed=2026-08-20T10:00:00+00:00 | confidence=1.00
+- key=relational_database | value=s0686_rel | observed=2026-08-20T10:00:00+00:00 | confidence=1.00
+- key=document_database | value=s0686_doc | observed=2026-10-14T08:00:00+00:00 | confidence=1.00
+- key=chat_model | value=llama3.2:latest | observed=2026-10-14T08:00:00+00:00 | confidence=1.00
+- key=embedding_model | value=all-MiniLM-L6-v2 | observed=2026-10-14T08:00:00+00:00 | confidence=1.00
+- key=preferred_city | value=San Jose, CA | observed=2026-09-01T10:00:00+00:00 | confidence=0.70
+- key=max_monthly_budget | value=$3,200 | observed=2026-09-01T10:00:00+00:00 | confidence=0.90
+- key=property_type | value=apartment | observed=2026-09-02T10:00:00+00:00 | confidence=0.85
+- key=bedrooms | value=two | observed=2026-09-02T10:05:00+00:00 | confidence=0.90
+- key=commute | value=under 30 minutes | observed=2026-09-03T10:00:00+00:00 | confidence=0.80
+- key=amenity_balcony | value=preferred | observed=2026-09-03T10:05:00+00:00 | confidence=0.75
+- key=pet_household | value=no pets | observed=2026-09-04T10:00:00+00:00 | confidence=0.80
+- key=lease_length | value=12 months | observed=2026-09-04T10:05:00+00:00 | confidence=0.80
+- key=move_date | value=2026-12-01 | observed=2026-09-05T10:00:00+00:00 | confidence=0.85
+- key=income_documents | value=ready | observed=2026-09-05T10:05:00+00:00 | confidence=0.70
+- key=contact_channel | value=email | observed=2026-09-06T10:00:00+00:00 | confidence=0.70

@@ -1,0 +1,11 @@
+{
+  "function": "normalize_rental_title",
+  "checks": {
+    "descriptive_snake_case_name": true,
+    "type_hints": true,
+    "docstring": true,
+    "validates_external_input": true,
+    "no_external_side_effects": true
+  },
+  "pass": true
+}

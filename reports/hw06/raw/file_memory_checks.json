@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "original_has_exactly_55_fact_lines": true,
+    "consolidated_has_fewer_than_40_fact_lines": true,
+    "root_is_consolidated_version": true,
+    "contradiction_outcomes_pass": true,
+    "dream_appended_one_known_file_fact": true,
+    "help_lists_all_exact_commands": true,
+    "memory_command_returns_current_file": true,
+    "agent_compliance_pass": true
+  },
+  "all_pass": true,
+  "counts": {
+    "original": 55,
+    "consolidated": 35
+  },
+  "contradiction_validation": {
+    "checks": [
+      {
+        "key": "preferred_city",
+        "expected": "Santa Clara, CA",
+        "actual": "Santa Clara, CA",
+        "pass": true
+      },
+      {
+        "key": "max_monthly_budget",
+        "expected": "$3,500",
+        "actual": "$3,500",
+        "pass": true
+      },
+      {
+        "key": "pet_household",
+        "expected": "one indoor cat",
+        "actual": "one indoor cat",
+        "pass": true
+      }
+    ],
+    "incorrect_resolutions": [],
+    "all_pass": true,
+    "statement": "Independent check found no incorrectly resolved contradictions."
+  },
+  "dream_result": {
+    "command": "/dream",
+    "text": "Dream added 1 durable facts.",
+    "added": 1,
+    "facts": [
+      "I prefer a rental with secure bicycle storage."
+    ]
+  },
+  "agent_compliance": {
+    "function": "normalize_rental_title",
+    "checks": {
+      "descriptive_snake_case_name": true,
+      "type_hints": true,
+      "docstring": true,
+      "validates_external_input": true,
+      "no_external_side_effects": true
+    },
+    "pass": true
+  },
+  "command_help": "/memory - display current file memory\n/compact - merge duplicates and explicitly resolve contradictions\n/dream - append durable facts from recent user messages\n/help - show these commands"
+}

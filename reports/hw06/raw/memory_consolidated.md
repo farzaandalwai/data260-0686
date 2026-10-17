@@ -1,0 +1,36 @@
+<!-- last-consolidated: 2026-10-17T04:56:16.513527+00:00 -->
+- key=accessibility | value=elevator preferred | status=confirmed | merged_sources=1
+- key=amenity_balcony | value=preferred | status=confirmed | merged_sources=2
+- key=application_fee | value=under $60 | status=confirmed | merged_sources=1
+- key=bedrooms | value=two | status=confirmed | merged_sources=2
+- key=chat_model | value=llama3.2:latest | status=confirmed | merged_sources=2
+- key=commute | value=under 30 minutes | status=confirmed | merged_sources=2
+- key=contact_channel | value=email | status=confirmed | merged_sources=2
+- key=deposit | value=up to one month rent | status=confirmed | merged_sources=1
+- key=document_database | value=s0686_doc | status=confirmed | merged_sources=2
+- key=domain | value=Rental Housing Listings | status=confirmed | merged_sources=2
+- key=elevator | value=required above second floor | status=confirmed | merged_sources=1
+- key=embedding_model | value=all-MiniLM-L6-v2 | status=confirmed | merged_sources=2
+- key=floor | value=second floor or higher | status=confirmed | merged_sources=1
+- key=furnished | value=unfurnished | status=confirmed | merged_sources=1
+- key=income_documents | value=ready | status=confirmed | merged_sources=2
+- key=laundry | value=in-unit | status=confirmed | merged_sources=1
+- key=lease_length | value=12 months | status=confirmed | merged_sources=2
+- key=max_monthly_budget | selected=$3,500 | alternatives=$3,200 @ 2026-09-01T10:00:00+00:00 confidence 0.90; $3,500 @ 2026-10-11T10:00:00+00:00 confidence 0.90 | reason=highest confidence, then newest observation
+- key=move_date | value=2026-12-01 | status=confirmed | merged_sources=2
+- key=natural_light | value=important | status=confirmed | merged_sources=1
+- key=neighborhood | value=walkable | status=confirmed | merged_sources=1
+- key=noise | value=quiet after 10 PM | status=confirmed | merged_sources=1
+- key=parking_type | value=one covered space | status=confirmed | merged_sources=1
+- key=pet_household | selected=one indoor cat | alternatives=no pets @ 2026-09-04T10:00:00+00:00 confidence 0.80; one indoor cat @ 2026-10-12T10:00:00+00:00 confidence 0.80 | reason=highest confidence, then newest observation
+- key=port_base | value=8686 | status=confirmed | merged_sources=2
+- key=preferred_city | selected=Santa Clara, CA | alternatives=San Jose, CA @ 2026-09-01T10:00:00+00:00 confidence 0.70; Santa Clara, CA @ 2026-10-10T10:00:00+00:00 confidence 0.95 | reason=highest confidence, then newest observation
+- key=property_type | value=apartment | status=confirmed | merged_sources=2
+- key=relational_database | value=s0686_rel | status=confirmed | merged_sources=2
+- key=renewal | value=renewal option preferred | status=confirmed | merged_sources=1
+- key=roommate | value=none | status=confirmed | merged_sources=1
+- key=schools | value=not a deciding factor | status=confirmed | merged_sources=1
+- key=smoke_free | value=required | status=confirmed | merged_sources=1
+- key=transit | value=near light rail | status=confirmed | merged_sources=1
+- key=utilities | value=water included preferred | status=confirmed | merged_sources=1
+- key=viewing_time | value=Saturday mornings | status=confirmed | merged_sources=1
