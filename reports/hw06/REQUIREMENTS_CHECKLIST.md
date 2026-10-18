@@ -21,5 +21,5 @@ This checklist is derived from all eight pages of the controlling `DATA260_HW6.p
 - [x] Regression and security checks cover existing FastAPI/MySQL/auth, React build/lint, MCP imports, ignored `.env`, and secret exclusion.
 - [x] Every terminal screenshot shows `Farzaan Dalwai — DATA 260 HW6`, the command, a timestamp, real output, and no private information.
 - [x] `SCREENSHOT_MANIFEST.md` maps every live-system screenshot to the exact PDF requirement and report section.
-- [x] Final PDF uses 14/12/11 pt styles, places each short snippet immediately above its matching real screenshot, and passes page-by-page visual QA across all 13 pages.
+- [x] Final PDF uses plain 14/12/11 pt styles, no decorative boxes or footers, places each short snippet immediately above its matching real screenshot, and passes page-by-page visual QA across all 11 pages.
 - [x] No push, `hw6` tag creation, or collaborator access change occurred before user review.
