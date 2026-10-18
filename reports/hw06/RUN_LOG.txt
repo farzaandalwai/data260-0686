@@ -74,3 +74,10 @@ Result: link resolves; repository is public; default branch is main. The direct 
 
 Computer-control note
 Direct control of the macOS Terminal application was blocked by the safety layer. The permitted Cursor integrated terminal was used against the same real repository, API, Docker container, mongosh process, and curl binary. The Codex in-app browser was used for the live FastAPI Swagger page. No screenshot was fabricated or reconstructed.
+
+2026-10-17 19:58:00 PDT
+Command: python3.11 verify_hw06.py
+Tested commit: 8130bc6f753f60ba2dbba6c3d481c8fc6caa7a50
+Result: overall_pass=true; 20/20 objective checks passed. This includes live FastAPI, MongoDB, schema validator, CRUD cleanup, invalid-input rejection, local model chat, memory, aggregate, required collections, numeric 384-dimensional embeddings, four 30-turn experiment conditions, five probes and 20 scores, 55-to-35 file consolidation, contradiction and AGENT.md checks, MySQL counts 5000/200/1, and all required evidence files.
+Raw output: verification.json
+Evidence: screenshots/P5_01_final_verification.png

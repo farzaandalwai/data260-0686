@@ -1,0 +1,121 @@
+{
+  "homework": 6,
+  "SID4": "0686",
+  "commit_hash_tested": "8130bc6f753f60ba2dbba6c3d481c8fc6caa7a50",
+  "model": "llama3.2:latest",
+  "configuration": {
+    "PORT_BASE": 8686,
+    "MONGODB_DB": "s0686_doc",
+    "SHORT_TERM_N_default": 12,
+    "SUMMARIZE_EVERY_USER_MSGS": 5,
+    "EPISODIC_TOP_K": 3,
+    "temperature": 0.0,
+    "num_ctx": 16384,
+    "num_predict": 96
+  },
+  "SEED": 686,
+  "VERIFY_SEED": 260686,
+  "checks": [
+    {
+      "name": "fastapi_import",
+      "pass": true,
+      "detail": "main.app imported"
+    },
+    {
+      "name": "backend_port_8686",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "name": "mongodb_responds",
+      "pass": true,
+      "detail": "database=s0686_doc, ping=True"
+    },
+    {
+      "name": "rental_collection_validator",
+      "pass": true,
+      "detail": "live $jsonSchema validator"
+    },
+    {
+      "name": "part1_crud_round_trip_cleanup",
+      "pass": true,
+      "detail": "POST/GET/PUT/DELETE over HTTP"
+    },
+    {
+      "name": "part1_invalid_rejected",
+      "pass": true,
+      "detail": "HTTP 422"
+    },
+    {
+      "name": "chat_reply_and_memory_used",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "name": "memory_endpoint",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "name": "aggregate_endpoint",
+      "pass": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "name": "required_mongodb_collections",
+      "pass": true,
+      "detail": "episodes, memory_usage, messages, rental_documents, summaries"
+    },
+    {
+      "name": "numeric_episode_embeddings",
+      "pass": true,
+      "detail": "dimension=384"
+    },
+    {
+      "name": "experiment_conditions_and_rows",
+      "pass": true,
+      "detail": "['SHORT_TERM_N=12', 'SHORT_TERM_N=30', 'SHORT_TERM_N=4', 'relevance_aware_eviction']"
+    },
+    {
+      "name": "five_fixed_probes",
+      "pass": true,
+      "detail": "5"
+    },
+    {
+      "name": "all_probe_results_scored",
+      "pass": true,
+      "detail": "20"
+    },
+    {
+      "name": "original_memory_55_lines",
+      "pass": true,
+      "detail": "55"
+    },
+    {
+      "name": "consolidated_memory_under_40",
+      "pass": true,
+      "detail": "35"
+    },
+    {
+      "name": "duplicate_and_contradiction_checks",
+      "pass": true,
+      "detail": "Independent check found no incorrectly resolved contradictions."
+    },
+    {
+      "name": "agent_md_compliance",
+      "pass": true,
+      "detail": "normalize_rental_title"
+    },
+    {
+      "name": "existing_mysql_counts",
+      "pass": true,
+      "detail": "5000/200/1"
+    },
+    {
+      "name": "required_report_evidence_files",
+      "pass": true,
+      "detail": "all present"
+    }
+  ],
+  "overall_pass": true
+}

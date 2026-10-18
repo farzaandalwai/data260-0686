@@ -14,6 +14,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import (
+    CondPageBreak,
     Image,
     KeepTogether,
     LongTable,
@@ -89,6 +90,7 @@ def build() -> None:
         leading=15,
         spaceBefore=7,
         spaceAfter=6,
+        keepWithNext=True,
         textColor=colors.HexColor("#155e75"),
     )
     title = ParagraphStyle(
@@ -147,6 +149,11 @@ def build() -> None:
         story.append(Paragraph(text, main))
 
     def h2(text: str) -> None:
+        story.append(Paragraph(text, sub))
+
+    def evidence_heading(text: str) -> None:
+        """Keep an evidence heading with its snippet, screenshot, and caption."""
+        story.append(CondPageBreak(5.6 * inch))
         story.append(Paragraph(text, sub))
 
     def code(text: str) -> XPreformatted:
@@ -228,7 +235,7 @@ def build() -> None:
         "bad requests before database writes, while a strict MongoDB $jsonSchema validator independently protects stored data. "
         "Timestamps are timezone-aware and automatic. The stable evidence record remains present; temporary test records are deleted.",
     )
-    h2("CRUD and validation evidence")
+    evidence_heading("CRUD and validation evidence")
     evidence(
         "@router.post('', status_code=201)\n"
         "def create_document_listing(payload: RentalDocumentCreate): ...\n"
@@ -239,7 +246,7 @@ def build() -> None:
         "P1_01_crud_and_validation.png",
         f"Figure 1. Live HTTP CRUD and validation: all_pass={str(part1['all_pass']).lower()}, 11/11 expected statuses.",
     )
-    h2("MongoDB sample document")
+    evidence_heading("MongoDB sample document")
     evidence(
         "VALIDATORS['rental_documents'] = {\n"
         "  '$jsonSchema': {'required': ['title','status','property_type',\n"
@@ -260,7 +267,7 @@ def build() -> None:
         "collection. The default short window is N=12, summaries refresh every five user messages, and cosine retrieval returns "
         "the top three local MiniLM episode embeddings. The local Ollama adapter supplies assistant replies.",
     )
-    h2("Live API surface")
+    evidence_heading("Live API surface")
     evidence(
         "router = APIRouter(tags=['HW6 memory'])\n"
         "@router.post('/api/chat', response_model=ChatResponse)\n"
@@ -270,7 +277,7 @@ def build() -> None:
         "Figure 3. Browser view of the three live FastAPI HW6 memory endpoints.",
         3.25 * inch,
     )
-    h2("Conversation evidence")
+    evidence_heading("Conversation evidence")
     evidence(
         "user_id = 'demo-260686-memory'\n"
         "for message in ten_fixed_messages:\n"
@@ -279,7 +286,7 @@ def build() -> None:
         "P2_02_conversation_reply.png",
         "Figure 4. The persisted tenth exchange shows the local assistant recalling Santa Clara.",
     )
-    h2("Memory endpoint evidence")
+    evidence_heading("Memory endpoint evidence")
     evidence(
         "def get_user_memory(user_id):\n"
         "    messages = last_16_messages(user_id)\n"
@@ -290,7 +297,7 @@ def build() -> None:
         "P2_03_memory_endpoint.png",
         "Figure 5. Live memory JSON: 16 messages, both summary scopes, 10 episodes, 384-dimensional embedding.",
     )
-    h2("Aggregate endpoint evidence")
+    evidence_heading("Aggregate endpoint evidence")
     evidence(
         "pipeline = [\n"
         "  {'$match': {'user_id': user_id}},\n"
@@ -300,7 +307,7 @@ def build() -> None:
         "P2_04_aggregate_endpoint.png",
         "Figure 6. Live daily message counts and recent session/user summaries.",
     )
-    h2("MongoDB memory collections")
+    evidence_heading("MongoDB memory collections")
     evidence(
         "messages: user_id, session_id, role, content, created_at\n"
         "summaries: user_id, nullable session_id, scope, text, created_at\n"
@@ -323,7 +330,7 @@ def build() -> None:
         "rubric are in memory_probes.yaml. Each condition used a fresh user/session, the identical 30-message conversation, and the "
         "same five probes; file memory was disabled to isolate MongoDB window behavior.",
     )
-    h2("Measured results")
+    evidence_heading("Measured results")
     evidence(
         "CONDITIONS = [N=4, N=12, N=30, relevance_aware_eviction]\n"
         "for condition in CONDITIONS:\n"
@@ -386,7 +393,7 @@ def build() -> None:
         "regressions, local-only models, preservation of prior data, and fixed memory paths. /memory displays; /compact consolidates; "
         "/dream appends up to three explicit durable preferences; /help documents all commands.",
     )
-    h2("Consolidation evidence")
+    evidence_heading("Consolidation evidence")
     evidence(
         "if command == '/compact':\n"
         "    result = compact_memory()\n"
@@ -396,7 +403,7 @@ def build() -> None:
         "P4_01_compact_55_to_35.png",
         "Figure 9. Real /compact output: 55 → 35, with 20 duplicate lines merged.",
     )
-    h2("AGENT.md and contradiction verification")
+    evidence_heading("AGENT.md and contradiction verification")
     evidence(
         "def verify_agent_compliance():\n"
         "    checks = {'descriptive_snake_case_name': True, 'type_hints': True,\n"
