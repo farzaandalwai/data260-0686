@@ -1,0 +1,76 @@
+DATA 260 HW6 RUN LOG
+Farzaan Dalwai | SID4 0686 | America/Los_Angeles
+
+2026-10-16 21:09–21:10 PDT
+Command: python3.11 run_hw6_chat_demo.py
+System: FastAPI 127.0.0.1:8686, local Ollama llama3.2:latest, MongoDB s0686_doc
+Result: 10 user messages and 10 assistant replies persisted. The last turn retrieved the Santa Clara episode and answered “You prefer to search for rentals in Santa Clara, California.” Session and lifetime summaries were present; episode embeddings were nonempty.
+Raw output: raw/chat_demo_10_messages.json, raw/memory_demo.json, raw/aggregate_demo.json, raw/fast_milestone.json
+
+2026-10-16 21:56:16 PDT
+Command: POST /api/chat with exact /compact command
+Result: {"before":55,"after":35,"duplicates_merged":20,"original_evidence":"reports/hw06/raw/memory_original_55.md","consolidated_evidence":"reports/hw06/raw/memory_consolidated.md"}
+Verification: three explicit contradiction outcomes independently matched Santa Clara, $3,500, and one indoor cat; no incorrect resolution was found.
+Evidence: screenshots/P4_01_compact_55_to_35.png, raw/file_memory_checks.json, raw/contradiction_validation.json
+
+2026-10-17 18:03–19:42 PDT
+Command: python3.11 run_hw6_memory_experiments.py
+System: four isolated users/sessions, identical 30-message conversation and five fixed probes, file memory disabled, local Ollama only, temperature=0.0, num_ctx=16384, num_predict=96
+SHORT_TERM_N=4: prompt=601.667 tokens/turn, completion=96.000, latency=3389.011 ms, quality=4.200
+SHORT_TERM_N=12: prompt=988.367 tokens/turn, completion=96.000, latency=5059.893 ms, quality=5.000
+SHORT_TERM_N=30: prompt=1632.233 tokens/turn, completion=96.000, latency=6843.770 ms, quality=5.000
+relevance_aware_eviction: prompt=969.867 tokens/turn, completion=96.000, latency=5731.379 ms, quality=5.000
+Policy versus N=30: 662.366 prompt tokens/turn saved (40.580%), quality change 0.000, latency change -1112.391 ms
+Raw output: raw/short_term_n_4.json, raw/short_term_n_12.json, raw/short_term_n_30.json, raw/relevance_aware_policy.json, raw/memory_probe_scores.json, raw/memory_experiment_results.json
+Note: an earlier context-truncated sweep was rejected after exact Ollama token counts plateaued near 2,050. Its aggregate is preserved only in raw/invalid_first_sweep_context_truncation.json and is not used in final results.
+
+2026-10-17 19:45:45 PDT
+Command: python3.11 seed_hw6_sample.py
+Result: idempotently stored `Santa Clara Light Rail Apartment` in s0686_doc.rental_documents with required status, property type, availability, created_at, and updated_at fields.
+Raw output: raw/stable_sample_document.json
+
+2026-10-17 19:47:28 PDT
+Command: python3.11 run_hw6_api_tests.py
+Result: all_pass=true. HTTP statuses: create 201; retrieve all 200; retrieve one 200; update 200; missing required field 422; invalid enum 422; incorrect data type 422; invalid ObjectId 400; missing resource 404; empty update 400; delete 200. Temporary document deleted.
+Raw output: raw/part1_api_tests.json
+
+2026-10-17 19:47:46 PDT
+Command: docker exec data260-hw6-mongodb mongosh --quiet s0686_doc --eval <findOne sample>
+Result: real stable rental document visible in s0686_doc.rental_documents.
+Evidence: screenshots/P1_02_mongodb_sample.png
+
+2026-10-17 19:48:56 PDT
+Command: curl -s http://127.0.0.1:8686/api/memory/demo-260686-memory
+Result: persisted final exchange shows the user asking for their preferred city and the assistant answering Santa Clara, California.
+Evidence: screenshots/P2_02_conversation_reply.png
+
+2026-10-17 19:49:12 PDT
+Command: curl -s http://127.0.0.1:8686/api/memory/demo-260686-memory
+Result: 16 returned messages, latest session summary, latest lifetime summary, 10 episodes, and sample embedding dimension 384.
+Evidence: screenshots/P2_03_memory_endpoint.png
+
+2026-10-17 19:49:30 PDT
+Command: curl -s http://127.0.0.1:8686/api/aggregate/demo-260686-memory
+Result: 20 daily messages and the recent session/user summary records.
+Evidence: screenshots/P2_04_aggregate_endpoint.png
+
+2026-10-17 19:49:47 PDT
+Command: docker exec data260-hw6-mongodb mongosh --quiet s0686_doc --eval <memory collection query>
+Result: collection names include messages, summaries, episodes, rental_documents, and memory_usage. Demo counts: 20 messages, 3 summaries, 10 episodes. Numeric embedding dimension: 384.
+Evidence: screenshots/P2_05_mongodb_memory_collections.png
+
+2026-10-17 19:50:37 PDT
+Command: python3.11 run_hw6_file_memory_checks.py
+Result: all_pass=true; original=55, consolidated=35; no incorrectly resolved contradiction; `normalize_rental_title` passed descriptive name, type hint, docstring, input validation, and no-side-effect checks.
+Raw output: raw/file_memory_checks.json, raw/agent_compliance.json, raw/contradiction_validation.json
+
+2026-10-17 19:45–19:51 PDT
+Commands: npm run build; npm run lint; import FastAPI and both FastMCP servers; git diff --check
+Result: Vite production build passed (97 modules); oxlint passed; FastAPI imported with 17 routes; meals and rentals FastMCP servers imported; whitespace check passed.
+
+GitHub read-only check on 2026-10-17 PDT
+Repository: https://github.com/farzaandalwai/data260-0686
+Result: link resolves; repository is public; default branch is main. The direct collaborator list currently contains only farzaandalwai and there are no pending invitations. Required usernames Sbnikitha and supriyaselvanganesan are therefore not confirmed as direct collaborators. No access change was made.
+
+Computer-control note
+Direct control of the macOS Terminal application was blocked by the safety layer. The permitted Cursor integrated terminal was used against the same real repository, API, Docker container, mongosh process, and curl binary. The Codex in-app browser was used for the live FastAPI Swagger page. No screenshot was fabricated or reconstructed.

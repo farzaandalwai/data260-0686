@@ -1,0 +1,37 @@
+{
+  "costs": [
+    {
+      "condition": "SHORT_TERM_N=4",
+      "requests": 300000,
+      "input_cost_usd": 180.5001,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 324.5001
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "requests": 300000,
+      "input_cost_usd": 296.5101,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 440.5101
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "requests": 300000,
+      "input_cost_usd": 489.6699,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 633.6699
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "requests": 300000,
+      "input_cost_usd": 290.9601,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 434.9601
+    }
+  ],
+  "selection": {
+    "rule": "Best is the lowest projected-cost configuration within 0.5 points of the highest probe score. Worst is the highest-cost configuration in that same quality band; if none share the band, it is the objectively lowest-quality configuration.",
+    "best": "relevance_aware_eviction",
+    "worst": "SHORT_TERM_N=30"
+  }
+}

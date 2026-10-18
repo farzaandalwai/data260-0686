@@ -1,0 +1,150 @@
+{
+  "seed": 686,
+  "verify_seed": 260686,
+  "fixed_conversation": [
+    "I want my rental search centered in Santa Clara, California.",
+    "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap.",
+    "I prefer a two-bedroom apartment rather than a house or studio.",
+    "I work near downtown San Jose three days each week.",
+    "I need my commute to stay under 30 minutes.",
+    "I prefer a walkable neighborhood for groceries and coffee.",
+    "I want one covered parking space.",
+    "I prefer an in-unit washer and dryer.",
+    "I need a quiet building after 10 PM.",
+    "I prefer natural light and a balcony.",
+    "I want an unfurnished rental.",
+    "I prefer a 12-month lease with a renewal option.",
+    "I need a smoke-free property because smoke bothers me.",
+    "I have one indoor cat, so the rental must allow cats.",
+    "I prefer water to be included in the rent.",
+    "I want an application fee under $60.",
+    "I can pay a security deposit up to one month of rent.",
+    "I do not plan to have a roommate.",
+    "I prefer the second floor or higher.",
+    "I need an elevator if the unit is above the second floor.",
+    "I prefer to live near light rail.",
+    "I want grocery stores within walking distance.",
+    "I prefer air conditioning, but it is not a hard requirement.",
+    "I need reliable high-speed internet options for remote work.",
+    "I prefer a building with secure package storage.",
+    "I want at least 850 square feet if possible.",
+    "I prefer a kitchen with a dishwasher.",
+    "I need the lease to permit one indoor cat without a monthly pet rent over $50.",
+    "I want to move on December 1, 2026.",
+    "I can attend property viewings on Saturday mornings."
+  ],
+  "condition_metrics": [
+    {
+      "condition": "SHORT_TERM_N=4",
+      "configuration": {
+        "short_term_n": 4,
+        "summarize_every_user_msgs": 5,
+        "episodic_top_k": 3,
+        "policy": "sliding",
+        "include_file_memory": false
+      },
+      "runs": 1,
+      "conversation_turns": 30,
+      "probe_turns": 5,
+      "mean_prompt_tokens": 601.667,
+      "mean_completion_tokens": 96,
+      "mean_latency_ms": 3389.011,
+      "mean_probe_score": 4.2
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "configuration": {
+        "short_term_n": 12,
+        "summarize_every_user_msgs": 5,
+        "episodic_top_k": 3,
+        "policy": "sliding",
+        "include_file_memory": false
+      },
+      "runs": 1,
+      "conversation_turns": 30,
+      "probe_turns": 5,
+      "mean_prompt_tokens": 988.367,
+      "mean_completion_tokens": 96,
+      "mean_latency_ms": 5059.893,
+      "mean_probe_score": 5
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "configuration": {
+        "short_term_n": 30,
+        "summarize_every_user_msgs": 5,
+        "episodic_top_k": 3,
+        "policy": "sliding",
+        "include_file_memory": false
+      },
+      "runs": 1,
+      "conversation_turns": 30,
+      "probe_turns": 5,
+      "mean_prompt_tokens": 1632.233,
+      "mean_completion_tokens": 96,
+      "mean_latency_ms": 6843.77,
+      "mean_probe_score": 5
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "configuration": {
+        "short_term_n": 12,
+        "summarize_every_user_msgs": 5,
+        "episodic_top_k": 3,
+        "policy": "relevance_aware",
+        "include_file_memory": false
+      },
+      "runs": 1,
+      "conversation_turns": 30,
+      "probe_turns": 5,
+      "mean_prompt_tokens": 969.867,
+      "mean_completion_tokens": 96,
+      "mean_latency_ms": 5731.379,
+      "mean_probe_score": 5
+    }
+  ],
+  "policy_comparison": {
+    "baseline": "SHORT_TERM_N=30",
+    "policy": "relevance_aware_eviction",
+    "absolute_prompt_token_savings": 662.366,
+    "percentage_prompt_token_savings": 40.58,
+    "probe_score_change": 0,
+    "latency_change_ms": -1112.391
+  },
+  "costs": [
+    {
+      "condition": "SHORT_TERM_N=4",
+      "requests": 300000,
+      "input_cost_usd": 180.5001,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 324.5001
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "requests": 300000,
+      "input_cost_usd": 296.5101,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 440.5101
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "requests": 300000,
+      "input_cost_usd": 489.6699,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 633.6699
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "requests": 300000,
+      "input_cost_usd": 290.9601,
+      "output_cost_usd": 144.0,
+      "total_cost_usd": 434.9601
+    }
+  ],
+  "selection": {
+    "rule": "Best is the lowest projected-cost configuration within 0.5 points of the highest probe score. Worst is the highest-cost configuration in that same quality band; if none share the band, it is the objectively lowest-quality configuration.",
+    "best": "relevance_aware_eviction",
+    "worst": "SHORT_TERM_N=30"
+  },
+  "file_memory_during_sweep": "disabled for every condition"
+}

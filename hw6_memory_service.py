@@ -420,7 +420,13 @@ def chat_turn(
         episodes,
         runtime.include_file_memory,
     )
-    model_result = complete(parts["messages"], temperature=0.0, model=settings.ollama_model)
+    model_result = complete(
+        parts["messages"],
+        temperature=0.0,
+        model=settings.ollama_model,
+        num_ctx=16384,
+        num_predict=96,
+    )
     reply = model_result["message"].strip()
     if not reply:
         raise RuntimeError("Local model returned an empty reply")

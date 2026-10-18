@@ -7,7 +7,15 @@ MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:latest")
 URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434/api/chat")
 
 
-def complete(messages, tools=None, temperature=None, json_output=False, model=None):
+def complete(
+    messages,
+    tools=None,
+    temperature=None,
+    json_output=False,
+    model=None,
+    num_ctx=None,
+    num_predict=None,
+):
     data = {
         "model": model or MODEL,
         "messages": messages,
@@ -17,8 +25,15 @@ def complete(messages, tools=None, temperature=None, json_output=False, model=No
     if tools:
         data["tools"] = tools
 
+    options = {}
     if temperature is not None:
-        data["options"] = {"temperature": temperature}
+        options["temperature"] = temperature
+    if num_ctx is not None:
+        options["num_ctx"] = num_ctx
+    if num_predict is not None:
+        options["num_predict"] = num_predict
+    if options:
+        data["options"] = options
 
     if json_output:
         data["format"] = "json"

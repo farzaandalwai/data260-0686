@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-17T04:09:10.614682+00:00",
+  "timestamp": "2026-10-18T02:47:29.112416+00:00",
   "base_url": "http://127.0.0.1:8686",
   "all_pass": true,
   "results": [
@@ -9,14 +9,14 @@
       "expected_status": 201,
       "pass": true,
       "body": {
-        "id": "6ad2f4e6b88173274700a618",
+        "id": "6ad43341928bd462487fa2a3",
         "title": "HW6 Temporary API Test Rental",
         "description": "Temporary record deleted by the test runner.",
         "status": "available",
         "property_type": "apartment",
         "available_from": "2026-12-01T17:00:00Z",
-        "created_at": "2026-10-17T04:09:10.592000Z",
-        "updated_at": "2026-10-17T04:09:10.592000Z"
+        "created_at": "2026-10-18T02:47:29.067000Z",
+        "updated_at": "2026-10-18T02:47:29.067000Z"
       }
     },
     {
@@ -26,14 +26,24 @@
       "pass": true,
       "body": [
         {
-          "id": "6ad2f4e6b88173274700a618",
+          "id": "6ad43341928bd462487fa2a3",
           "title": "HW6 Temporary API Test Rental",
           "description": "Temporary record deleted by the test runner.",
           "status": "available",
           "property_type": "apartment",
           "available_from": "2026-12-01T17:00:00Z",
-          "created_at": "2026-10-17T04:09:10.592000Z",
-          "updated_at": "2026-10-17T04:09:10.592000Z"
+          "created_at": "2026-10-18T02:47:29.067000Z",
+          "updated_at": "2026-10-18T02:47:29.067000Z"
+        },
+        {
+          "id": "6ad432d902180c6236450d80",
+          "title": "Santa Clara Light Rail Apartment",
+          "description": "Stable HW6 evidence listing near light rail with in-unit laundry.",
+          "status": "available",
+          "property_type": "apartment",
+          "available_from": "2026-12-01T17:00:00Z",
+          "created_at": "2026-10-18T02:45:45.225000Z",
+          "updated_at": "2026-10-18T02:45:45.225000Z"
         }
       ]
     },
@@ -43,14 +53,14 @@
       "expected_status": 200,
       "pass": true,
       "body": {
-        "id": "6ad2f4e6b88173274700a618",
+        "id": "6ad43341928bd462487fa2a3",
         "title": "HW6 Temporary API Test Rental",
         "description": "Temporary record deleted by the test runner.",
         "status": "available",
         "property_type": "apartment",
         "available_from": "2026-12-01T17:00:00Z",
-        "created_at": "2026-10-17T04:09:10.592000Z",
-        "updated_at": "2026-10-17T04:09:10.592000Z"
+        "created_at": "2026-10-18T02:47:29.067000Z",
+        "updated_at": "2026-10-18T02:47:29.067000Z"
       }
     },
     {
@@ -59,14 +69,14 @@
       "expected_status": 200,
       "pass": true,
       "body": {
-        "id": "6ad2f4e6b88173274700a618",
+        "id": "6ad43341928bd462487fa2a3",
         "title": "HW6 Temporary API Test Rental",
         "description": "Temporary record deleted by the test runner.",
         "status": "pending",
         "property_type": "apartment",
         "available_from": "2026-12-01T17:00:00Z",
-        "created_at": "2026-10-17T04:09:10.592000Z",
-        "updated_at": "2026-10-17T04:09:10.602000Z"
+        "created_at": "2026-10-18T02:47:29.067000Z",
+        "updated_at": "2026-10-18T02:47:29.092000Z"
       }
     },
     {
@@ -180,7 +190,7 @@
       "pass": true,
       "body": {
         "message": "Document listing deleted",
-        "id": "6ad2f4e6b88173274700a618"
+        "id": "6ad43341928bd462487fa2a3"
       }
     }
   ]

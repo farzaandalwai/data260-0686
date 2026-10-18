@@ -1,0 +1,1461 @@
+{
+  "rubric": {
+    "5": "All expected criteria are explicitly present and correct.",
+    "4": "At least three quarters of the expected criteria are present with no contradiction.",
+    "3": "At least half of the expected criteria are present with no contradiction.",
+    "2": "Some relevant detail is present, but fewer than half of the criteria are supported.",
+    "1": "No expected criterion is present, or the answer contradicts the stored preference."
+  },
+  "results": [
+    {
+      "condition": "SHORT_TERM_N=4",
+      "phase": "probe",
+      "number": 1,
+      "message": "Which city and maximum monthly rent should you use for my search?",
+      "reply": "Based on your preferences, I've updated the search criteria. Here's the new summary:\n\n* Type of property: Apartment\n* Furnishings: Unfurnished\n* Lease duration: 12 months with renewal option\n* Move-in date: December 1, 2026\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Commute time: Under 30 minutes\n* Commute frequency",
+      "usage": {
+        "prompt_tokens": 765,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 212,
+        "episodic_fact_tokens": 73,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 4423.75,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 4,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:17.157000+00:00",
+            "similarity": 0.608732
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:31:48.083000+00:00",
+            "similarity": 0.50768
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:49.430000+00:00",
+            "similarity": 0.501661
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_1",
+      "expected_criteria": [
+        {
+          "label": "Santa Clara",
+          "any_of": [
+            "santa clara"
+          ]
+        },
+        {
+          "label": "maximum budget of $3,500",
+          "any_of": [
+            "$3,500",
+            "3500",
+            "3,500"
+          ]
+        }
+      ],
+      "score": 3,
+      "matched": [
+        "maximum budget of $3,500"
+      ],
+      "missing": [
+        "Santa Clara"
+      ],
+      "scoring_explanation": "Objective phrase match: 1/2; matched=['maximum budget of $3,500']; missing=['Santa Clara']."
+    },
+    {
+      "condition": "SHORT_TERM_N=4",
+      "phase": "probe",
+      "number": 2,
+      "message": "What property type and bedroom count do I prefer?",
+      "reply": "Based on your previous messages, you prefer a 2-bedroom apartment.",
+      "usage": {
+        "prompt_tokens": 759,
+        "completion_tokens": 15,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 214,
+        "episodic_fact_tokens": 70,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 1304.049,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 4,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:23.258000+00:00",
+            "similarity": 0.611983
+          },
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:45.780000+00:00",
+            "similarity": 0.463668
+          },
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:59.148000+00:00",
+            "similarity": 0.453999
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_2",
+      "expected_criteria": [
+        {
+          "label": "apartment",
+          "any_of": [
+            "apartment"
+          ]
+        },
+        {
+          "label": "two bedrooms",
+          "any_of": [
+            "two-bedroom",
+            "two bedroom",
+            "2-bedroom",
+            "2 bedroom"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "apartment",
+        "two bedrooms"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['apartment', 'two bedrooms']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=4",
+      "phase": "probe",
+      "number": 3,
+      "message": "What pet and smoke-related constraints must the rental satisfy?",
+      "reply": "Based on your previous messages, the rental must satisfy the following constraints:\n\n1. Allow cats\n2. Permit one indoor cat without a monthly pet rent over $50\n3. Be smoke-free",
+      "usage": {
+        "prompt_tokens": 685,
+        "completion_tokens": 40,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 142,
+        "episodic_fact_tokens": 79,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 1669.204,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 4,
+        "episodic_facts": [
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:59.148000+00:00",
+            "similarity": 0.635984
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:31:48.083000+00:00",
+            "similarity": 0.583528
+          },
+          {
+            "fact": "I need a smoke-free property because smoke bothers me",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:56.061000+00:00",
+            "similarity": 0.577209
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_3",
+      "expected_criteria": [
+        {
+          "label": "one indoor cat",
+          "any_of": [
+            "indoor cat",
+            "one cat",
+            "cat"
+          ]
+        },
+        {
+          "label": "smoke-free",
+          "any_of": [
+            "smoke-free",
+            "smoke free",
+            "non-smoking",
+            "nonsmoking"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "one indoor cat",
+        "smoke-free"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['one indoor cat', 'smoke-free']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=4",
+      "phase": "probe",
+      "number": 4,
+      "message": "What transit and commute preferences did I give you?",
+      "reply": "Based on your previous messages, you prefer a commute time of under 30 minutes.",
+      "usage": {
+        "prompt_tokens": 613,
+        "completion_tokens": 18,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 93,
+        "episodic_fact_tokens": 63,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 872.616,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 4,
+        "episodic_facts": [
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:29.709000+00:00",
+            "similarity": 0.427343
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:30:33.213000+00:00",
+            "similarity": 0.319089
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:31:24.082000+00:00",
+            "similarity": 0.294525
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_4",
+      "expected_criteria": [
+        {
+          "label": "near light rail",
+          "any_of": [
+            "light rail"
+          ]
+        },
+        {
+          "label": "commute under 30 minutes",
+          "any_of": [
+            "under 30",
+            "less than 30",
+            "30 minutes or less",
+            "within 30"
+          ]
+        }
+      ],
+      "score": 3,
+      "matched": [
+        "commute under 30 minutes"
+      ],
+      "missing": [
+        "near light rail"
+      ],
+      "scoring_explanation": "Objective phrase match: 1/2; matched=['commute under 30 minutes']; missing=['near light rail']."
+    },
+    {
+      "condition": "SHORT_TERM_N=4",
+      "phase": "probe",
+      "number": 5,
+      "message": "When do I want to move, and when can I attend viewings?",
+      "reply": "You want to move on December 1, 2026, and you can attend property viewings on Saturday mornings.",
+      "usage": {
+        "prompt_tokens": 622,
+        "completion_tokens": 25,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 97,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 1043.285,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 4,
+        "episodic_facts": [
+          {
+            "fact": "I want to move on December 1, 2026",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:31:51.462000+00:00",
+            "similarity": 0.486799
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:31:24.082000+00:00",
+            "similarity": 0.368678
+          },
+          {
+            "fact": "What transit and commute preferences did I give you",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-4",
+            "created_at": "2026-10-18T02:32:03.197000+00:00",
+            "similarity": 0.318279
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_5",
+      "expected_criteria": [
+        {
+          "label": "December 1, 2026 move date",
+          "any_of": [
+            "december 1, 2026",
+            "december 1st, 2026",
+            "2026-12-01",
+            "dec 1, 2026"
+          ]
+        },
+        {
+          "label": "Saturday morning viewings",
+          "any_of": [
+            "saturday morning",
+            "saturday mornings"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "December 1, 2026 move date",
+        "Saturday morning viewings"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['December 1, 2026 move date', 'Saturday morning viewings']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "phase": "probe",
+      "number": 1,
+      "message": "Which city and maximum monthly rent should you use for my search?",
+      "reply": "Based on your previous messages, I will use the following criteria for your rental search:\n\n* City: Santa Clara, California\n* Maximum monthly rent: $3,500\n\nThese criteria are consistent with your previous preferences and requirements. I will focus on properties in Santa Clara, California, with a budget of $3,500 per month.",
+      "usage": {
+        "prompt_tokens": 1220,
+        "completion_tokens": 69,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 619,
+        "episodic_fact_tokens": 73,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 4847.115,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:06.688000+00:00",
+            "similarity": 0.608732
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:34:28.733000+00:00",
+            "similarity": 0.50768
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:45.490000+00:00",
+            "similarity": 0.501661
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_1",
+      "expected_criteria": [
+        {
+          "label": "Santa Clara",
+          "any_of": [
+            "santa clara"
+          ]
+        },
+        {
+          "label": "maximum budget of $3,500",
+          "any_of": [
+            "$3,500",
+            "3500",
+            "3,500"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "Santa Clara",
+        "maximum budget of $3,500"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['Santa Clara', 'maximum budget of $3,500']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "phase": "probe",
+      "number": 2,
+      "message": "What property type and bedroom count do I prefer?",
+      "reply": "Based on our previous conversation, you prefer an apartment type and a 2-bedroom configuration.",
+      "usage": {
+        "prompt_tokens": 1190,
+        "completion_tokens": 19,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 603,
+        "episodic_fact_tokens": 70,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3460.296,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:12.283000+00:00",
+            "similarity": 0.611983
+          },
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:40.659000+00:00",
+            "similarity": 0.463668
+          },
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:33:02.682000+00:00",
+            "similarity": 0.453999
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_2",
+      "expected_criteria": [
+        {
+          "label": "apartment",
+          "any_of": [
+            "apartment"
+          ]
+        },
+        {
+          "label": "two bedrooms",
+          "any_of": [
+            "two-bedroom",
+            "two bedroom",
+            "2-bedroom",
+            "2 bedroom"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "apartment",
+        "two bedrooms"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['apartment', 'two bedrooms']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "phase": "probe",
+      "number": 3,
+      "message": "What pet and smoke-related constraints must the rental satisfy?",
+      "reply": "Based on your previous messages, the rental must satisfy the following constraints:\n\n1. Allow cats, as you have one indoor cat.\n2. Permit one indoor cat without a monthly pet rent over $50.\n3. Be smoke-free, as smoke bothers you.\n\nThese constraints are consistent with your previous preferences and requirements.",
+      "usage": {
+        "prompt_tokens": 1119,
+        "completion_tokens": 64,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 529,
+        "episodic_fact_tokens": 79,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 4077.307,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:33:02.682000+00:00",
+            "similarity": 0.635984
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:34:28.733000+00:00",
+            "similarity": 0.583528
+          },
+          {
+            "fact": "I need a smoke-free property because smoke bothers me",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:56.636000+00:00",
+            "similarity": 0.577209
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_3",
+      "expected_criteria": [
+        {
+          "label": "one indoor cat",
+          "any_of": [
+            "indoor cat",
+            "one cat",
+            "cat"
+          ]
+        },
+        {
+          "label": "smoke-free",
+          "any_of": [
+            "smoke-free",
+            "smoke free",
+            "non-smoking",
+            "nonsmoking"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "one indoor cat",
+        "smoke-free"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['one indoor cat', 'smoke-free']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "phase": "probe",
+      "number": 4,
+      "message": "What transit and commute preferences did I give you?",
+      "reply": "You mentioned that you prefer to live near light rail and that your commute should stay under 30 minutes.",
+      "usage": {
+        "prompt_tokens": 1076,
+        "completion_tokens": 22,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 510,
+        "episodic_fact_tokens": 63,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3200.979,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:18.438000+00:00",
+            "similarity": 0.427343
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:32:23.068000+00:00",
+            "similarity": 0.319089
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:33:44.813000+00:00",
+            "similarity": 0.294525
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_4",
+      "expected_criteria": [
+        {
+          "label": "near light rail",
+          "any_of": [
+            "light rail"
+          ]
+        },
+        {
+          "label": "commute under 30 minutes",
+          "any_of": [
+            "under 30",
+            "less than 30",
+            "30 minutes or less",
+            "within 30"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "near light rail",
+        "commute under 30 minutes"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['near light rail', 'commute under 30 minutes']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=12",
+      "phase": "probe",
+      "number": 5,
+      "message": "When do I want to move, and when can I attend viewings?",
+      "reply": "You want to move on December 1, 2026, and you can attend property viewings on Saturday mornings.",
+      "usage": {
+        "prompt_tokens": 999,
+        "completion_tokens": 25,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 438,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 2477.647,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I want to move on December 1, 2026",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:34:35.775000+00:00",
+            "similarity": 0.486799
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:33:44.813000+00:00",
+            "similarity": 0.368678
+          },
+          {
+            "fact": "What transit and commute preferences did I give you",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-12",
+            "created_at": "2026-10-18T02:34:57.702000+00:00",
+            "similarity": 0.318279
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_5",
+      "expected_criteria": [
+        {
+          "label": "December 1, 2026 move date",
+          "any_of": [
+            "december 1, 2026",
+            "december 1st, 2026",
+            "2026-12-01",
+            "dec 1, 2026"
+          ]
+        },
+        {
+          "label": "Saturday morning viewings",
+          "any_of": [
+            "saturday morning",
+            "saturday mornings"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "December 1, 2026 move date",
+        "Saturday morning viewings"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['December 1, 2026 move date', 'Saturday morning viewings']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "phase": "probe",
+      "number": 1,
+      "message": "Which city and maximum monthly rent should you use for my search?",
+      "reply": "Based on your previous messages, I will use the following criteria for your rental search:\n\n* City: Santa Clara, California\n* Maximum monthly rent: $3,500\n\nThese criteria are consistent with your previous preferences, including your budget, amenities, and pet policy. I will focus on finding apartments in Santa Clara, California that meet these criteria.",
+      "usage": {
+        "prompt_tokens": 2222,
+        "completion_tokens": 71,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1538,
+        "episodic_fact_tokens": 73,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9338.527,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.608732
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:38:12.669000+00:00",
+            "similarity": 0.50768
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.501661
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_1",
+      "expected_criteria": [
+        {
+          "label": "Santa Clara",
+          "any_of": [
+            "santa clara"
+          ]
+        },
+        {
+          "label": "maximum budget of $3,500",
+          "any_of": [
+            "$3,500",
+            "3500",
+            "3,500"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "Santa Clara",
+        "maximum budget of $3,500"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['Santa Clara', 'maximum budget of $3,500']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "phase": "probe",
+      "number": 2,
+      "message": "What property type and bedroom count do I prefer?",
+      "reply": "You prefer an apartment with 2 bedrooms.",
+      "usage": {
+        "prompt_tokens": 2195,
+        "completion_tokens": 10,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1522,
+        "episodic_fact_tokens": 70,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 8115.595,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.611983
+          },
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:38.029000+00:00",
+            "similarity": 0.463668
+          },
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:56.819000+00:00",
+            "similarity": 0.453999
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_2",
+      "expected_criteria": [
+        {
+          "label": "apartment",
+          "any_of": [
+            "apartment"
+          ]
+        },
+        {
+          "label": "two bedrooms",
+          "any_of": [
+            "two-bedroom",
+            "two bedroom",
+            "2-bedroom",
+            "2 bedroom"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "apartment",
+        "two bedrooms"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['apartment', 'two bedrooms']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "phase": "probe",
+      "number": 3,
+      "message": "What pet and smoke-related constraints must the rental satisfy?",
+      "reply": "Based on your previous messages, the rental must satisfy the following constraints:\n\n1. The rental must allow cats.\n2. The lease must permit one indoor cat without a monthly pet rent over $50.\n3. The rental must be smoke-free.\n\nThese constraints are consistent with your previous preferences, and I will ensure that the rental properties I find meet these requirements.",
+      "usage": {
+        "prompt_tokens": 2115,
+        "completion_tokens": 73,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1444,
+        "episodic_fact_tokens": 79,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 7936.529,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:56.819000+00:00",
+            "similarity": 0.635984
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:38:12.669000+00:00",
+            "similarity": 0.583528
+          },
+          {
+            "fact": "I need a smoke-free property because smoke bothers me",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:53.255000+00:00",
+            "similarity": 0.577209
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_3",
+      "expected_criteria": [
+        {
+          "label": "one indoor cat",
+          "any_of": [
+            "indoor cat",
+            "one cat",
+            "cat"
+          ]
+        },
+        {
+          "label": "smoke-free",
+          "any_of": [
+            "smoke-free",
+            "smoke free",
+            "non-smoking",
+            "nonsmoking"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "one indoor cat",
+        "smoke-free"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['one indoor cat', 'smoke-free']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "phase": "probe",
+      "number": 4,
+      "message": "What transit and commute preferences did I give you?",
+      "reply": "You mentioned the following transit and commute preferences:\n\n* You prefer to live near light rail.\n* You work near downtown San Jose three days a week.\n* You want your commute to stay under 30 minutes.\n\nThese preferences are consistent with your previous messages, and I will ensure that the rental properties I find meet these requirements.",
+      "usage": {
+        "prompt_tokens": 2081,
+        "completion_tokens": 66,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1432,
+        "episodic_fact_tokens": 63,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 8083.234,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:18.160000+00:00",
+            "similarity": 0.427343
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.319089
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:37:00.177000+00:00",
+            "similarity": 0.294525
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_4",
+      "expected_criteria": [
+        {
+          "label": "near light rail",
+          "any_of": [
+            "light rail"
+          ]
+        },
+        {
+          "label": "commute under 30 minutes",
+          "any_of": [
+            "under 30",
+            "less than 30",
+            "30 minutes or less",
+            "within 30"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "near light rail",
+        "commute under 30 minutes"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['near light rail', 'commute under 30 minutes']; missing=['none']."
+    },
+    {
+      "condition": "SHORT_TERM_N=30",
+      "phase": "probe",
+      "number": 5,
+      "message": "When do I want to move, and when can I attend viewings?",
+      "reply": "You want to move on December 1, 2026, and you can attend property viewings on Saturday mornings.",
+      "usage": {
+        "prompt_tokens": 2059,
+        "completion_tokens": 25,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1413,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 7683.805,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I want to move on December 1, 2026",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:38:22.918000+00:00",
+            "similarity": 0.486799
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:37:00.177000+00:00",
+            "similarity": 0.368678
+          },
+          {
+            "fact": "What transit and commute preferences did I give you",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:39:07.395000+00:00",
+            "similarity": 0.318279
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_5",
+      "expected_criteria": [
+        {
+          "label": "December 1, 2026 move date",
+          "any_of": [
+            "december 1, 2026",
+            "december 1st, 2026",
+            "2026-12-01",
+            "dec 1, 2026"
+          ]
+        },
+        {
+          "label": "Saturday morning viewings",
+          "any_of": [
+            "saturday morning",
+            "saturday mornings"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "December 1, 2026 move date",
+        "Saturday morning viewings"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['December 1, 2026 move date', 'Saturday morning viewings']; missing=['none']."
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "phase": "probe",
+      "number": 1,
+      "message": "Which city and maximum monthly rent should you use for my search?",
+      "reply": "Based on your previous messages, I will use the following criteria for your rental search:\n\n* City: Santa Clara, California\n* Maximum monthly rent: $3,500\n\nI will focus on properties in and around Santa Clara, California, with a budget of $3,500 per month. I will also consider your other preferences, such as:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Amenities:\n\t+ Covered parking",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 931,
+        "episodic_fact_tokens": 73,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 8401.991,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:39:18.836000+00:00",
+            "similarity": 0.608732
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:42:02.251000+00:00",
+            "similarity": 0.50768
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:40:07.807000+00:00",
+            "similarity": 0.501661
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_1",
+      "expected_criteria": [
+        {
+          "label": "Santa Clara",
+          "any_of": [
+            "santa clara"
+          ]
+        },
+        {
+          "label": "maximum budget of $3,500",
+          "any_of": [
+            "$3,500",
+            "3500",
+            "3,500"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "Santa Clara",
+        "maximum budget of $3,500"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['Santa Clara', 'maximum budget of $3,500']; missing=['none']."
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "phase": "probe",
+      "number": 2,
+      "message": "What property type and bedroom count do I prefer?",
+      "reply": "You prefer an apartment with 2 bedrooms.",
+      "usage": {
+        "prompt_tokens": 1553,
+        "completion_tokens": 10,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 933,
+        "episodic_fact_tokens": 70,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 1931.44,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:39:26.787000+00:00",
+            "similarity": 0.611983
+          },
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:40:01.166000+00:00",
+            "similarity": 0.463668
+          },
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:40:28.497000+00:00",
+            "similarity": 0.453999
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_2",
+      "expected_criteria": [
+        {
+          "label": "apartment",
+          "any_of": [
+            "apartment"
+          ]
+        },
+        {
+          "label": "two bedrooms",
+          "any_of": [
+            "two-bedroom",
+            "two bedroom",
+            "2-bedroom",
+            "2 bedroom"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "apartment",
+        "two bedrooms"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['apartment', 'two bedrooms']; missing=['none']."
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "phase": "probe",
+      "number": 3,
+      "message": "What pet and smoke-related constraints must the rental satisfy?",
+      "reply": "Based on your previous messages, the rental must satisfy the following constraints:\n\n* The rental must allow cats.\n* The lease must permit one indoor cat without a monthly pet rent over $50.\n* The rental must be smoke-free.\n\nThese constraints have a similarity of 0.636, 0.584, and 0.577, respectively, with your existing preferences.",
+      "usage": {
+        "prompt_tokens": 1393,
+        "completion_tokens": 76,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 789,
+        "episodic_fact_tokens": 79,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 6539.835,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:40:28.497000+00:00",
+            "similarity": 0.635984
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:42:02.251000+00:00",
+            "similarity": 0.583528
+          },
+          {
+            "fact": "I need a smoke-free property because smoke bothers me",
+            "importance": 0.9,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:40:22.525000+00:00",
+            "similarity": 0.577209
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_3",
+      "expected_criteria": [
+        {
+          "label": "one indoor cat",
+          "any_of": [
+            "indoor cat",
+            "one cat",
+            "cat"
+          ]
+        },
+        {
+          "label": "smoke-free",
+          "any_of": [
+            "smoke-free",
+            "smoke free",
+            "non-smoking",
+            "nonsmoking"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "one indoor cat",
+        "smoke-free"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['one indoor cat', 'smoke-free']; missing=['none']."
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "phase": "probe",
+      "number": 4,
+      "message": "What transit and commute preferences did I give you?",
+      "reply": "You mentioned that you prefer to live near light rail and that your commute should stay under 30 minutes.",
+      "usage": {
+        "prompt_tokens": 740,
+        "completion_tokens": 22,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 222,
+        "episodic_fact_tokens": 63,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 2174.376,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:39:34.620000+00:00",
+            "similarity": 0.427343
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:39:37.898000+00:00",
+            "similarity": 0.319089
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:41:12.767000+00:00",
+            "similarity": 0.294525
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_4",
+      "expected_criteria": [
+        {
+          "label": "near light rail",
+          "any_of": [
+            "light rail"
+          ]
+        },
+        {
+          "label": "commute under 30 minutes",
+          "any_of": [
+            "under 30",
+            "less than 30",
+            "30 minutes or less",
+            "within 30"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "near light rail",
+        "commute under 30 minutes"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['near light rail', 'commute under 30 minutes']; missing=['none']."
+    },
+    {
+      "condition": "relevance_aware_eviction",
+      "phase": "probe",
+      "number": 5,
+      "message": "When do I want to move, and when can I attend viewings?",
+      "reply": "You want to move on December 1, 2026, and you can attend property viewings on Saturday mornings.",
+      "usage": {
+        "prompt_tokens": 934,
+        "completion_tokens": 25,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 389,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 2877.331,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I want to move on December 1, 2026",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:42:07.035000+00:00",
+            "similarity": 0.486799
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:41:12.767000+00:00",
+            "similarity": 0.368678
+          },
+          {
+            "fact": "What transit and commute preferences did I give you",
+            "importance": 0.8,
+            "session_id": "session-260686-relevance-aware-eviction",
+            "created_at": "2026-10-18T02:42:34.217000+00:00",
+            "similarity": 0.318279
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_5",
+      "expected_criteria": [
+        {
+          "label": "December 1, 2026 move date",
+          "any_of": [
+            "december 1, 2026",
+            "december 1st, 2026",
+            "2026-12-01",
+            "dec 1, 2026"
+          ]
+        },
+        {
+          "label": "Saturday morning viewings",
+          "any_of": [
+            "saturday morning",
+            "saturday mornings"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "December 1, 2026 move date",
+        "Saturday morning viewings"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['December 1, 2026 move date', 'Saturday morning viewings']; missing=['none']."
+    }
+  ]
+}

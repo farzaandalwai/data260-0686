@@ -1,0 +1,1727 @@
+{
+  "condition": "SHORT_TERM_N=30",
+  "user_id": "exp-260686-short-term-n-30",
+  "session_id": "session-260686-short-term-n-30",
+  "configuration": {
+    "short_term_n": 30,
+    "summarize_every_user_msgs": 5,
+    "episodic_top_k": 3,
+    "policy": "sliding",
+    "include_file_memory": false
+  },
+  "conversation": [
+    {
+      "phase": "conversation",
+      "number": 1,
+      "message": "I want my rental search centered in Santa Clara, California.",
+      "reply": "I can help you with your rental search. I'll focus on properties in and around Santa Clara, California.\n\nTo get started, can you please provide me with some additional details about your preferences? For example:\n\n* What type of property are you looking for (apartment, house, condo, etc.)?\n* How many bedrooms and bathrooms are you interested in?\n* Do you have a specific budget in mind?\n* Are there any amenities you're looking for (pool, gym",
+      "usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 14,
+        "episodic_fact_tokens": 14,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 2911.804,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 0,
+        "episodic_facts": [],
+        "session_summary_present": false,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 2,
+      "message": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap.",
+      "reply": "Thank you for providing more details about your rental search preferences. I've taken note of your hard cap of $3,500 per month.\n\nTo summarize, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: (open to suggestions)\n* Number of bedrooms and bathrooms: (open to suggestions)\n* Budget: $3,500 per month (hard cap)\n* Amenities: (open to suggestions)\n\nPlease feel free",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 125,
+        "episodic_fact_tokens": 30,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3399.498,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 2,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.165562
+          }
+        ],
+        "session_summary_present": false,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 3,
+      "message": "I prefer a two-bedroom apartment rather than a house or studio.",
+      "reply": "I've taken note of your updated preferences. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities: (open to suggestions)\n\nPlease feel free to add or modify any of these criteria as you see fit. I'll continue to refine your search based on your",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 250,
+        "episodic_fact_tokens": 59,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3809.005,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 4,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.340496
+          },
+          {
+            "fact": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:07.038000+00:00",
+            "similarity": 0.202518
+          }
+        ],
+        "session_summary_present": false,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 4,
+      "message": "I work near downtown San Jose three days each week.",
+      "reply": "Thank you for providing more details about your rental search preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities: (open to suggestions)\n* Commute: You work near downtown San Jose three days a week, suggesting you may want a property with easy access to public transportation or a short commute.\n\nConsidering your proximity",
+      "usage": {
+        "prompt_tokens": 553,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 365,
+        "episodic_fact_tokens": 80,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3253.055,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 6,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.340259
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.266201
+          },
+          {
+            "fact": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:07.038000+00:00",
+            "similarity": 0.160139
+          }
+        ],
+        "session_summary_present": false,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 5,
+      "message": "I need my commute to stay under 30 minutes.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities: (open to suggestions)\n* Commute: You work near downtown San Jose three days a week, suggesting you may want a property with easy access to public",
+      "usage": {
+        "prompt_tokens": 665,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 24,
+        "short_term_window_tokens": 474,
+        "episodic_fact_tokens": 78,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3761.062,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 8,
+        "episodic_facts": [
+          {
+            "fact": "I work near downtown San Jose three days each week",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:14.331000+00:00",
+            "similarity": 0.399148
+          },
+          {
+            "fact": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:07.038000+00:00",
+            "similarity": 0.250872
+          },
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.231556
+          }
+        ],
+        "session_summary_present": false,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 6,
+      "message": "I prefer a walkable neighborhood for groceries and coffee.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities: (open to suggestions)\n* Commute: You work near downtown San Jose three days a week, suggesting you may want a property with easy access to public transportation or a short commute.\n* Neighborhood: You prefer",
+      "usage": {
+        "prompt_tokens": 840,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 96,
+        "short_term_window_tokens": 584,
+        "episodic_fact_tokens": 69,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3123.046,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 10,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.464245
+          },
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:18.160000+00:00",
+            "similarity": 0.343219
+          },
+          {
+            "fact": "I work near downtown San Jose three days each week",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:14.331000+00:00",
+            "similarity": 0.335664
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 7,
+      "message": "I want one covered parking space.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities: \n  * Covered parking space\n* Commute: You work near downtown San Jose three days a week, suggesting you may want a property with easy access",
+      "usage": {
+        "prompt_tokens": 951,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 96,
+        "short_term_window_tokens": 693,
+        "episodic_fact_tokens": 71,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3454.759,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 12,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.367289
+          },
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:18.160000+00:00",
+            "similarity": 0.364137
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.341365
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 8,
+      "message": "I prefer an in-unit washer and dryer.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n* Commute: You work near downtown San Jose three days a week, suggesting you",
+      "usage": {
+        "prompt_tokens": 1073,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 96,
+        "short_term_window_tokens": 796,
+        "episodic_fact_tokens": 79,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3966.711,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 14,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.308146
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.217583
+          },
+          {
+            "fact": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:07.038000+00:00",
+            "similarity": 0.146422
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 9,
+      "message": "I need a quiet building after 10 PM.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n* Commute: You work near downtown San Jose three days a week, suggesting you",
+      "usage": {
+        "prompt_tokens": 1171,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 96,
+        "short_term_window_tokens": 906,
+        "episodic_fact_tokens": 66,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3623.609,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 16,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.444369
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.341917
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.312584
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 10,
+      "message": "I prefer natural light and a balcony.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n* Commute: You work near downtown San Jose three days a week, suggesting you may want",
+      "usage": {
+        "prompt_tokens": 1285,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 96,
+        "short_term_window_tokens": 1013,
+        "episodic_fact_tokens": 67,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 4641.963,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 18,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.488083
+          },
+          {
+            "fact": "I need a quiet building after 10 PM",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:33.112000+00:00",
+            "similarity": 0.395081
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.340399
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": false
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 11,
+      "message": "I want an unfurnished rental.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n* Commute: You work near downtown San Jose three days a week, suggesting you",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 272,
+        "short_term_window_tokens": 1114,
+        "episodic_fact_tokens": 67,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 7208.316,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 20,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.560461
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.462521
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.462057
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 12,
+      "message": "I prefer a 12-month lease with a renewal option.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n* Commute: You work near downtown San Jose three days a week, suggesting you",
+      "usage": {
+        "prompt_tokens": 1679,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 272,
+        "short_term_window_tokens": 1220,
+        "episodic_fact_tokens": 68,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3547.266,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 22,
+        "episodic_facts": [
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.489063
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.454647
+          },
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.344897
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 13,
+      "message": "I need a smoke-free property because smoke bothers me.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n* Commute: You work near downtown San Jose three days a week, suggesting you",
+      "usage": {
+        "prompt_tokens": 1785,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 272,
+        "short_term_window_tokens": 1330,
+        "episodic_fact_tokens": 57,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3975.463,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 24,
+        "episodic_facts": [
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.402097
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.372445
+          },
+          {
+            "fact": "I need a quiet building after 10 PM",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:33.112000+00:00",
+            "similarity": 0.354605
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 14,
+      "message": "I have one indoor cat, so the rental must allow cats.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n* Commute: You work near downtown San Jose three days a week, suggesting you",
+      "usage": {
+        "prompt_tokens": 1909,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 272,
+        "short_term_window_tokens": 1441,
+        "episodic_fact_tokens": 67,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3477.489,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 26,
+        "episodic_facts": [
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.450698
+          },
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.429735
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.423712
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 15,
+      "message": "I prefer water to be included in the rent.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony\n  * Unfurnished rental\n  * 12-month",
+      "usage": {
+        "prompt_tokens": 2022,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 272,
+        "short_term_window_tokens": 1552,
+        "episodic_fact_tokens": 68,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 3943.041,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 28,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.481408
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.479568
+          },
+          {
+            "fact": "I prefer a 12-month lease with a renewal option",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:49.113000+00:00",
+            "similarity": 0.464581
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 16,
+      "message": "I want an application fee under $60.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2127,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 258,
+        "short_term_window_tokens": 1650,
+        "episodic_fact_tokens": 73,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 10232.729,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:07.038000+00:00",
+            "similarity": 0.27926
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.257768
+          },
+          {
+            "fact": "I prefer a 12-month lease with a renewal option",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:49.113000+00:00",
+            "similarity": 0.25026
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 17,
+      "message": "I can pay a security deposit up to one month of rent.",
+      "reply": "Thank you for providing more details about your rental search preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony\n  * Unfurnished rental\n  *",
+      "usage": {
+        "prompt_tokens": 2114,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 258,
+        "short_term_window_tokens": 1637,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9188.832,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a 12-month lease with a renewal option",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:49.113000+00:00",
+            "similarity": 0.540384
+          },
+          {
+            "fact": "I prefer water to be included in the rent",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:36:00.845000+00:00",
+            "similarity": 0.496726
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.484667
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 18,
+      "message": "I do not plan to have a roommate.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2100,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 258,
+        "short_term_window_tokens": 1612,
+        "episodic_fact_tokens": 66,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9125.919,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.521004
+          },
+          {
+            "fact": "I prefer water to be included in the rent",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:36:00.845000+00:00",
+            "similarity": 0.443611
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.391946
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 19,
+      "message": "I prefer the second floor or higher.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2095,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 258,
+        "short_term_window_tokens": 1598,
+        "episodic_fact_tokens": 67,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 10205.292,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.494041
+          },
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:38.029000+00:00",
+            "similarity": 0.414236
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.334276
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 20,
+      "message": "I need an elevator if the unit is above the second floor.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2094,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 258,
+        "short_term_window_tokens": 1589,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9478.876,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer the second floor or higher",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:36:40.781000+00:00",
+            "similarity": 0.552073
+          },
+          {
+            "fact": "I need a quiet building after 10 PM",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:33.112000+00:00",
+            "similarity": 0.354458
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.324485
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 21,
+      "message": "I prefer to live near light rail.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony\n* Commute: You work near downtown San Jose three days",
+      "usage": {
+        "prompt_tokens": 2212,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 381,
+        "short_term_window_tokens": 1584,
+        "episodic_fact_tokens": 66,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9304.747,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:38.029000+00:00",
+            "similarity": 0.521469
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.390442
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.389016
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 22,
+      "message": "I want grocery stores within walking distance.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2206,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 381,
+        "short_term_window_tokens": 1574,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 10144.609,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.642913
+          },
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:18.160000+00:00",
+            "similarity": 0.447843
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.371525
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 23,
+      "message": "I prefer air conditioning, but it is not a hard requirement.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2211,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 381,
+        "short_term_window_tokens": 1571,
+        "episodic_fact_tokens": 69,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 10603.372,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:38.029000+00:00",
+            "similarity": 0.453739
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.417802
+          },
+          {
+            "fact": "I prefer an in-unit washer and dryer",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:29.307000+00:00",
+            "similarity": 0.414251
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 24,
+      "message": "I need reliable high-speed internet options for remote work.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2214,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 381,
+        "short_term_window_tokens": 1566,
+        "episodic_fact_tokens": 68,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9154.0,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:18.160000+00:00",
+            "similarity": 0.309504
+          },
+          {
+            "fact": "I prefer an in-unit washer and dryer",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:29.307000+00:00",
+            "similarity": 0.199888
+          },
+          {
+            "fact": "I prefer air conditioning, but it is not a hard requirement",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:37:21.562000+00:00",
+            "similarity": 0.194601
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 25,
+      "message": "I prefer a building with secure package storage.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony\n  * Unfurnished rental\n  * 12-month",
+      "usage": {
+        "prompt_tokens": 2211,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 381,
+        "short_term_window_tokens": 1563,
+        "episodic_fact_tokens": 66,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 10500.288,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.429631
+          },
+          {
+            "fact": "I prefer water to be included in the rent",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:36:00.845000+00:00",
+            "similarity": 0.426773
+          },
+          {
+            "fact": "I need a quiet building after 10 PM",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:33.112000+00:00",
+            "similarity": 0.403353
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 26,
+      "message": "I want at least 850 square feet if possible.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Square footage: At least 850 square feet (preferable)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet",
+      "usage": {
+        "prompt_tokens": 2207,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 375,
+        "short_term_window_tokens": 1559,
+        "episodic_fact_tokens": 65,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9943.054,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.468199
+          },
+          {
+            "fact": "I need a quiet building after 10 PM",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:33.112000+00:00",
+            "similarity": 0.40799
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.386709
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 27,
+      "message": "I prefer a kitchen with a dishwasher.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2211,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 375,
+        "short_term_window_tokens": 1559,
+        "episodic_fact_tokens": 71,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9310.269,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer an in-unit washer and dryer",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:29.307000+00:00",
+            "similarity": 0.552593
+          },
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.39774
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.349992
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 28,
+      "message": "I need the lease to permit one indoor cat without a monthly pet rent over $50.",
+      "reply": "I've taken note of your updated criteria. To recap, I'll focus on properties in and around Santa Clara, California, with the following criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony",
+      "usage": {
+        "prompt_tokens": 2214,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 375,
+        "short_term_window_tokens": 1551,
+        "episodic_fact_tokens": 66,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 10685.123,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:56.819000+00:00",
+            "similarity": 0.81865
+          },
+          {
+            "fact": "I prefer a 12-month lease with a renewal option",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:49.113000+00:00",
+            "similarity": 0.520523
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.505133
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 29,
+      "message": "I want to move on December 1, 2026.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony\n  * Unfurnished rental\n  * 12-month",
+      "usage": {
+        "prompt_tokens": 2224,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 375,
+        "short_term_window_tokens": 1550,
+        "episodic_fact_tokens": 74,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9926.941,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:37:00.177000+00:00",
+            "similarity": 0.326106
+          },
+          {
+            "fact": "I prefer a 12-month lease with a renewal option",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:49.113000+00:00",
+            "similarity": 0.317445
+          },
+          {
+            "fact": "My maximum monthly budget is $3,500, and I need you to treat that as a hard cap",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:07.038000+00:00",
+            "similarity": 0.31325
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    },
+    {
+      "phase": "conversation",
+      "number": 30,
+      "message": "I can attend property viewings on Saturday mornings.",
+      "reply": "Thank you for providing more details about your preferences. I've taken note of your updated criteria:\n\n* Type of property: Apartment\n* Number of bedrooms and bathrooms: 2 bedrooms\n* Budget: $3,500 per month (hard cap)\n* Amenities:\n  * Covered parking space\n  * In-unit washer and dryer\n  * Quiet building after 10 PM\n  * Natural light and balcony\n  * Unfurnished rental\n  * 12-month",
+      "usage": {
+        "prompt_tokens": 2207,
+        "completion_tokens": 96,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 375,
+        "short_term_window_tokens": 1538,
+        "episodic_fact_tokens": 60,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9412.961,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I need a quiet building after 10 PM",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:33.112000+00:00",
+            "similarity": 0.372888
+          },
+          {
+            "fact": "I want one covered parking space",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:24.955000+00:00",
+            "similarity": 0.356142
+          },
+          {
+            "fact": "I work near downtown San Jose three days each week",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:14.331000+00:00",
+            "similarity": 0.34963
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      }
+    }
+  ],
+  "probes": [
+    {
+      "phase": "probe",
+      "number": 1,
+      "message": "Which city and maximum monthly rent should you use for my search?",
+      "reply": "Based on your previous messages, I will use the following criteria for your rental search:\n\n* City: Santa Clara, California\n* Maximum monthly rent: $3,500\n\nThese criteria are consistent with your previous preferences, including your budget, amenities, and pet policy. I will focus on finding apartments in Santa Clara, California that meet these criteria.",
+      "usage": {
+        "prompt_tokens": 2222,
+        "completion_tokens": 71,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1538,
+        "episodic_fact_tokens": 73,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 9338.527,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I want my rental search centered in Santa Clara, California",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:03.540000+00:00",
+            "similarity": 0.608732
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:38:12.669000+00:00",
+            "similarity": 0.50768
+          },
+          {
+            "fact": "I want an unfurnished rental",
+            "importance": 0.6,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:45.437000+00:00",
+            "similarity": 0.501661
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_1",
+      "expected_criteria": [
+        {
+          "label": "Santa Clara",
+          "any_of": [
+            "santa clara"
+          ]
+        },
+        {
+          "label": "maximum budget of $3,500",
+          "any_of": [
+            "$3,500",
+            "3500",
+            "3,500"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "Santa Clara",
+        "maximum budget of $3,500"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['Santa Clara', 'maximum budget of $3,500']; missing=['none']."
+    },
+    {
+      "phase": "probe",
+      "number": 2,
+      "message": "What property type and bedroom count do I prefer?",
+      "reply": "You prefer an apartment with 2 bedrooms.",
+      "usage": {
+        "prompt_tokens": 2195,
+        "completion_tokens": 10,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1522,
+        "episodic_fact_tokens": 70,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 8115.595,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I prefer a two-bedroom apartment rather than a house or studio",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:10.979000+00:00",
+            "similarity": 0.611983
+          },
+          {
+            "fact": "I prefer natural light and a balcony",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:38.029000+00:00",
+            "similarity": 0.463668
+          },
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:56.819000+00:00",
+            "similarity": 0.453999
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_2",
+      "expected_criteria": [
+        {
+          "label": "apartment",
+          "any_of": [
+            "apartment"
+          ]
+        },
+        {
+          "label": "two bedrooms",
+          "any_of": [
+            "two-bedroom",
+            "two bedroom",
+            "2-bedroom",
+            "2 bedroom"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "apartment",
+        "two bedrooms"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['apartment', 'two bedrooms']; missing=['none']."
+    },
+    {
+      "phase": "probe",
+      "number": 3,
+      "message": "What pet and smoke-related constraints must the rental satisfy?",
+      "reply": "Based on your previous messages, the rental must satisfy the following constraints:\n\n1. The rental must allow cats.\n2. The lease must permit one indoor cat without a monthly pet rent over $50.\n3. The rental must be smoke-free.\n\nThese constraints are consistent with your previous preferences, and I will ensure that the rental properties I find meet these requirements.",
+      "usage": {
+        "prompt_tokens": 2115,
+        "completion_tokens": 73,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1444,
+        "episodic_fact_tokens": 79,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 7936.529,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I have one indoor cat, so the rental must allow cats",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:56.819000+00:00",
+            "similarity": 0.635984
+          },
+          {
+            "fact": "I need the lease to permit one indoor cat without a monthly pet rent over $50",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:38:12.669000+00:00",
+            "similarity": 0.583528
+          },
+          {
+            "fact": "I need a smoke-free property because smoke bothers me",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:53.255000+00:00",
+            "similarity": 0.577209
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_3",
+      "expected_criteria": [
+        {
+          "label": "one indoor cat",
+          "any_of": [
+            "indoor cat",
+            "one cat",
+            "cat"
+          ]
+        },
+        {
+          "label": "smoke-free",
+          "any_of": [
+            "smoke-free",
+            "smoke free",
+            "non-smoking",
+            "nonsmoking"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "one indoor cat",
+        "smoke-free"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['one indoor cat', 'smoke-free']; missing=['none']."
+    },
+    {
+      "phase": "probe",
+      "number": 4,
+      "message": "What transit and commute preferences did I give you?",
+      "reply": "You mentioned the following transit and commute preferences:\n\n* You prefer to live near light rail.\n* You work near downtown San Jose three days a week.\n* You want your commute to stay under 30 minutes.\n\nThese preferences are consistent with your previous messages, and I will ensure that the rental properties I find meet these requirements.",
+      "usage": {
+        "prompt_tokens": 2081,
+        "completion_tokens": 66,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1432,
+        "episodic_fact_tokens": 63,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 8083.234,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I need my commute to stay under 30 minutes",
+            "importance": 0.9,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:18.160000+00:00",
+            "similarity": 0.427343
+          },
+          {
+            "fact": "I prefer a walkable neighborhood for groceries and coffee",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:35:21.394000+00:00",
+            "similarity": 0.319089
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:37:00.177000+00:00",
+            "similarity": 0.294525
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_4",
+      "expected_criteria": [
+        {
+          "label": "near light rail",
+          "any_of": [
+            "light rail"
+          ]
+        },
+        {
+          "label": "commute under 30 minutes",
+          "any_of": [
+            "under 30",
+            "less than 30",
+            "30 minutes or less",
+            "within 30"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "near light rail",
+        "commute under 30 minutes"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['near light rail', 'commute under 30 minutes']; missing=['none']."
+    },
+    {
+      "phase": "probe",
+      "number": 5,
+      "message": "When do I want to move, and when can I attend viewings?",
+      "reply": "You want to move on December 1, 2026, and you can attend property viewings on Saturday mornings.",
+      "usage": {
+        "prompt_tokens": 2059,
+        "completion_tokens": 25,
+        "system_primer_tokens": 41,
+        "long_term_summary_tokens": 374,
+        "short_term_window_tokens": 1413,
+        "episodic_fact_tokens": 64,
+        "component_counts_are_estimates": true,
+        "component_tokenizer": "MiniLM WordPiece estimate (not the exact llama3.2 tokenizer)",
+        "latency_ms": 7683.805,
+        "model": "llama3.2:latest"
+      },
+      "memory_used": {
+        "short_term_count": 30,
+        "episodic_facts": [
+          {
+            "fact": "I want to move on December 1, 2026",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:38:22.918000+00:00",
+            "similarity": 0.486799
+          },
+          {
+            "fact": "I prefer to live near light rail",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:37:00.177000+00:00",
+            "similarity": 0.368678
+          },
+          {
+            "fact": "What transit and commute preferences did I give you",
+            "importance": 0.8,
+            "session_id": "session-260686-short-term-n-30",
+            "created_at": "2026-10-18T02:39:07.395000+00:00",
+            "similarity": 0.318279
+          }
+        ],
+        "session_summary_present": true,
+        "lifetime_summary_present": true
+      },
+      "probe_id": "probe_5",
+      "expected_criteria": [
+        {
+          "label": "December 1, 2026 move date",
+          "any_of": [
+            "december 1, 2026",
+            "december 1st, 2026",
+            "2026-12-01",
+            "dec 1, 2026"
+          ]
+        },
+        {
+          "label": "Saturday morning viewings",
+          "any_of": [
+            "saturday morning",
+            "saturday mornings"
+          ]
+        }
+      ],
+      "score": 5,
+      "matched": [
+        "December 1, 2026 move date",
+        "Saturday morning viewings"
+      ],
+      "missing": [],
+      "scoring_explanation": "Objective phrase match: 2/2; matched=['December 1, 2026 move date', 'Saturday morning viewings']; missing=['none']."
+    }
+  ],
+  "metrics": {
+    "condition": "SHORT_TERM_N=30",
+    "configuration": {
+      "short_term_n": 30,
+      "summarize_every_user_msgs": 5,
+      "episodic_top_k": 3,
+      "policy": "sliding",
+      "include_file_memory": false
+    },
+    "runs": 1,
+    "conversation_turns": 30,
+    "probe_turns": 5,
+    "mean_prompt_tokens": 1632.233,
+    "mean_completion_tokens": 96,
+    "mean_latency_ms": 6843.77,
+    "mean_probe_score": 5
+  }
+}
