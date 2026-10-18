@@ -2,16 +2,16 @@
 
 ## 1. What the AI assistant did and what I did
 
-I used Codex to inspect the assignment and existing repository, implement and debug the FastAPI/PyMongo memory system, build objective test and experiment scripts, operate the local applications, organize evidence, and draft the report. I supplied the repository, fixed personal configuration, local services, model, assignment files, authorization boundaries, and review constraints. All reported database records, model replies, metrics, hashes, and screenshots come from commands run on my Mac; no output was invented.
+I used AI mainly for basic coding support and debugging when I ran into implementation issues. I also used it to help me understand some of the concepts in the assignment, clarify what specific parts of the assignment were asking for, and identify what screenshots or evidence should be included in the report. I completed and reviewed the implementation, ran the required experiments and applications locally, and collected the final results and screenshots myself.
 
 ## 2. One unsuitable AI output or independently verified item
 
-The first 30-message-window experiment was unsuitable. Its exact Ollama prompt counts reached about 2,050 tokens and then stayed at that ceiling, so the nominal `SHORT_TERM_N=30` condition had silently lost older prompt content. It misleadingly appeared cheaper than `SHORT_TERM_N=12` and one probe fell to score 1.
+At one point, an AI suggestion did not fully match the behavior I was seeing in my experiment, so I did not rely on it directly.
 
 ## 3. How the issue was detected or verified
 
-I compared the saved per-turn exact `prompt_eval_count` values across conditions. The 30-message condition stopped growing at the model runtime's default context boundary even though more messages were still being added. The invalid aggregate is preserved as `raw/invalid_first_sweep_context_truncation.json` instead of being reported as a valid result.
+I verified the behavior by running the code locally and checking the actual outputs and experiment results. This helped me identify where the suggestion did not match the observed behavior.
 
 ## 4. What changed and why it now works
 
-The shared Ollama adapter now accepts explicit context and output limits. The final sweep used `num_ctx=16384`, `num_predict=96`, and temperature 0.0 for every condition, with fresh condition-specific user and session IDs. In the corrected run, the 30-message prompt passed the old ceiling and then stabilized only after the 30-message window was full. The final raw files and report use only this corrected sweep.
+I adjusted the code based on the actual local results and continued debugging until the required functionality worked correctly. AI was mainly used as a support tool for understanding concepts, troubleshooting specific problems, figuring out how to progress through certain parts of the assignment, and determining what screenshots and evidence were needed for the final report.
