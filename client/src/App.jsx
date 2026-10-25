@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
-import { getJson, postEmpty } from "./api";
+import { getJson } from "./api";
 import Navbar from "./components/Navbar";
 import CreateRecord from "./pages/CreateRecord";
 import DeleteRecord from "./pages/DeleteRecord";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import UpdateRecord from "./pages/UpdateRecord";
+import BikeAgent from "./pages/BikeAgent";
 import { useDispatch } from "react-redux";
 import { clearListings } from "./features/listings/listingsSlice";
 
@@ -29,14 +30,14 @@ function AppShell() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getJson("/api/auth/me")
+    getJson("/auth/me")
       .then((data) => setUser(data))
       .catch(() => setUser(null))
       .finally(() => setLoading(false));
   }, []);
 
   async function handleLogout() {
-    await postEmpty("/api/auth/logout");
+    sessionStorage.removeItem("hw7_token");
     setUser(null);
     dispatch(clearListings());
     navigate("/login");
@@ -55,25 +56,26 @@ function AppShell() {
               element={<Home user={user} />}
             />
             <Route path="/login" element={<Login setUser={setUser} />} />
+            <Route path="/bike" element={<BikeAgent />} />
             <Route
               path="/create"
-              element={user ? <CreateRecord /> : <LoginRequired />}
+              element={user && user.role !== "reader" ? <CreateRecord /> : <LoginRequired />}
             />
             <Route
               path="/update"
-              element={user ? <UpdateRecord /> : <LoginRequired />}
+              element={user && user.role !== "reader" ? <UpdateRecord /> : <LoginRequired />}
             />
             <Route
               path="/update/:id"
-              element={user ? <UpdateRecord /> : <LoginRequired />}
+              element={user && user.role !== "reader" ? <UpdateRecord /> : <LoginRequired />}
             />
             <Route
               path="/delete"
-              element={user ? <DeleteRecord /> : <LoginRequired />}
+              element={user && user.role === "moderator" ? <DeleteRecord /> : <LoginRequired />}
             />
             <Route
               path="/delete/:id"
-              element={user ? <DeleteRecord /> : <LoginRequired />}
+              element={user && user.role === "moderator" ? <DeleteRecord /> : <LoginRequired />}
             />
           </Routes>
         )}

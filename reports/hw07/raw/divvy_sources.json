@@ -1,0 +1,27 @@
+{
+  "data_url": "https://divvy-tripdata.s3.amazonaws.com/202601-divvy-tripdata.zip",
+  "data_accessed_utc": "2026-10-25T04:53:52.170317+00:00",
+  "zip_sha256": "c72e49ced87ed20d4da4730c8905f007f78c771a68fbb5c2caf194fcaf5536ca",
+  "selection_note": "Anonymized public trips are not a single rider. scenario_selected flags modeled frequency using genuine trip durations; 500 source rows per file.",
+  "scenarios": {
+    "member": {
+      "rows": 500,
+      "attributed_rides": 48
+    },
+    "sparse": {
+      "rows": 500,
+      "attributed_rides": 3
+    }
+  },
+  "pricing": {
+    "url": "https://divvybikes.com/pricing",
+    "accessed_utc": "2026-10-25T04:53:52.878542+00:00",
+    "html_sha256": "81fb9136343965fb5e1ac8a7370bddf78da8ebcbbc6a96d4227b255cfa2c5035",
+    "exact_passages": [
+      "$1 + $0.20/min",
+      "$143.90/year* ($99/year limited time offer available for new members)",
+      "45 min free, then $0.20/min"
+    ],
+    "snapshot_file": "divvy_pricing.html"
+  }
+}

@@ -9,10 +9,11 @@ function Navbar({ user, onLogout }) {
         </Link>
         <div className="nav-links">
           <Link to="/">Home</Link>
+          <Link to="/bike">Bike Agent</Link>
           {user ? (
             <>
-              <Link to="/create">Add Listing</Link>
-              <span className="nav-user">{user.name}</span>
+              {user.role !== "reader" ? <Link to="/create">Add Listing</Link> : null}
+              <span className="nav-user">{user.username} ({user.role})</span>
               <button className="btn secondary" type="button" onClick={onLogout}>
                 Logout
               </button>

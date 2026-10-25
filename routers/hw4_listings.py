@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session as DbSession
 from database import get_db
 from hw5_schemas import ListingRequest, ListingResponse, ListingsPage
 from models import ListingNote, PropertyManager, RentalListing, User
-from routers.hw4_auth import get_current_user
+from routers.hw7_auth import current_user, require_roles
 
 
 router = APIRouter(prefix="/api/listings")
@@ -38,7 +38,7 @@ def save_listing(db, listing):
 def create_listing(
     data: ListingRequest,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_roles("writer", "moderator")),
 ):
     check_manager(db, data.property_manager_id)
     listing = RentalListing(**data.model_dump())
@@ -51,7 +51,7 @@ def get_listings(
     page: int = Query(default=1, ge=1),
     page_size: int = Query(default=20, ge=1, le=100),
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(current_user),
 ):
     total = db.scalar(select(func.count()).select_from(RentalListing))
     rows = db.scalars(
@@ -65,7 +65,7 @@ def get_listings(
 def get_listing(
     listing_id: int,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(current_user),
 ):
     return find_listing(db, listing_id)
 
@@ -75,7 +75,7 @@ def update_listing(
     listing_id: int,
     data: ListingRequest,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_roles("writer", "moderator")),
 ):
     listing = find_listing(db, listing_id)
     check_manager(db, data.property_manager_id)
@@ -88,7 +88,7 @@ def update_listing(
 def delete_listing(
     listing_id: int,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_roles("moderator")),
 ):
     listing = find_listing(db, listing_id)
     if db.scalar(select(ListingNote.id).where(ListingNote.listing_id == listing_id).limit(1)):

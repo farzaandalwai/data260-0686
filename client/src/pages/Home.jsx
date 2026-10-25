@@ -40,11 +40,9 @@ function Home({ user }) {
       <div className="page-header">
         <div>
           <h1>Rental Housing Listings</h1>
-          <p className="muted">Signed in as {user.name}</p>
+          <p className="muted">Signed in as {user.username} ({user.role})</p>
         </div>
-        <Link className="btn primary" to="/create">
-          Add Listing
-        </Link>
+        {user.role !== "reader" ? <Link className="btn primary" to="/create">Add Listing</Link> : null}
       </div>
       {error ? <p className="error">{error}</p> : null}
       {status === "loading" ? <p>Loading listings...</p> : null}
@@ -75,12 +73,8 @@ function Home({ user }) {
                   <td>{listing.property_manager_id}</td>
                   <td>
                     <div className="actions">
-                      <Link className="btn secondary" to={"/update/" + listing.id}>
-                        Update
-                      </Link>
-                      <button className="btn danger" type="button" disabled={status === "loading"} onClick={() => handleDelete(listing.id)}>
-                        Delete
-                      </button>
+                      {user.role !== "reader" ? <Link className="btn secondary" to={"/update/" + listing.id}>Update</Link> : null}
+                      {user.role === "moderator" ? <button className="btn danger" type="button" disabled={status === "loading"} onClick={() => handleDelete(listing.id)}>Delete</button> : null}
                     </div>
                   </td>
                 </tr>

@@ -6,11 +6,12 @@ async function request(path, options) {
   if (settings.body !== undefined) {
     headers["Content-Type"] = "application/json";
   }
+  const token = sessionStorage.getItem("hw7_token");
+  if (token) headers.Authorization = `Bearer ${token}`;
   const response = await fetch(API_BASE + path, {
     method: settings.method || "GET",
     headers,
     body: settings.body,
-    credentials: "include",
   });
   const text = await response.text();
   let data = null;

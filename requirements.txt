@@ -19,6 +19,7 @@ sqlalchemy
 pymysql
 python-dotenv
 bcrypt
+PyJWT
 requests
 email-validator
 mcp[cli]<2

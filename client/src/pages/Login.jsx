@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { sendJson } from "../api";
 
 function Login({ setUser }) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -12,10 +12,11 @@ function Login({ setUser }) {
     event.preventDefault();
     setError("");
     try {
-      const data = await sendJson("/api/auth/login", "POST", {
-        email,
+      const data = await sendJson("/auth/login", "POST", {
+        username,
         password,
       });
+      sessionStorage.setItem("hw7_token", data.access_token);
       setUser(data.user);
       navigate("/");
     } catch (err) {
@@ -29,12 +30,11 @@ function Login({ setUser }) {
       <form onSubmit={handleSubmit}>
         {error ? <p className="error">{error}</p> : null}
         <div className="field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="username">Username</label>
           <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            id="username"
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
           />
         </div>
         <div className="field">

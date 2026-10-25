@@ -6,34 +6,25 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
-from starlette.middleware.sessions import SessionMiddleware
-
-from routers.auth import router as auth_router
-from routers.hw4_auth import router as hw4_auth_router
 from routers.hw4_listings import router as hw4_listings_router
 from routers.hw4_measure import router as hw4_measure_router
 from routers.hw5_managers import router as hw5_managers_router
 from routers.hw6_documents import router as hw6_documents_router
 from routers.hw6_memory import router as hw6_memory_router
+from routers.hw7_auth import router as hw7_auth_router
+from routers.hw7_bike import router as hw7_bike_router
 
 
 app = FastAPI()
 app.add_middleware(
-    SessionMiddleware,
-    secret_key="s0686-rental-housing-dev",
-    max_age=3600,
-    same_site="lax",
-    https_only=True,
-)
-app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://127.0.0.1:5173"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.include_router(auth_router)
-app.include_router(hw4_auth_router)
+app.include_router(hw7_auth_router)
+app.include_router(hw7_bike_router)
 app.include_router(hw4_listings_router)
 app.include_router(hw4_measure_router)
 app.include_router(hw5_managers_router)

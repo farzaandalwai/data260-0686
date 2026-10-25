@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session as DbSession
 from database import get_db
 from hw5_schemas import ManagerRequest, ManagerResponse, ManagersPage, ListingsPage
 from models import PropertyManager, RentalListing, User
-from routers.hw4_auth import get_current_user
+from routers.hw7_auth import current_user, require_roles
 
 
 router = APIRouter(prefix="/api/property-managers")
@@ -33,7 +33,7 @@ def save_manager(db, manager):
 def create_manager(
     data: ManagerRequest,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_roles("writer", "moderator")),
 ):
     manager = PropertyManager(**data.model_dump())
     db.add(manager)
@@ -45,7 +45,7 @@ def get_managers(
     page: int = Query(default=1, ge=1),
     page_size: int = Query(default=20, ge=1, le=100),
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(current_user),
 ):
     total = db.scalar(select(func.count()).select_from(PropertyManager))
     rows = db.scalars(
@@ -61,7 +61,7 @@ def manager_listings(
     page: int = Query(default=1, ge=1),
     page_size: int = Query(default=20, ge=1, le=100),
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(current_user),
 ):
     find_manager(db, manager_id)
     total = db.scalar(
@@ -79,7 +79,7 @@ def manager_listings(
 def get_manager(
     manager_id: int,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(current_user),
 ):
     return find_manager(db, manager_id)
 
@@ -89,7 +89,7 @@ def update_manager(
     manager_id: int,
     data: ManagerRequest,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_roles("writer", "moderator")),
 ):
     manager = find_manager(db, manager_id)
     for field, value in data.model_dump().items():
@@ -101,7 +101,7 @@ def update_manager(
 def delete_manager(
     manager_id: int,
     db: DbSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_roles("moderator")),
 ):
     manager = find_manager(db, manager_id)
     if db.scalar(select(RentalListing.id).where(RentalListing.property_manager_id == manager_id).limit(1)):

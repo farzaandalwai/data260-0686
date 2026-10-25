@@ -1,0 +1,203 @@
+{
+  "homework": 7,
+  "sid4": "0686",
+  "port_base": 8686,
+  "prefix": "s0686",
+  "seed": 686,
+  "verify_seed": 260686,
+  "domain_id": 6,
+  "model": "llama3.2:latest",
+  "timestamp_utc": "2026-10-25T06:10:05.702530+00:00",
+  "source_head_at_run": "e08df7de0a37dfa14fbeac193003df3096d69724",
+  "machine": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.14",
+  "passed": true,
+  "checks": [
+    {
+      "name": "reader0686 login",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "writer0686 login",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "moderator0686 login",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "bad password",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "missing bearer",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "old session cookie rejected",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "invalid bearer",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "expired bearer",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "reader profile",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "reader list",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "reader create forbidden",
+      "passed": true,
+      "actual": 403,
+      "expected": 403
+    },
+    {
+      "name": "writer delete forbidden",
+      "passed": true,
+      "actual": 403,
+      "expected": 403
+    },
+    {
+      "name": "writer create",
+      "passed": true,
+      "actual": 201,
+      "expected": 201
+    },
+    {
+      "name": "moderator read",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "moderator delete",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "member CSV rows",
+      "passed": true,
+      "actual": 500,
+      "expected": 500
+    },
+    {
+      "name": "member framework stop",
+      "passed": true,
+      "actual": "success",
+      "expected": "success"
+    },
+    {
+      "name": "sparse CSV rows",
+      "passed": true,
+      "actual": 500,
+      "expected": 500
+    },
+    {
+      "name": "sparse framework stop",
+      "passed": true,
+      "actual": "success",
+      "expected": "success"
+    },
+    {
+      "name": "member decision",
+      "passed": true,
+      "actual": "Buy Monthly Membership",
+      "expected": "Buy Monthly Membership"
+    },
+    {
+      "name": "sparse decision",
+      "passed": true,
+      "actual": "Pay Per Ride/Minute",
+      "expected": "Pay Per Ride/Minute"
+    },
+    {
+      "name": "non-SELECT SQL rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "calculator expression rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "recursive delete detected",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "find delete detected",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "sandbox gate",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "baseline attempts",
+      "passed": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "name": "injection matrix",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "name": "pricing snapshot SHA-256",
+      "passed": true,
+      "actual": "81fb9136343965fb5e1ac8a7370bddf78da8ebcbbc6a96d4227b255cfa2c5035",
+      "expected": "81fb9136343965fb5e1ac8a7370bddf78da8ebcbbc6a96d4227b255cfa2c5035"
+    },
+    {
+      "name": "live bike API",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "live bike API decision",
+      "passed": true,
+      "actual": "Pay Per Ride/Minute",
+      "expected": "Pay Per Ride/Minute"
+    }
+  ]
+}

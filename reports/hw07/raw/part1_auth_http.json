@@ -1,0 +1,44 @@
+[
+  {
+    "case": "login valid",
+    "status": 200,
+    "jwt": "eyJhbG...[redacted]",
+    "token_type": "bearer"
+  },
+  {
+    "case": "login wrong password",
+    "status": 401
+  },
+  {
+    "case": "me missing token",
+    "status": 401
+  },
+  {
+    "case": "me invalid token",
+    "status": 401
+  },
+  {
+    "case": "me expired token",
+    "status": 401
+  },
+  {
+    "case": "list reader",
+    "status": 200
+  },
+  {
+    "case": "create reader",
+    "status": 403
+  },
+  {
+    "case": "delete writer",
+    "status": 403
+  },
+  {
+    "case": "create writer",
+    "status": 201
+  },
+  {
+    "case": "delete moderator",
+    "status": 200
+  }
+]
