@@ -1,6 +1,14 @@
 import { useState } from "react";
 import api, { errorMessage } from "../api/axios";
 
+function observationText(step) {
+  const observation = step.observation;
+  if (!observation.success) return observation.error;
+  if (step.tool === "csv_sql") return `${observation.data.row_count} row(s): ${JSON.stringify(observation.data.rows)}`;
+  if (step.tool === "policy_retriever") return observation.data.passages.map((passage) => `${passage.text} (${passage.source})`).join(" | ");
+  return `${observation.data.value} ${observation.data.units || ""}`;
+}
+
 function BikeAgent() {
   const [file, setFile] = useState(null);
   const [url, setUrl] = useState("https://divvybikes.com/pricing");
@@ -47,7 +55,7 @@ function BikeAgent() {
         </> : null}
         <p>Steps: {output.steps}; time: {output.time_ms} ms; stop: {output.stop_reason}</p>
         <h3>Tool timeline</h3>
-        <ol>{output.timeline.map((step, index) => <li key={index}><strong>{step.tool}</strong><pre>{JSON.stringify(step.inputs, null, 2)}</pre><pre>{JSON.stringify(step.observation, null, 2)}</pre></li>)}</ol>
+        <ol>{output.timeline.map((step, index) => <li key={index} style={{ overflowWrap: "anywhere" }}><strong>{step.tool}</strong><p>Input: {JSON.stringify(step.inputs)}</p><p>Observation: {observationText(step)}; source: {step.observation.source}</p><details><summary>Full observation</summary><pre>{JSON.stringify(step.observation, null, 2)}</pre></details></li>)}</ol>
       </div> : null}
     </section>
   );

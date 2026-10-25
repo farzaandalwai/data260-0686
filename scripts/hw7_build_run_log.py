@@ -40,7 +40,7 @@ def main():
     lines.append("")
     lines.append(f"{sandbox['timestamp']} sandbox debug_matches={len(sandbox['discovery']['search'])} allowed={sum(x['result']['allowed'] for x in sandbox['allowed'])}/5 blocked={sum(not x['result']['allowed'] for x in sandbox['blocked'])}/5 passed={sandbox['passed']}")
     verification = json.loads((ROOT / "verification.json").read_text())
-    lines.append(f"{verification['timestamp_utc']} live verification passed={verification['passed']}/{len(verification['checks'])}")
+    lines.append(f"{verification['timestamp_utc']} live verification passed={sum(item['passed'] for item in verification['checks'])}/{len(verification['checks'])}")
     (ROOT / "RUN_LOG.txt").write_text("\n".join(lines) + "\n")
 
 
