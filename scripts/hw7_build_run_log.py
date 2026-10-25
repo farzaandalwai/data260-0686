@@ -15,6 +15,8 @@ def main():
     for item in load("part2_attempts.json"):
         run = item["run"]
         lines.append(f"{run['timestamp']} baseline {item['attempt']:02d} task={run['task']} calls={run['tool_calls']} stop={run['stop_reason']} verified={item['verdict']['passed']} reasons={item['verdict']['reasons']}")
+    missing = load("part2_nonexistent_id.json")
+    lines.append(f"{missing['timestamp']} nonexistent ID stop={missing['stop_reason']} answer={missing['answer']}")
     lines.append("")
     for item in load("part3_reflexion.json"):
         for number, attempt in enumerate(item["attempts"], 1):

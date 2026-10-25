@@ -21,6 +21,7 @@ Times below are real UTC timestamps stored by the run scripts.
 2026-10-25T05:31:47.996680+00:00 baseline 18 task=C calls=4 stop=success verified=True reasons=[]
 2026-10-25T05:31:52.584013+00:00 baseline 19 task=A calls=3 stop=success verified=False reasons=['limited search count stated as a total; say these are examples']
 2026-10-25T05:31:55.639885+00:00 baseline 20 task=B calls=3 stop=success verified=True reasons=[]
+2026-10-25T05:26:25.834598+00:00 nonexistent ID stop=success answer=The rental listing ID 9999999 does not exist.
 
 2026-10-25T05:33:46.944437+00:00 reflexion task=A attempt=1 calls=3 stop=success verified=False reasons=['limited search count stated as a total; say these are examples']
 2026-10-25T05:33:52.676994+00:00 reflexion task=A attempt=2 calls=3 stop=human_review verified=False reasons=['human_review', 'answer omits title, units, or manager evidence']
