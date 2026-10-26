@@ -2,19 +2,32 @@
 
 All values below come from the JSON files in `raw/`. The 20 baseline trials used `llama3.2:latest`, temperature 0, and the same three fixed prompts in A/B/C rotation. “Verified” means the deterministic evidence checker passed, not merely that the model returned text.
 
-## Hand-written agent and Reflexion
+## Twenty-attempt baseline reliability
 
-| Measure | Baseline (20 independent trials) | Reflexion (3 fixed tasks) |
+| Measure | Before repair | After repair |
 | --- | ---: | ---: |
-| Verified task successes | 13/20 (65%) | 3/3 (100%) |
-| Unsupported-claim failures | 7/20 (35%) | 1 failed attempt, corrected on retry; 0 final |
-| Retry rate | 0/20 | 1/3 tasks retried (2 retry attempts) |
-| Tool calls | 66 total; 3.30/trial | 18 total; 6.00/task |
-| Input + output tokens | 43,050 total; 2,152.5/trial | 15,159 total; 5,053/task |
-| Latency | 95.10 s total; 4.75 s/trial | 26.50 s total; 8.83 s/task |
+| Well-formed tool calls | 66/66 (100%) | 66/66 (100%) |
+| Malformed arguments | 0 | 0 |
+| Unknown tool | 0 | 0 |
+| Text when a tool was required | 0 | 0 |
+| Schema failures | 0 | 0 |
+| Lost multi-step chain | 0 | 0 |
+
+The verifier passed 13/20 complete tasks. No tool-call repair was needed. Task A was verified 0/7 because the model called a limited three-row search result the total number of listings; B was 7/7 and C was 6/6. The missing-ID test returned a graceful not-found answer.
+
+## Original versus Reflexion on the same A/B/C tasks
+
+| Measure | Original A/B/C first attempts | Reflexion A/B/C |
+| --- | ---: | ---: |
+| Verified task successes | 2/3 (66.7%) | 3/3 (100%) |
+| Unsupported claims in final answers | 1/3 | 0/3; one failed attempt corrected |
+| Retry rate | 0/3 | 1/3 tasks (2 retry attempts) |
+| Tool calls | 10 total; 3.33/task | 18 total; 6.00/task |
+| Input + output tokens | 6,586 total; 2,195.33/task | 15,159 total; 5,053/task |
+| Latency (ms) | 15,000.17 total; 5,000.06/task | 26,504.18 total; 8,834.73/task |
 | Verifier false rejections | 0 observed | 0 observed |
 
-Task A was verified 0/7 at baseline because the model called a limited three-row search result the total number of listings. B was 7/7; C was 6/6. The model made 66 well-formed tool calls before repair and 66 after repair (100% both); no repairs were needed. Recorded malformed arguments, unknown tools, text-when-tool-required, schema failures, and lost chains were each 0. The missing-ID test returned a graceful not-found answer. Reflexion A needed two retries; the first unsupported claim was rejected, the second attempt did not complete, and the third passed. B and C passed first try. A separate tight-step probe produced a real `budget_exhausted` first attempt and a successful second attempt; it is not counted in the three-task comparison.
+The original column uses attempts 1–3 of `part2_attempts.json`, matching the fixed A/B/C prompts in `part3_reflexion.json`. Reflexion A needed two retries; the first unsupported claim was rejected, the second attempt did not complete, and the third passed. B and C passed first try. A separate tight-step probe produced a real `budget_exhausted` first attempt and a successful second attempt; it is not counted in the three-task comparison. No false rejection was observed in these cases; this does not establish a general false-rejection rate.
 
 ## Divvy framework agent
 

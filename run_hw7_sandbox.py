@@ -28,6 +28,14 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps(record, indent=2))
         print(f"Sandbox: 3 Python files; glob -> search -> read found {len(discovery['search'])} DEBUG matches")
+        print(f"glob: {discovery['glob']}")
+        for match in discovery["search"]:
+            print(f"search: {match['file']}:{match['line']} {match['text']}")
+        print(f"read alpha.py: {discovery['read'].strip()!r}")
+        for number, item in enumerate(allowed, 1):
+            print(f"ALLOW {number}: {item['command']} -> rc={item['result']['returncode']}")
+        for number, item in enumerate(blocked, 1):
+            print(f"BLOCK {number}: {item['command']} -> {item['result']['reason']}")
         print(f"Gate: {sum(item['result']['allowed'] for item in allowed)}/5 allowed; {sum(not item['result']['allowed'] for item in blocked)}/5 blocked")
         print("PASS" if passed else "FAIL")
         if not passed:

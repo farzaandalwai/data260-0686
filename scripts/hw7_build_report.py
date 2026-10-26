@@ -136,4 +136,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    from hw7_build_report_v2 import main as revised_main
+
+    revised_main()
