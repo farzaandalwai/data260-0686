@@ -1,6 +1,6 @@
 # AI use
 
-1. I used ChatGPT/Codex to read and explain the HW8 instructions, plan the evidence, write the Kafka implementation and verification scripts, debug failures, operate my Mac, and collect the screenshots. I supplied the assignment, repository, and constraints. The assistant performed most of the implementation, execution, and screenshot collection; I am responsible for reviewing the submission.
+1. I used ChatGPT to read and understand the HW8 instructions, clarify what each part required, and plan screenshots after the runs. I also used AI for code and debugging. For the HW8 Kafka additions, Codex wrote most of the implementation, ran the checks, and operated my Mac to capture the real screenshots. I provided the assignment and constraints, reviewed the results, and requested revisions.
 
 2. The first implementation assumed concurrent SQLite journal initialization would work and that every line read from a live JSONL file was complete. Real runs exposed a database-lock error and a JSON parsing error. The first startup also exposed transient Kafka topic-metadata errors. An initial regression check expected a list, but the existing MySQL endpoint correctly returned a paginated object; the check was corrected after reading its real implementation.
 
