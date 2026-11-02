@@ -1,0 +1,5 @@
+{"timestamp":"2026-11-02T04:40:10.060689+00:00","event":"baseline_ready","pid":16429,"mode":"duplicate","group":"s0686_before_duplicate_hw8-e66681cbf8","offset":54}
+{"timestamp":"2026-11-02T04:40:10.174443+00:00","event":"baseline_receive","pid":16429,"mode":"duplicate","correlation_id":"hw8-e66681cbf8-before-duplicate","offset":54}
+{"timestamp":"2026-11-02T04:40:10.175163+00:00","event":"baseline_effect","pid":16429,"mode":"duplicate","correlation_id":"hw8-e66681cbf8-before-duplicate","effects":1,"offset":54}
+{"timestamp":"2026-11-02T04:40:10.299741+00:00","event":"baseline_receive","pid":16429,"mode":"duplicate","correlation_id":"hw8-e66681cbf8-before-duplicate","offset":55}
+{"timestamp":"2026-11-02T04:40:10.301866+00:00","event":"baseline_effect","pid":16429,"mode":"duplicate","correlation_id":"hw8-e66681cbf8-before-duplicate","effects":2,"offset":55}

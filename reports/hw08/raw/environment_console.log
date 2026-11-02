@@ -1,0 +1,24 @@
+{
+  "captured_utc": "2026-11-02T04:42:09.362033+00:00",
+  "repository": {
+    "default_branch": "main",
+    "html_url": "https://github.com/farzaandalwai/data260-0686",
+    "private": false
+  },
+  "collaborators": [
+    {
+      "permission": "read",
+      "user": "Sbnikitha"
+    },
+    {
+      "permission": "read",
+      "user": "supriyaselvanganesan"
+    }
+  ],
+  "hardware": "Apple M4",
+  "memory_bytes": 25769803776,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.14",
+  "docker": "29.7.2",
+  "image": "[\"apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e\"]"
+}

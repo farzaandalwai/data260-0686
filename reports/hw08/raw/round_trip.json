@@ -1,0 +1,199 @@
+{
+  "create": {
+    "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+    "success": true,
+    "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+    "message": "Listing created"
+  },
+  "get": {
+    "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+    "success": true,
+    "listing": {
+      "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+      "propertyTitle": "HW8 San Jose apartment",
+      "location": "San Jose, CA",
+      "submitterEmail": "hw8@example.com",
+      "description": "A bright two-bedroom rental near campus.",
+      "propertyType": "Apartment",
+      "termsAccepted": true
+    }
+  },
+  "flow": [
+    {
+      "timestamp": "2026-11-02T04:39:47.226028+00:00",
+      "event": "client_send",
+      "pid": 16202,
+      "topic": "s0686_entity_requests",
+      "message": {
+        "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+        "reply_to": "s0686_entity_responses",
+        "operation": "CREATE_LISTING",
+        "data": {
+          "propertyTitle": "HW8 San Jose apartment",
+          "location": "San Jose, CA",
+          "submitterEmail": "hw8@example.com",
+          "description": "A bright two-bedroom rental near campus.",
+          "propertyType": "Apartment",
+          "termsAccepted": true
+        }
+      },
+      "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6"
+    },
+    {
+      "timestamp": "2026-11-02T04:39:48.202825+00:00",
+      "event": "worker_receive",
+      "pid": 1,
+      "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+      "message": {
+        "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+        "reply_to": "s0686_entity_responses",
+        "operation": "CREATE_LISTING",
+        "data": {
+          "propertyTitle": "HW8 San Jose apartment",
+          "location": "San Jose, CA",
+          "submitterEmail": "hw8@example.com",
+          "description": "A bright two-bedroom rental near campus.",
+          "propertyType": "Apartment",
+          "termsAccepted": true
+        }
+      },
+      "partition": 0,
+      "offset": 45
+    },
+    {
+      "timestamp": "2026-11-02T04:39:48.217615+00:00",
+      "event": "worker_process",
+      "pid": 1,
+      "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+      "message": {
+        "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+        "success": true,
+        "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+        "message": "Listing created"
+      },
+      "listing_count": 1
+    },
+    {
+      "timestamp": "2026-11-02T04:39:48.232832+00:00",
+      "event": "worker_reply",
+      "pid": 1,
+      "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+      "message": {
+        "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+        "success": true,
+        "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+        "message": "Listing created"
+      },
+      "topic": "s0686_entity_responses",
+      "partition": 0,
+      "offset": 45
+    },
+    {
+      "timestamp": "2026-11-02T04:39:48.504944+00:00",
+      "event": "client_receive",
+      "pid": 16202,
+      "topic": "s0686_entity_responses",
+      "message": {
+        "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6",
+        "success": true,
+        "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+        "message": "Listing created"
+      },
+      "correlation_id": "538f4f01-2507-49d6-be11-2de0568017a6"
+    },
+    {
+      "timestamp": "2026-11-02T04:39:48.546679+00:00",
+      "event": "client_send",
+      "pid": 16202,
+      "topic": "s0686_entity_requests",
+      "message": {
+        "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+        "reply_to": "s0686_entity_responses",
+        "operation": "GET_LISTING",
+        "data": {
+          "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806"
+        }
+      },
+      "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255"
+    },
+    {
+      "timestamp": "2026-11-02T04:39:49.122190+00:00",
+      "event": "worker_receive",
+      "pid": 1,
+      "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+      "message": {
+        "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+        "reply_to": "s0686_entity_responses",
+        "operation": "GET_LISTING",
+        "data": {
+          "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806"
+        }
+      },
+      "partition": 0,
+      "offset": 46
+    },
+    {
+      "timestamp": "2026-11-02T04:39:49.133681+00:00",
+      "event": "worker_process",
+      "pid": 1,
+      "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+      "message": {
+        "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+        "success": true,
+        "listing": {
+          "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+          "propertyTitle": "HW8 San Jose apartment",
+          "location": "San Jose, CA",
+          "submitterEmail": "hw8@example.com",
+          "description": "A bright two-bedroom rental near campus.",
+          "propertyType": "Apartment",
+          "termsAccepted": true
+        }
+      },
+      "listing_count": 1
+    },
+    {
+      "timestamp": "2026-11-02T04:39:49.159622+00:00",
+      "event": "worker_reply",
+      "pid": 1,
+      "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+      "message": {
+        "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+        "success": true,
+        "listing": {
+          "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+          "propertyTitle": "HW8 San Jose apartment",
+          "location": "San Jose, CA",
+          "submitterEmail": "hw8@example.com",
+          "description": "A bright two-bedroom rental near campus.",
+          "propertyType": "Apartment",
+          "termsAccepted": true
+        }
+      },
+      "topic": "s0686_entity_responses",
+      "partition": 0,
+      "offset": 46
+    },
+    {
+      "timestamp": "2026-11-02T04:39:49.244898+00:00",
+      "event": "client_receive",
+      "pid": 16202,
+      "topic": "s0686_entity_responses",
+      "message": {
+        "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255",
+        "success": true,
+        "listing": {
+          "listing_id": "ade8d7cb-6d53-4f76-95e6-4f29d3733806",
+          "propertyTitle": "HW8 San Jose apartment",
+          "location": "San Jose, CA",
+          "submitterEmail": "hw8@example.com",
+          "description": "A bright two-bedroom rental near campus.",
+          "propertyType": "Apartment",
+          "termsAccepted": true
+        }
+      },
+      "correlation_id": "4b8df81f-7a9d-45dd-9f10-a1f317b6c255"
+    }
+  ],
+  "correlation_preserved": true
+}

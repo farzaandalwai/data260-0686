@@ -1,0 +1,18 @@
+{
+  "correlation_id": "42fe025e-46ce-4be7-a973-02a9f0d36461",
+  "question": "What is known about this San Jose rental?",
+  "entity_key": "rental-0686",
+  "facts": {
+    "location": "San Jose",
+    "available_units": 2
+  },
+  "use_model": true,
+  "plan": [
+    "Read the supplied rental facts",
+    "Explain the facts without inventing details"
+  ],
+  "model": "llama3.2:latest",
+  "draft": "Based on the provided facts, it is known that the San Jose rental has 2 available units.",
+  "status": "approved",
+  "answer": "Based on the provided facts, it is known that the San Jose rental has 2 available units."
+}

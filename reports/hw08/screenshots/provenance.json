@@ -1,0 +1,227 @@
+[
+  {
+    "file": "01_services.png",
+    "original": "originals/01_services.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      701
+    ],
+    "original_sha256": "6d1ada9f752ae57dc9fc976b31fc7202f13eb353b9406cff2ea1737aa3085502",
+    "cropped_sha256": "65001e8f4c25a6c334da8992443b6b868c639a67489dd367f2306877d26908f1",
+    "requirement": "Part 1 V.1",
+    "section": "Setup",
+    "command": "docker ps; worker ready and FastAPI startup logs"
+  },
+  {
+    "file": "04_client_demo_code.png",
+    "original": "originals/04_client_demo_code.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1233
+    ],
+    "original_sha256": "ff541e0405bea268cd024fd8104c11b39bd493098d3e14a8449d86d6966c1626",
+    "cropped_sha256": "be5cbe35ed23a67137116936cc5cfdd901e3cc2d46fb9ce81f9133ca9d3e221c",
+    "requirement": "Part 1 source screenshots",
+    "section": "Client and demo",
+    "command": "nl -ba hw8_kafka.py (85-96); homework_demo.py (7-24)"
+  },
+  {
+    "file": "05_worker_api_code.png",
+    "original": "originals/05_worker_api_code.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1289
+    ],
+    "original_sha256": "27a83255dfc16a0440d7dde28c09c555740ccbba0b3b12d0e514d22fecfd4690",
+    "cropped_sha256": "d9b5ac7433fd4b4b6eb9b33a9b70fa4d9f15be29f5d863b8d8992d6ebb23af64",
+    "requirement": "Part 1 source screenshots",
+    "section": "Worker and API",
+    "command": "nl -ba hw8_worker.py (27-51); routers/hw8_listings.py (16-23)"
+  },
+  {
+    "file": "16_api.png",
+    "original": "originals/16_api.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      813
+    ],
+    "original_sha256": "219fcecb6e3aa683406afa2b6b09e4ea099350014a3085b3641e9d8b49228eb4",
+    "cropped_sha256": "6edebe51a9d22707ef475298c7ae4c2e3fe1a38a3e83cc77f5bbbdef3ac8bb3a",
+    "requirement": "Part 1 II and V.2-3",
+    "section": "API response",
+    "command": "curl POST /api/hw8/listings with saved listing UUID and caller correlation ID"
+  },
+  {
+    "file": "02_roundtrip.png",
+    "original": "originals/02_roundtrip.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1261
+    ],
+    "original_sha256": "934f183f90625b28d04dbf232d99a0d543808989db2b20226e747301aa748877",
+    "cropped_sha256": "6fbee1897e09189e713722cee62c00d67b1a702d7a538e0a48d9c987c5b51f48",
+    "requirement": "Part 1 IV and V.2-4",
+    "section": "CREATE then GET",
+    "command": "python show_hw8_evidence.py roundtrip; reads raw/round_trip.json"
+  },
+  {
+    "file": "15_validation.png",
+    "original": "originals/15_validation.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1009
+    ],
+    "original_sha256": "6bbaf03e3504bc16fead1de3c5eb1c2aa42340c3cf2e5308e65e1cacdff86741",
+    "cropped_sha256": "cbb4821fe560b6f84fb6d9b38e02969a2e741f965435666ef16b599be7ca039d",
+    "requirement": "Part 1 III",
+    "section": "Validation",
+    "command": "python show_hw8_evidence.py checks | head -n 23"
+  },
+  {
+    "file": "03_topics.png",
+    "original": "originals/03_topics.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      981
+    ],
+    "original_sha256": "938f1fd65e2cf863074522385cdc81f32e54b4e10470301aff3ed5de962f121f",
+    "cropped_sha256": "749e8a30be9faf3bceaff44cc862b54ef7d4240f42529e461105980dbdbf9e66",
+    "requirement": "Part 2 II",
+    "section": "Topics",
+    "command": "bash scripts/hw8_topics.sh; Kafka CLI create and describe"
+  },
+  {
+    "file": "06_agents.png",
+    "original": "originals/06_agents.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1037
+    ],
+    "original_sha256": "d4af50baea353e3e6a968b178fe5a59852b5cb0108a8f3cd857b58523517b9f2",
+    "cropped_sha256": "fdb6a2d4d72f88165e599fd20bceb8f0cb793c7ee15e91f7756dbbde5ba0d029",
+    "requirement": "Part 2 III and Submit code",
+    "section": "Separate agents",
+    "command": "cat planner.py writer.py reviewer.py; docker top each agent"
+  },
+  {
+    "file": "07_journey.png",
+    "original": "originals/07_journey.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      813
+    ],
+    "original_sha256": "dfdddc19c9241e0a77e46746a9fb08e0c67753633b2daaad0514bc5993cd330e",
+    "cropped_sha256": "11bdc2c1af269a14e47d1efa17d331fb07b292333831f0cc0075d10a24da8477",
+    "requirement": "Part 2 IV and Submit journey/final JSON",
+    "section": "Message journey",
+    "command": "python show_hw8_evidence.py journey; reads raw events and agent_journey.json"
+  },
+  {
+    "file": "08_duplicate.png",
+    "original": "originals/08_duplicate.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      673
+    ],
+    "original_sha256": "68a8c87b076a61658b2ac323da9d6ba600e0e1947b3c9c1248e7d78c9bee1e9d",
+    "cropped_sha256": "06e7bb45e8ed8dbd262503907377e07cc10722e5bc16358f6b256715f3d31eae",
+    "requirement": "Part 3 I and Submit logs",
+    "section": "Duplicate delivery",
+    "command": "python show_hw8_evidence.py duplicate"
+  },
+  {
+    "file": "09_death.png",
+    "original": "originals/09_death.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      645
+    ],
+    "original_sha256": "584c5a8fb84b4e3c972f9c0acc1785ac7a7c37bd49d1b46aa62b78839a3068e4",
+    "cropped_sha256": "47631dcb9403d40b67eee7141069bc5545a9b391e1e6db68142c36cb57dbecc3",
+    "requirement": "Part 3 II and Submit logs",
+    "section": "Consumer death",
+    "command": "python show_hw8_evidence.py death"
+  },
+  {
+    "file": "10_poison.png",
+    "original": "originals/10_poison.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      925
+    ],
+    "original_sha256": "af81ff6eec4f8c257978230c2c4586991c9166af7643bcc3044a525ae680c554",
+    "cropped_sha256": "1a834e721a0fe24ad293407d2f2a2a8d0dbb2dbf8ea5c1bf8e2dda7269518b17",
+    "requirement": "Part 3 III and Submit logs",
+    "section": "Poison message",
+    "command": "python show_hw8_evidence.py poison"
+  },
+  {
+    "file": "11_unkeyed.png",
+    "original": "originals/11_unkeyed.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1065
+    ],
+    "original_sha256": "7ecbd37aa7592d4c993af546cf9108f95c408386a8891b6f3f4c6543374412dc",
+    "cropped_sha256": "86917edfb42488c3ab2c518f1b356507c0114394009bd9aec067ca0c2c92cb4e",
+    "requirement": "Part 3 IV and Submit logs",
+    "section": "Unkeyed ordering",
+    "command": "python show_hw8_evidence.py unkeyed; all 20 raw CSV rows"
+  },
+  {
+    "file": "12_keyed.png",
+    "original": "originals/12_keyed.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      1065
+    ],
+    "original_sha256": "d4a98216b5133858e92e8a0ca3a18e86e23921e9dc04b30c87cb5dfbb840f9a0",
+    "cropped_sha256": "bfe43e759c768dcecee086a044b480b380ad4c8d3d460693611cbe187bc1f9f3",
+    "requirement": "Part 3 IV and Submit logs",
+    "section": "Keyed ordering",
+    "command": "python show_hw8_evidence.py keyed; all 20 raw CSV rows"
+  },
+  {
+    "file": "13_verification.png",
+    "original": "originals/13_verification.png",
+    "crop_box": [
+      185,
+      200,
+      2670,
+      897
+    ],
+    "original_sha256": "b10a4495133674a32b38806574b3e4b73dcb931e817467e42a74b39c74d94a5d",
+    "cropped_sha256": "ee041c16501929721a338da16f2307cfe368f735fe0744b37ae7048456f610d1",
+    "requirement": "Repository verification.json",
+    "section": "Verification",
+    "command": "python show_hw8_evidence.py checks | tail -n 19"
+  }
+]

@@ -1,0 +1,52 @@
+{"timestamp":"2026-11-02T04:27:56.624147+00:00","event":"experiments_start","pid":7508,"run_id":"hw8-741fc7d784","verify_seed":260686}
+ Container s0686-hw8-writer-1 Stopping 
+ Container s0686-hw8-writer-1 Stopped 
+
+{"timestamp":"2026-11-02T04:27:59.916567+00:00","event":"docker_action","pid":7508,"arguments":["stop","writer","writer2"],"output":" Container s0686-hw8-writer-1 Stopping \n Container s0686-hw8-writer-1 Stopped \n"}
+ Container s0686-hw8-kafka-1 Running 
+ Container s0686-hw8-kafka-1 Waiting 
+ Container s0686-hw8-kafka-1 Healthy 
+ Container s0686-hw8-writer-1 Starting 
+ Container s0686-hw8-writer-1 Started 
+
+{"timestamp":"2026-11-02T04:28:03.652885+00:00","event":"docker_action","pid":7508,"arguments":["up","-d","writer"],"output":" Container s0686-hw8-kafka-1 Running \n Container s0686-hw8-kafka-1 Waiting \n Container s0686-hw8-kafka-1 Healthy \n Container s0686-hw8-writer-1 Starting \n Container s0686-hw8-writer-1 Started \n"}
+{"timestamp":"2026-11-02T04:28:03.653689+00:00","event":"client_send","pid":7508,"topic":"s0686_entity_requests","message":{"correlation_id":"hw8-741fc7d784-entity-duplicate","reply_to":"s0686_entity_responses","operation":"CREATE_LISTING","data":{"propertyTitle":"HW8 San Jose apartment","location":"San Jose, CA","submitterEmail":"hw8@example.com","description":"A bright two-bedroom rental near campus.","propertyType":"Apartment","termsAccepted":true}},"correlation_id":"hw8-741fc7d784-entity-duplicate"}
+{"timestamp":"2026-11-02T04:28:04.277815+00:00","event":"client_receive","pid":7508,"topic":"s0686_entity_responses","message":{"correlation_id":"hw8-741fc7d784-entity-duplicate","success":true,"listing_id":"171fb101-a4e7-47a8-bf8d-9a3c0791d495","message":"Listing created"},"correlation_id":"hw8-741fc7d784-entity-duplicate"}
+{"timestamp":"2026-11-02T04:28:04.286370+00:00","event":"client_send","pid":7508,"topic":"s0686_entity_requests","message":{"correlation_id":"hw8-741fc7d784-entity-duplicate","reply_to":"s0686_entity_responses","operation":"CREATE_LISTING","data":{"propertyTitle":"HW8 San Jose apartment","location":"San Jose, CA","submitterEmail":"hw8@example.com","description":"A bright two-bedroom rental near campus.","propertyType":"Apartment","termsAccepted":true}},"correlation_id":"hw8-741fc7d784-entity-duplicate"}
+{"timestamp":"2026-11-02T04:28:04.912850+00:00","event":"client_receive","pid":7508,"topic":"s0686_entity_responses","message":{"correlation_id":"hw8-741fc7d784-entity-duplicate","success":true,"listing_id":"171fb101-a4e7-47a8-bf8d-9a3c0791d495","message":"Listing created"},"correlation_id":"hw8-741fc7d784-entity-duplicate"}
+ Container s0686-hw8-writer-1 Killing 
+ Container s0686-hw8-writer-1 Killed 
+
+{"timestamp":"2026-11-02T04:28:06.738149+00:00","event":"docker_action","pid":7508,"arguments":["kill","-s","SIGKILL","writer"],"output":" Container s0686-hw8-writer-1 Killing \n Container s0686-hw8-writer-1 Killed \n"}
+{"timestamp":"2026-11-02T04:28:06.805593+00:00","event":"writer_killed","pid":7508,"correlation_id":"hw8-741fc7d784-death","source_offset":9,"committed_before":9,"committed_after_kill":9}
+ Container s0686-hw8-kafka-1 Running 
+ Container s0686-hw8-kafka-1 Waiting 
+ Container s0686-hw8-kafka-1 Healthy 
+ Container s0686-hw8-writer-1 Starting 
+ Container s0686-hw8-writer-1 Started 
+
+{"timestamp":"2026-11-02T04:28:07.516598+00:00","event":"docker_action","pid":7508,"arguments":["up","-d","writer"],"output":" Container s0686-hw8-kafka-1 Running \n Container s0686-hw8-kafka-1 Waiting \n Container s0686-hw8-kafka-1 Healthy \n Container s0686-hw8-writer-1 Starting \n Container s0686-hw8-writer-1 Started \n"}
+Traceback (most recent call last):
+  File "/Users/farzu/data260-0686/run_hw8_experiments.py", line 202, in <module>
+    main()
+  File "/Users/farzu/data260-0686/run_hw8_experiments.py", line 172, in main
+    wait_event("offset_commit", later, stage="writer")
+  File "/Users/farzu/data260-0686/run_hw8_experiments.py", line 26, in wait_event
+    rows = [row for row in events() if row["event"] == event and (cid is None or row.get("correlation_id") == cid)
+                           ^^^^^^^^
+  File "/Users/farzu/data260-0686/run_hw8_experiments.py", line 20, in events
+    return [json.loads(line) for line in (RAW / "events.jsonl").read_text().splitlines() if line.strip()]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/farzu/data260-0686/run_hw8_experiments.py", line 20, in <listcomp>
+    return [json.loads(line) for line in (RAW / "events.jsonl").read_text().splitlines() if line.strip()]
+            ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 14 (char 13)

@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .env
 .venv-hw7/
+.hw8_runtime/
+reports/hw08/submission/

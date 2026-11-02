@@ -1,0 +1,317 @@
+{
+  "homework": 8,
+  "sid4": "0686",
+  "port_base": 8686,
+  "prefix": "s0686",
+  "seed": 686,
+  "verify_seed": 260686,
+  "domain_id": 6,
+  "commit_hash": "4fb0684389fcd16e5f22a5031de2ceea1ac4e0b0",
+  "tested_tag": null,
+  "verification_scope": "pre-commit working tree; source hashes identify tested code",
+  "timestamp_utc": "2026-11-02T04:51:31.019854+00:00",
+  "hardware": "macOS-26.6.2-arm64-arm-64bit",
+  "model": "llama3.2:latest",
+  "ordering_model": "deterministic facts-only Writer; no model timing",
+  "source_sha256": {
+    "main.py": "a4e47db3c084d444d398285da462db5a578b89c8c4433ecf8fb79a4b353afe02",
+    "hw8_kafka.py": "d21c373f023f3126b3f633144be4c14ff02d2cde5e8d4bd4bbbdbcd0cf3cf0cd",
+    "hw8_worker.py": "c6b16f10778a1d9b07ac393947a48444ff7c48172069177d5d9e33bf10612e9b",
+    "hw8_pipeline.py": "dbe300616b01c1087683c819e042dbf117bf8de6218497d22f2d82d4c2c57d4b",
+    "planner.py": "2136d75efb85ae34e445e782096bd3a65eeec50a9c2d8b1a29c3624c258e4adf",
+    "writer.py": "8b6a2e1a85fcf5f19d988599efb0db55091078d5a014cffb7d58b361da54b859",
+    "reviewer.py": "eb863f23f457c70c038c1f8e412902665ced1b06830b38303bddf38d697b33de",
+    "homework_demo.py": "343a7cea6ef52c1b389598eca63778a852c4164e0d12d70a7e1fee3f45fc0eff",
+    "send_question.py": "33e9d7ea03597e4b0e3c9561607e8d1c14ebd50ea63b77e8b02f90ecbecfda73",
+    "routers/hw8_listings.py": "bea07839a18289a009e5e8235165197eac2bbf3a676e4da9b15fbf0ff1f50139",
+    "compose.hw08.yml": "b0c921f8ebbc8482b39efd6b980e7a38cf2c68ee5209b23a1614608fb47c453d",
+    "verify_hw08.py": "dba7fb8705731ec62534f213965495cd7cd17c65ee11da9f37b57e4c9be0442c"
+  },
+  "checks": [
+    {
+      "name": "required topics and partitions",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "CREATE_LISTING success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker-generated UUID",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "GET_LISTING round trip",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "unknown operation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "unknown ID",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "missing ID",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid ID",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "required field propertyTitle",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "required field location",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "required field submitterEmail",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "required field description",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "required field propertyType",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "required field termsAccepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid field propertyTitle",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid field location",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid field submitterEmail",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid field description",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid field propertyType",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid field termsAccepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "FastAPI preserves supplied correlation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "HW7 missing token still 401",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "existing MySQL listings API",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing rental rows preserved",
+      "passed": true,
+      "actual": 5000,
+      "expected": 5000
+    },
+    {
+      "name": "existing MongoDB documents API",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing MCP rental search",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "baseline duplicate observed",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "idempotent replay makes one draft",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "entity replay preserves UUID",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "killed Writer has not committed its input",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "same offset redelivered",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "commit after restart success",
+      "passed": true,
+      "actual": 63,
+      "expected": 63
+    },
+    {
+      "name": "poison retry bound",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "dead-letter topic and later progress",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "two Writers and two unkeyed partitions",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "twenty unkeyed records",
+      "passed": true,
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "name": "one keyed partition and preserved order",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "three-stage journey with same correlation",
+      "passed": true,
+      "actual": [
+        "planner",
+        "writer",
+        "reviewer"
+      ],
+      "expected": [
+        "planner",
+        "writer",
+        "reviewer"
+      ]
+    },
+    {
+      "name": "final status and answer",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    }
+  ],
+  "passed": true
+}

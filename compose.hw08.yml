@@ -1,0 +1,69 @@
+name: s0686-hw8
+x-python: &python
+  build:
+    context: .
+    dockerfile: Dockerfile.hw08
+  image: s0686-hw8-python
+  working_dir: /app
+  volumes:
+    - .:/app
+  environment: &environment
+    KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+    OLLAMA_URL: http://host.docker.internal:11434/api/chat
+  depends_on:
+    kafka:
+      condition: service_healthy
+services:
+  kafka:
+    image: apache/kafka:4.1.2
+    ports:
+      - "127.0.0.1:9092:9092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: INTERNAL://:19092,EXTERNAL://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:19092,EXTERNAL://127.0.0.1:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:19092 --list >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  worker:
+    <<: *python
+    command: python hw8_worker.py
+  fastapi:
+    <<: *python
+    command: python hw8_start_api.py
+    env_file: .env
+    environment:
+      <<: *environment
+      MONGODB_URI: mongodb://host.docker.internal:27017
+    ports:
+      - "127.0.0.1:8686:8686"
+  planner:
+    <<: *python
+    command: python planner.py
+  writer:
+    <<: *python
+    command: python writer.py
+    environment:
+      <<: *environment
+      HW8_INSTANCE: writer-1
+  writer2:
+    <<: *python
+    command: python writer.py
+    profiles: [ordering]
+    environment:
+      <<: *environment
+      HW8_INSTANCE: writer-2
+  reviewer:
+    <<: *python
+    command: python reviewer.py

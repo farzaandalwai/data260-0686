@@ -13,6 +13,7 @@ from routers.hw6_documents import router as hw6_documents_router
 from routers.hw6_memory import router as hw6_memory_router
 from routers.hw7_auth import router as hw7_auth_router
 from routers.hw7_bike import router as hw7_bike_router
+from routers.hw8_listings import router as hw8_listings_router
 
 
 app = FastAPI()
@@ -25,6 +26,7 @@ app.add_middleware(
 )
 app.include_router(hw7_auth_router)
 app.include_router(hw7_bike_router)
+app.include_router(hw8_listings_router)
 app.include_router(hw4_listings_router)
 app.include_router(hw4_measure_router)
 app.include_router(hw5_managers_router)

@@ -1,0 +1,3 @@
+{"timestamp":"2026-11-02T04:40:10.673911+00:00","event":"baseline_ready","pid":16447,"mode":"early","group":"s0686_before_early_hw8-e66681cbf8","offset":56}
+{"timestamp":"2026-11-02T04:40:10.754709+00:00","event":"baseline_receive","pid":16447,"mode":"early","correlation_id":"hw8-e66681cbf8-before-early","offset":56}
+{"timestamp":"2026-11-02T04:40:11.313600+00:00","event":"baseline_early_commit","pid":16447,"correlation_id":"hw8-e66681cbf8-before-early","committed_offset":57}

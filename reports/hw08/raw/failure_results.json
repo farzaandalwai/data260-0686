@@ -1,0 +1,1054 @@
+{
+  "run_id": "hw8-e66681cbf8",
+  "verify_seed": 260686,
+  "before": {
+    "duplicate": {
+      "side_effects": 2,
+      "records": [
+        {
+          "timestamp": "2026-11-02T04:40:10.175163+00:00",
+          "event": "baseline_effect",
+          "pid": 16429,
+          "mode": "duplicate",
+          "correlation_id": "hw8-e66681cbf8-before-duplicate",
+          "effects": 1,
+          "offset": 54
+        },
+        {
+          "timestamp": "2026-11-02T04:40:10.301866+00:00",
+          "event": "baseline_effect",
+          "pid": 16429,
+          "mode": "duplicate",
+          "correlation_id": "hw8-e66681cbf8-before-duplicate",
+          "effects": 2,
+          "offset": 55
+        }
+      ],
+      "correlation_id": "hw8-e66681cbf8-before-duplicate"
+    },
+    "early": {
+      "source_offset": 56,
+      "committed_after_kill": 57,
+      "original_effects": 0,
+      "later_completed": true,
+      "correlation_id": "hw8-e66681cbf8-before-early"
+    },
+    "poison": {
+      "observed_retries_before_kill": 5,
+      "later_completed": false,
+      "correlation_id": "hw8-e66681cbf8-before-poison"
+    }
+  },
+  "entity_duplicate": {
+    "first": {
+      "correlation_id": "hw8-e66681cbf8-entity-duplicate",
+      "success": true,
+      "listing_id": "3bf1ee21-7ec9-4add-8d9d-477b58f80f6b",
+      "message": "Listing created"
+    },
+    "replay": {
+      "correlation_id": "hw8-e66681cbf8-entity-duplicate",
+      "success": true,
+      "listing_id": "3bf1ee21-7ec9-4add-8d9d-477b58f80f6b",
+      "message": "Listing created"
+    },
+    "same_uuid": true
+  },
+  "duplicate": {
+    "correlation_id": "hw8-e66681cbf8-duplicate",
+    "new_drafts": 1,
+    "replay_skipped": true
+  },
+  "death": {
+    "correlation_id": "hw8-e66681cbf8-death",
+    "source": {
+      "topic": "s0686_tasks",
+      "partition": 0,
+      "offset": 62
+    },
+    "committed_before": 62,
+    "committed_after_kill": 62,
+    "committed_after_success": 63,
+    "receives": [
+      {
+        "timestamp": "2026-11-02T04:40:17.101908+00:00",
+        "event": "stage_receive",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-death",
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 62,
+        "committed_before": 62,
+        "sequence": null,
+        "run_id": null
+      },
+      {
+        "timestamp": "2026-11-02T04:40:22.995513+00:00",
+        "event": "stage_receive",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-death",
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 62,
+        "committed_before": 62,
+        "sequence": null,
+        "run_id": null
+      }
+    ]
+  },
+  "poison": {
+    "correlation_id": "hw8-e66681cbf8-poison",
+    "dead_letter": {
+      "correlation_id": "hw8-e66681cbf8-poison",
+      "status": "dead_letter",
+      "stage": "writer",
+      "attempts": 3,
+      "error": "question is required",
+      "original": {
+        "correlation_id": "hw8-e66681cbf8-poison",
+        "question": "",
+        "facts": {
+          "location": "San Jose",
+          "available_units": 2
+        },
+        "entity_key": "rental-0686"
+      },
+      "source_topic": "s0686_tasks",
+      "partition": 0,
+      "offset": 63
+    },
+    "retry_count": 3,
+    "later_correlation_id": "hw8-e66681cbf8-after-poison",
+    "later_completed": true
+  },
+  "writer_group": [
+    {
+      "client_id": "rdkafka",
+      "partitions": [
+        0
+      ]
+    },
+    {
+      "client_id": "rdkafka",
+      "partitions": [
+        1
+      ]
+    }
+  ],
+  "unkeyed": {
+    "sent": [
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 65,
+        "sequence": 1,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-01",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 10,
+        "sequence": 2,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-02",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 66,
+        "sequence": 3,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-03",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 11,
+        "sequence": 4,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-04",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 67,
+        "sequence": 5,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-05",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 12,
+        "sequence": 6,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-06",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 68,
+        "sequence": 7,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-07",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 13,
+        "sequence": 8,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-08",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 69,
+        "sequence": 9,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-09",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 14,
+        "sequence": 10,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-10",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 70,
+        "sequence": 11,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-11",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 15,
+        "sequence": 12,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-12",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 71,
+        "sequence": 13,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-13",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 16,
+        "sequence": 14,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-14",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 72,
+        "sequence": 15,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-15",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 17,
+        "sequence": 16,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-16",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 73,
+        "sequence": 17,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-17",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 18,
+        "sequence": 18,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-18",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 74,
+        "sequence": 19,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-19",
+        "key": null
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 1,
+        "offset": 19,
+        "sequence": 20,
+        "correlation_id": "hw8-e66681cbf8-unkeyed-20",
+        "key": null
+      }
+    ],
+    "processed": [
+      {
+        "timestamp": "2026-11-02T04:40:41.500138+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-02",
+        "partition": 1,
+        "offset": 10,
+        "sequence": 2,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:41.725063+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-04",
+        "partition": 1,
+        "offset": 11,
+        "sequence": 4,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:41.851983+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-06",
+        "partition": 1,
+        "offset": 12,
+        "sequence": 6,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.012369+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-08",
+        "partition": 1,
+        "offset": 13,
+        "sequence": 8,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.060967+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-01",
+        "partition": 0,
+        "offset": 65,
+        "sequence": 1,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.199023+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-10",
+        "partition": 1,
+        "offset": 14,
+        "sequence": 10,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.419337+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-03",
+        "partition": 0,
+        "offset": 66,
+        "sequence": 3,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.421603+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-12",
+        "partition": 1,
+        "offset": 15,
+        "sequence": 12,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.522619+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-05",
+        "partition": 0,
+        "offset": 67,
+        "sequence": 5,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.618727+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-14",
+        "partition": 1,
+        "offset": 16,
+        "sequence": 14,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.767250+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-07",
+        "partition": 0,
+        "offset": 68,
+        "sequence": 7,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.802836+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-16",
+        "partition": 1,
+        "offset": 17,
+        "sequence": 16,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:42.968135+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-09",
+        "partition": 0,
+        "offset": 69,
+        "sequence": 9,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:43.052915+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-18",
+        "partition": 1,
+        "offset": 18,
+        "sequence": 18,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:43.575511+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-11",
+        "partition": 0,
+        "offset": 70,
+        "sequence": 11,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:43.577398+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-2",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-20",
+        "partition": 1,
+        "offset": 19,
+        "sequence": 20,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:43.759139+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-13",
+        "partition": 0,
+        "offset": 71,
+        "sequence": 13,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:44.068635+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-15",
+        "partition": 0,
+        "offset": 72,
+        "sequence": 15,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:44.330625+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-17",
+        "partition": 0,
+        "offset": 73,
+        "sequence": 17,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:44.720631+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-unkeyed-19",
+        "partition": 0,
+        "offset": 74,
+        "sequence": 19,
+        "run_id": "hw8-e66681cbf8-unkeyed",
+        "emitted": true
+      }
+    ],
+    "observed_order": [
+      2,
+      4,
+      6,
+      8,
+      1,
+      10,
+      3,
+      12,
+      5,
+      14,
+      7,
+      16,
+      9,
+      18,
+      11,
+      20,
+      13,
+      15,
+      17,
+      19
+    ],
+    "partitions": [
+      0,
+      1
+    ],
+    "instances": [
+      "writer-1",
+      "writer-2"
+    ],
+    "in_order": false
+  },
+  "keyed": {
+    "sent": [
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 75,
+        "sequence": 1,
+        "correlation_id": "hw8-e66681cbf8-keyed-01",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 76,
+        "sequence": 2,
+        "correlation_id": "hw8-e66681cbf8-keyed-02",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 77,
+        "sequence": 3,
+        "correlation_id": "hw8-e66681cbf8-keyed-03",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 78,
+        "sequence": 4,
+        "correlation_id": "hw8-e66681cbf8-keyed-04",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 79,
+        "sequence": 5,
+        "correlation_id": "hw8-e66681cbf8-keyed-05",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 80,
+        "sequence": 6,
+        "correlation_id": "hw8-e66681cbf8-keyed-06",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 81,
+        "sequence": 7,
+        "correlation_id": "hw8-e66681cbf8-keyed-07",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 82,
+        "sequence": 8,
+        "correlation_id": "hw8-e66681cbf8-keyed-08",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 83,
+        "sequence": 9,
+        "correlation_id": "hw8-e66681cbf8-keyed-09",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 84,
+        "sequence": 10,
+        "correlation_id": "hw8-e66681cbf8-keyed-10",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 85,
+        "sequence": 11,
+        "correlation_id": "hw8-e66681cbf8-keyed-11",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 86,
+        "sequence": 12,
+        "correlation_id": "hw8-e66681cbf8-keyed-12",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 87,
+        "sequence": 13,
+        "correlation_id": "hw8-e66681cbf8-keyed-13",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 88,
+        "sequence": 14,
+        "correlation_id": "hw8-e66681cbf8-keyed-14",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 89,
+        "sequence": 15,
+        "correlation_id": "hw8-e66681cbf8-keyed-15",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 90,
+        "sequence": 16,
+        "correlation_id": "hw8-e66681cbf8-keyed-16",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 91,
+        "sequence": 17,
+        "correlation_id": "hw8-e66681cbf8-keyed-17",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 92,
+        "sequence": 18,
+        "correlation_id": "hw8-e66681cbf8-keyed-18",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 93,
+        "sequence": 19,
+        "correlation_id": "hw8-e66681cbf8-keyed-19",
+        "key": "rental-0686"
+      },
+      {
+        "topic": "s0686_tasks",
+        "partition": 0,
+        "offset": 94,
+        "sequence": 20,
+        "correlation_id": "hw8-e66681cbf8-keyed-20",
+        "key": "rental-0686"
+      }
+    ],
+    "processed": [
+      {
+        "timestamp": "2026-11-02T04:40:45.706970+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-01",
+        "partition": 0,
+        "offset": 75,
+        "sequence": 1,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:46.080904+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-02",
+        "partition": 0,
+        "offset": 76,
+        "sequence": 2,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:46.378588+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-03",
+        "partition": 0,
+        "offset": 77,
+        "sequence": 3,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:46.620190+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-04",
+        "partition": 0,
+        "offset": 78,
+        "sequence": 4,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:46.706737+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-05",
+        "partition": 0,
+        "offset": 79,
+        "sequence": 5,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:46.834309+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-06",
+        "partition": 0,
+        "offset": 80,
+        "sequence": 6,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:47.009190+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-07",
+        "partition": 0,
+        "offset": 81,
+        "sequence": 7,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:47.206530+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-08",
+        "partition": 0,
+        "offset": 82,
+        "sequence": 8,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:47.373253+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-09",
+        "partition": 0,
+        "offset": 83,
+        "sequence": 9,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:47.567602+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-10",
+        "partition": 0,
+        "offset": 84,
+        "sequence": 10,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:47.842440+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-11",
+        "partition": 0,
+        "offset": 85,
+        "sequence": 11,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.007751+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-12",
+        "partition": 0,
+        "offset": 86,
+        "sequence": 12,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.119936+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-13",
+        "partition": 0,
+        "offset": 87,
+        "sequence": 13,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.267337+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-14",
+        "partition": 0,
+        "offset": 88,
+        "sequence": 14,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.408249+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-15",
+        "partition": 0,
+        "offset": 89,
+        "sequence": 15,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.524787+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-16",
+        "partition": 0,
+        "offset": 90,
+        "sequence": 16,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.654293+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-17",
+        "partition": 0,
+        "offset": 91,
+        "sequence": 17,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:48.801551+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-18",
+        "partition": 0,
+        "offset": 92,
+        "sequence": 18,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:49.057771+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-19",
+        "partition": 0,
+        "offset": 93,
+        "sequence": 19,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      },
+      {
+        "timestamp": "2026-11-02T04:40:49.313651+00:00",
+        "event": "stage_complete",
+        "pid": 1,
+        "stage": "writer",
+        "instance": "writer-1",
+        "correlation_id": "hw8-e66681cbf8-keyed-20",
+        "partition": 0,
+        "offset": 94,
+        "sequence": 20,
+        "run_id": "hw8-e66681cbf8-keyed",
+        "emitted": true
+      }
+    ],
+    "observed_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "partitions": [
+      0
+    ],
+    "instances": [
+      "writer-1"
+    ],
+    "in_order": true
+  }
+}
