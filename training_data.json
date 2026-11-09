@@ -1,0 +1,30 @@
+[
+  {
+    "question": "For rental listing 32, report available_units from the supplied record; use null when not recorded.",
+    "listing_id": 32,
+    "fields": [
+      "available_units"
+    ]
+  },
+  {
+    "question": "For rental listing 33, report available_units from the supplied record; use null when not recorded.",
+    "listing_id": 33,
+    "fields": [
+      "available_units"
+    ]
+  },
+  {
+    "question": "For rental listing 34, report available_units from the supplied record; use null when not recorded.",
+    "listing_id": 34,
+    "fields": [
+      "available_units"
+    ]
+  },
+  {
+    "question": "For rental listing 35, report location from the supplied record; use null when not recorded.",
+    "listing_id": 35,
+    "fields": [
+      "location"
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "question": "For rental listing 36, report available_units from the supplied record; use null when not recorded.",
+    "listing_id": 36,
+    "fields": [
+      "available_units"
+    ]
+  },
+  {
+    "question": "For rental listing 37, report available_units, location from the supplied record; use null when not recorded.",
+    "listing_id": 37,
+    "fields": [
+      "available_units",
+      "location"
+    ]
+  },
+  {
+    "question": "For rental listing 38, report location from the supplied record; use null when not recorded.",
+    "listing_id": 38,
+    "fields": [
+      "location"
+    ]
+  },
+  {
+    "question": "For rental listing 39, report property_title from the supplied record; use null when not recorded.",
+    "listing_id": 39,
+    "fields": [
+      "property_title"
+    ]
+  },
+  {
+    "question": "For rental listing 40, report listing_code from the supplied record; use null when not recorded.",
+    "listing_id": 40,
+    "fields": [
+      "listing_code"
+    ]
+  },
+  {
+    "question": "For rental listing 41, report pet_policy from the supplied record; use null when not recorded.",
+    "listing_id": 41,
+    "fields": [
+      "pet_policy"
+    ]
+  }
+]

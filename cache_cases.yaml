@@ -1,0 +1,322 @@
+[
+  {
+    "case_id": "paraphrase_07",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 7,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 7."
+  },
+  {
+    "case_id": "paraphrase_05",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 5,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 5."
+  },
+  {
+    "case_id": "similar_08",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 18,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 18?"
+  },
+  {
+    "case_id": "exact_06",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 6,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 6?"
+  },
+  {
+    "case_id": "paraphrase_01",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 1,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 1."
+  },
+  {
+    "case_id": "paraphrase_09",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 9,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 9."
+  },
+  {
+    "case_id": "unrelated_07",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 28,
+    "field": "location",
+    "query": "Where is property 28 located?"
+  },
+  {
+    "case_id": "similar_02",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 12,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 12?"
+  },
+  {
+    "case_id": "paraphrase_10",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 10,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 10."
+  },
+  {
+    "case_id": "similar_06",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 16,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 16?"
+  },
+  {
+    "case_id": "similar_10",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 21,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 21?"
+  },
+  {
+    "case_id": "unrelated_06",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 27,
+    "field": "available_units",
+    "query": "How many units are available at property 27?"
+  },
+  {
+    "case_id": "similar_09",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 19,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 19?"
+  },
+  {
+    "case_id": "exact_04",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 4,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 4?"
+  },
+  {
+    "case_id": "paraphrase_08",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 8,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 8."
+  },
+  {
+    "case_id": "similar_07",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 17,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 17?"
+  },
+  {
+    "case_id": "unrelated_05",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 26,
+    "field": "location",
+    "query": "Where is property 26 located?"
+  },
+  {
+    "case_id": "exact_10",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 10,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 10?"
+  },
+  {
+    "case_id": "paraphrase_03",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 3,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 3."
+  },
+  {
+    "case_id": "similar_05",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 15,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 15?"
+  },
+  {
+    "case_id": "unrelated_03",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 24,
+    "field": "location",
+    "query": "Where is property 24 located?"
+  },
+  {
+    "case_id": "unrelated_04",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 25,
+    "field": "available_units",
+    "query": "How many units are available at property 25?"
+  },
+  {
+    "case_id": "unrelated_02",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 23,
+    "field": "available_units",
+    "query": "How many units are available at property 23?"
+  },
+  {
+    "case_id": "unrelated_09",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 30,
+    "field": "location",
+    "query": "Where is property 30 located?"
+  },
+  {
+    "case_id": "paraphrase_02",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 2,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 2."
+  },
+  {
+    "case_id": "paraphrase_04",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 4,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 4."
+  },
+  {
+    "case_id": "exact_08",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 8,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 8?"
+  },
+  {
+    "case_id": "unrelated_08",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 29,
+    "field": "available_units",
+    "query": "How many units are available at property 29?"
+  },
+  {
+    "case_id": "similar_04",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 14,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 14?"
+  },
+  {
+    "case_id": "unrelated_01",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 22,
+    "field": "location",
+    "query": "Where is property 22 located?"
+  },
+  {
+    "case_id": "exact_01",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 1,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 1?"
+  },
+  {
+    "case_id": "exact_05",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 5,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 5?"
+  },
+  {
+    "case_id": "exact_03",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 3,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 3?"
+  },
+  {
+    "case_id": "exact_09",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 9,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 9?"
+  },
+  {
+    "case_id": "exact_02",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 2,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 2?"
+  },
+  {
+    "case_id": "paraphrase_06",
+    "category": "paraphrase",
+    "should_hit": true,
+    "listing_id": 6,
+    "field": "listing_code",
+    "query": "Give me the reference code of rental listing 6."
+  },
+  {
+    "case_id": "unrelated_10",
+    "category": "unrelated",
+    "should_hit": false,
+    "listing_id": 31,
+    "field": "available_units",
+    "query": "How many units are available at property 31?"
+  },
+  {
+    "case_id": "exact_07",
+    "category": "exact",
+    "should_hit": true,
+    "listing_id": 7,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 7?"
+  },
+  {
+    "case_id": "similar_01",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 11,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 11?"
+  },
+  {
+    "case_id": "similar_03",
+    "category": "similar_different",
+    "should_hit": false,
+    "listing_id": 13,
+    "field": "listing_code",
+    "query": "What is the listing code for rental listing 13?"
+  }
+]
