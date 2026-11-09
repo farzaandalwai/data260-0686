@@ -1,0 +1,37 @@
+services:
+  redis:
+    image: redis:8.2.2
+    ports:
+      - "127.0.0.1:6386:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "PING"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.hw09
+    image: s0686-hw9-python
+    environment:
+      HW9_REDIS_URL: redis://redis:6379/0
+      HW9_EMBED_URL: http://host.docker.internal:11434/api/embed
+      HW8_RAW_DIR: reports/hw09/raw/kafka
+    depends_on:
+      redis:
+        condition: service_healthy
+  planner:
+    environment:
+      HW8_RAW_DIR: reports/hw09/raw/kafka
+  writer:
+    environment:
+      HW8_RAW_DIR: reports/hw09/raw/kafka
+  writer2:
+    environment:
+      HW8_RAW_DIR: reports/hw09/raw/kafka
+  reviewer:
+    environment:
+      HW8_RAW_DIR: reports/hw09/raw/kafka
+  worker:
+    environment:
+      HW8_RAW_DIR: reports/hw09/raw/kafka

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-11-09T04:16:30.754730+00:00",
+  "backup_private": ".hw9_runtime/backups/s0686_rel_20261109T041630Z.sql",
+  "backup_bytes": 566605,
+  "backup_sha256": "cfcbd5f58e0a72437ef59d37ef832d0422f36244e662bfbbaa79a2a869a87c0c",
+  "database": "s0686_rel",
+  "rows_before": 5000,
+  "migration": "view_count already present; no alteration",
+  "version_table": "s0686_cache_version, one global data-version row",
+  "rows_after": 5000
+}

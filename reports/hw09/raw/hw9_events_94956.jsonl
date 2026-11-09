@@ -1,0 +1,28 @@
+{"timestamp":"2026-11-09T04:20:40.761901+00:00","event":"counter_access","access":1,"count":1,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.763509+00:00","event":"counter_access","access":2,"count":2,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.765253+00:00","event":"counter_access","access":3,"count":3,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.766936+00:00","event":"counter_access","access":4,"count":4,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.768506+00:00","event":"counter_access","access":5,"count":5,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.770340+00:00","event":"counter_access","access":6,"count":6,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.771545+00:00","event":"counter_access","access":7,"count":7,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.772798+00:00","event":"counter_access","access":8,"count":8,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.773998+00:00","event":"counter_access","access":9,"count":9,"mysql_view_count":0}
+{"timestamp":"2026-11-09T04:20:40.777269+00:00","event":"views_synced","listing_id":1,"count":10,"message":"Synced views to database"}
+{"timestamp":"2026-11-09T04:20:40.777805+00:00","event":"counter_access","access":10,"count":10,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.779879+00:00","event":"counter_access","access":11,"count":11,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.783494+00:00","event":"counter_access","access":12,"count":12,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.785057+00:00","event":"counter_access","access":13,"count":13,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.785773+00:00","event":"counter_access","access":14,"count":14,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.786418+00:00","event":"counter_access","access":15,"count":15,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.787037+00:00","event":"counter_access","access":16,"count":16,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.787635+00:00","event":"counter_access","access":17,"count":17,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.788203+00:00","event":"counter_access","access":18,"count":18,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.788782+00:00","event":"counter_access","access":19,"count":19,"mysql_view_count":10}
+{"timestamp":"2026-11-09T04:20:40.790450+00:00","event":"views_synced","listing_id":1,"count":20,"message":"Synced views to database"}
+{"timestamp":"2026-11-09T04:20:40.790842+00:00","event":"counter_access","access":20,"count":20,"mysql_view_count":20}
+{"timestamp":"2026-11-09T04:20:40.791456+00:00","event":"counter_access","access":21,"count":21,"mysql_view_count":20}
+{"timestamp":"2026-11-09T04:20:40.792119+00:00","event":"counter_access","access":22,"count":22,"mysql_view_count":20}
+{"timestamp":"2026-11-09T04:20:40.792731+00:00","event":"counter_access","access":23,"count":23,"mysql_view_count":20}
+{"timestamp":"2026-11-09T04:20:40.793471+00:00","event":"counter_access","access":24,"count":24,"mysql_view_count":20}
+{"timestamp":"2026-11-09T04:20:40.794210+00:00","event":"counter_access","access":25,"count":25,"mysql_view_count":20}
+{"timestamp":"2026-11-09T04:20:40.795301+00:00","event":"counter_restored","listing_id":1,"mysql_view_count":0}

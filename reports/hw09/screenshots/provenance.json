@@ -1,0 +1,242 @@
+[
+  {
+    "file": "01_services.png",
+    "original": "originals/01_services.png",
+    "crop_box": [
+      190,
+      205,
+      2080,
+      520
+    ],
+    "original_sha256": "103c71086cdc1335202857452b4e6e950712f8043ae39c023dc18170cf2396f7",
+    "cropped_sha256": "42ca9d75073e3788e8957a6741590ae4a5363587973bbdc63e2c0f30df74bbdb",
+    "requirement": "Inherited repository instructions: working system/configuration",
+    "report_section": "Setup",
+    "report_page": 1,
+    "command": "docker ps --filter name=s0686-hw8 --format 'table {{.Names}}  {{.Status}}'"
+  },
+  {
+    "file": "02_views.png",
+    "original": "originals/02_views.png",
+    "crop_box": [
+      190,
+      205,
+      1530,
+      1195
+    ],
+    "original_sha256": "56a73e3b71bee29575b3b461c47650c74085ba1308e0554abb5f4eeac5cd915b",
+    "cropped_sha256": "1bd70281d6d09c5cab4ad8ceaca129c6bf812e70e7ca9b5ad41aa33569817c00",
+    "requirement": "Part 1: INCR on accesses 1-25; MySQL syncs at 10 and 20",
+    "report_section": "Part 1 - Views",
+    "report_page": 2,
+    "command": "python show_hw9_evidence.py views"
+  },
+  {
+    "file": "03_index.png",
+    "original": "originals/03_index.png",
+    "crop_box": [
+      190,
+      205,
+      2640,
+      805
+    ],
+    "original_sha256": "721820713683e3c4408448afedc51fd72594f66e2e72e082183f8a88259c514f",
+    "cropped_sha256": "7a09069ca85f14570ff831556c50ebb1a25a4c85c888cbe6f83a992fec5404db",
+    "requirement": "Part 2: real Redis vector index and cosine embeddings",
+    "report_section": "Part 2 - Vector cache",
+    "report_page": 3,
+    "command": "python show_hw9_evidence.py index"
+  },
+  {
+    "file": "04_requests.png",
+    "original": "originals/04_requests.png",
+    "crop_box": [
+      190,
+      205,
+      1560,
+      790
+    ],
+    "original_sha256": "98e3f501287033b1eb00b9251ce2fd40a7db4471ae9c1d5c8241cf4a9884cbf4",
+    "cropped_sha256": "852d4097308cd221ce9b9e203eae03cb27173ee4b3cf537771bce916978a34e8",
+    "requirement": "Part 2: at least ten requests; flags, scores, latency and measured hit/miss means",
+    "report_section": "Part 2 - Requests",
+    "report_page": 4,
+    "command": "python show_hw9_evidence.py requests"
+  },
+  {
+    "file": "05_journey.png",
+    "original": "originals/05_journey.png",
+    "crop_box": [
+      190,
+      205,
+      1860,
+      620
+    ],
+    "original_sha256": "c60580866cd0d2a4a57b46b4177e06d07677a44e809715c251f291b4ee312ae4",
+    "cropped_sha256": "7febd7416294fdef89da426febf21c91be565bcc34c4597fad473404bdf72781",
+    "requirement": "Part 2: miss uses existing HW8 Kafka/local adapter; hit reuses final answer",
+    "report_section": "Part 2 - Pipeline",
+    "report_page": 5,
+    "command": "python show_hw9_evidence.py journey"
+  },
+  {
+    "file": "06_labels.png",
+    "original": "originals/06_labels.png",
+    "crop_box": [
+      190,
+      205,
+      1600,
+      765
+    ],
+    "original_sha256": "a4a8e21ecfb75737ffbcd6a974e58e175be0ead9ec91904dea58f052b5b967bf",
+    "cropped_sha256": "4df8131ef67373e6faea9afea7812804db48de8e99206e0cc62a14632f470901",
+    "requirement": "Part 3.1: exactly 40 labels committed before the sweep",
+    "report_section": "Part 3.1 - Frozen cases",
+    "report_page": 6,
+    "command": "python show_hw9_evidence.py labels"
+  },
+  {
+    "file": "07_thresholds.png",
+    "original": "originals/07_thresholds.png",
+    "crop_box": [
+      190,
+      205,
+      1590,
+      565
+    ],
+    "original_sha256": "510b1ed615c6f56926ea488b02f5c27bc1a7e8fcdbd3d2f3e32ddec3de664b56",
+    "cropped_sha256": "5991d922c7f91e6ab0e7118d43e51456df03d91e68ab4116c1ce8065a376cdc5",
+    "requirement": "Parts 3.2 and 3.4: five thresholds, filled metrics, cost choice",
+    "report_section": "Parts 3.2/3.4 - Thresholds",
+    "report_page": 7,
+    "command": "python show_hw9_evidence.py thresholds"
+  },
+  {
+    "file": "08_false_hit.png",
+    "original": "originals/08_false_hit.png",
+    "crop_box": [
+      190,
+      205,
+      1970,
+      565
+    ],
+    "original_sha256": "7a23af46d067622cfef79b3bc7900f12dd2a68f0c784ae1a38eb21473cfdb523",
+    "cropped_sha256": "9921cd12c1501a4a6fc9abba79988e1377cc25340b4aca4e480df75dc0f36b2b",
+    "requirement": "Part 3.3: complete observed false hit",
+    "report_section": "Part 3.3 - False hit",
+    "report_page": 8,
+    "command": "python show_hw9_evidence.py falsehit"
+  },
+  {
+    "file": "09_stale.png",
+    "original": "originals/09_stale.png",
+    "crop_box": [
+      190,
+      205,
+      1770,
+      540
+    ],
+    "original_sha256": "522d02e96689fbd5628e483b9d7bf06837c02ba9f5834130e01b6ebc7f7b9de8",
+    "cropped_sha256": "3993600e0d63240ef07e33024c48511a7162b06dbd74c80d00429fdb4227de0a",
+    "requirement": "Part 3.5: actual SQL change, stale answer, invalidation and restoration",
+    "report_section": "Part 3.5 - Stale answer",
+    "report_page": 9,
+    "command": "python show_hw9_evidence.py stale"
+  },
+  {
+    "file": "10_datasets.png",
+    "original": "originals/10_datasets.png",
+    "crop_box": [
+      190,
+      205,
+      2640,
+      900
+    ],
+    "original_sha256": "d10dd5c01f7456d6e2f47e2d16ab562909cffd35db99b5660aea208c4ca65fe3",
+    "cropped_sha256": "e304459d810250f503f7753c56ca7146fd9ff38d7bc367769c93853635878046",
+    "requirement": "Part 4: separate reference facts and input-only train/validation/test datasets",
+    "report_section": "Part 4 - Datasets",
+    "report_page": 10,
+    "command": "python show_hw9_evidence.py datasets"
+  },
+  {
+    "file": "11_repair.png",
+    "original": "originals/11_repair.png",
+    "crop_box": [
+      190,
+      205,
+      1970,
+      625
+    ],
+    "original_sha256": "1cd4d5ad76a8adc459f5de3a4d41b0590dbe2231fb59a51553a0c41b00c241b3",
+    "cropped_sha256": "9650519dbd826ba39f372bebfc168f063b962578f1a1b36e56f7680922e5d508",
+    "requirement": "Part 4.1 / Required demonstration 1 and 3: Answering/Evaluator code, full revision and stop",
+    "report_section": "Part 4.1 - Repair",
+    "report_page": 11,
+    "command": "python show_hw9_evidence.py repair"
+  },
+  {
+    "file": "12_lessons.png",
+    "original": "originals/12_lessons.png",
+    "crop_box": [
+      190,
+      205,
+      2110,
+      690
+    ],
+    "original_sha256": "e7a23ad6ff6c8e99b7d8e684dc2eab565e654ede032f7b67a685aeb7a77682d2",
+    "cropped_sha256": "3904666393e9c28091b5f688d9e7597185cc10810529376f416b16b0591cb20e",
+    "requirement": "Part 4.2 / Required demonstration 2: all five lesson fields and later reuse",
+    "report_section": "Part 4.2 - Lessons",
+    "report_page": 12,
+    "command": "python show_hw9_evidence.py lessons"
+  },
+  {
+    "file": "13_validation.png",
+    "original": "originals/13_validation.png",
+    "crop_box": [
+      190,
+      205,
+      2640,
+      770
+    ],
+    "original_sha256": "e26f0bdacc52a07ea07fbb6eb06849c7f652537d101122e45b295a89f08fdaf3",
+    "cropped_sha256": "c9535c179d4cfdb428bde1b905f56af06e85e0bae052581ab325fa59139d06dc",
+    "requirement": "Part 4.3: before/after validation and rejection of regression",
+    "report_section": "Part 4.3 - Validation",
+    "report_page": 13,
+    "command": "python show_hw9_evidence.py validation"
+  },
+  {
+    "file": "14_variants.png",
+    "original": "originals/14_variants.png",
+    "crop_box": [
+      190,
+      205,
+      1620,
+      620
+    ],
+    "original_sha256": "192b1c87d822ed460ead3216b46718fe3fee716116b3087fae55d9380d34fa42",
+    "cropped_sha256": "c295b2d0ac2008c797e015904eafb931be5ddf06c0f5ec8fc298c89d4c1b2a84",
+    "requirement": "Part 4.4 / Required demonstration 4: independent four-variant test table",
+    "report_section": "Part 4.4 - Held-out results",
+    "report_page": 14,
+    "command": "python show_hw9_evidence.py variants"
+  },
+  {
+    "file": "15_verification.png",
+    "original": "originals/15_verification.png",
+    "crop_box": [
+      190,
+      205,
+      1760,
+      820
+    ],
+    "original_sha256": "aa1987a04fd7f5c679360c83a372ad68b47de3164abda49e67df962397e3924c",
+    "cropped_sha256": "bb601963a9e6c13c13517f48579546b6a14f8f97ef666c65430bc5dec9be4b2e",
+    "requirement": "Inherited repository instructions: objective checks and earlier-homework regression",
+    "report_section": "Verification",
+    "report_page": 15,
+    "command": "python show_hw9_evidence.py checks | tail -n 18"
+  }
+]

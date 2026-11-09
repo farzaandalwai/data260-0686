@@ -25,7 +25,9 @@ def write(message: dict) -> dict:
         raise ValueError("rental facts are required")
     answer = "; ".join(f"{key}: {value}" for key, value in facts.items())
     if message.get("use_model"):
-        result = complete([{"role": "user", "content": f"Answer this rental question using only these facts. Keep it short. Question: {message['question']} Facts: {json.dumps(facts)}"}], temperature=0.0, num_predict=120)
+        instruction = "Return only a JSON object containing exactly the supplied facts and their values." if message.get("response_json") else "Keep it short."
+        schema = {"type": "object", "properties": {key: {"type": "integer" if isinstance(value, int) else "string"} for key, value in facts.items()}, "required": list(facts), "additionalProperties": False} if message.get("response_json") else False
+        result = complete([{"role": "user", "content": f"Answer this rental question using only these facts. {instruction} Question: {message['question']} Facts: {json.dumps(facts)}"}], temperature=0.0, num_predict=120, json_output=schema)
         answer = result["message"]
         message = {**message, "model": result["model"]}
     return {**message, "draft": answer}

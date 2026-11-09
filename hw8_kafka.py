@@ -14,7 +14,7 @@ REQUESTS = PREFIX + "_entity_requests"
 RESPONSES = PREFIX + "_entity_responses"
 INBOX, TASKS, DRAFTS, FINAL, DEAD = [PREFIX + "_" + name for name in ("inbox", "tasks", "drafts", "final", "dead_letter")]
 BROKER = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "127.0.0.1:9092")
-RAW = Path("reports/hw08/raw")
+RAW = Path(os.getenv("HW8_RAW_DIR", "reports/hw08/raw"))
 
 
 def log(event: str, **fields) -> dict:

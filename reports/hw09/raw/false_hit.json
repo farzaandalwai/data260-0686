@@ -1,0 +1,23 @@
+{
+  "case_id": "similar_08",
+  "category": "similar_different",
+  "should_hit": false,
+  "listing_id": 18,
+  "field": "listing_code",
+  "query": "What is the listing code for rental listing 18?",
+  "answer": "{\"listing_id\": 8, \"listing_code\": \"RH-0686-00008\"}",
+  "is_cached": true,
+  "similarity_score": 0.90014946,
+  "data_version": 2,
+  "latency_ms": 17.061,
+  "correlation_id": "a4914a7e-df23-4303-87e1-996bb778a97b",
+  "matched_query": "What is the listing code for rental listing 8?",
+  "threshold": 0.75,
+  "answer_correct": false,
+  "correct_answer": {
+    "listing_id": 18,
+    "listing_code": "RH-0686-00018"
+  },
+  "label_prediction_correct": false,
+  "false_hit": true
+}

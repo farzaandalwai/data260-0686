@@ -24,3 +24,5 @@ requests
 email-validator
 mcp[cli]<2
 confluent-kafka==2.12.0
+redis==8.1.0
+PyYAML

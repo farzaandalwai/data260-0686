@@ -1,0 +1,9 @@
+[
+  {
+    "lesson_id": "lesson_001",
+    "failure_pattern": "Repeated omission of available_units",
+    "correction": "When available_units is requested, include its current reference value, including zero; do not omit it.",
+    "created_at": "2026-11-09T04:52:39.871970+00:00",
+    "use_count": 2
+  }
+]

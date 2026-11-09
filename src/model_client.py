@@ -36,7 +36,7 @@ def complete(
         data["options"] = options
 
     if json_output:
-        data["format"] = "json"
+        data["format"] = json_output if isinstance(json_output, dict) else "json"
 
     req = urllib.request.Request(
         URL,

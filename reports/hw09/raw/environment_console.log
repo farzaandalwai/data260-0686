@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-11-09T05:00:12.825468+00:00",
+  "repository": "https://github.com/farzaandalwai/data260-0686",
+  "hardware": "Apple M4",
+  "memory_bytes": 25769803776,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.14",
+  "docker": "29.7.2",
+  "redis": "8.2.2",
+  "models": [
+    {
+      "name": "nomic-embed-text:latest",
+      "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    {
+      "name": "llama3.2:latest",
+      "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72"
+    }
+  ],
+  "required_accounts": [
+    {
+      "account": "Sbnikitha",
+      "permission": "read",
+      "listed_collaborator": false
+    },
+    {
+      "account": "supriyaselvanganesan",
+      "permission": "read",
+      "listed_collaborator": false
+    }
+  ],
+  "labels_commit": "0cdc5328e78881f95f5756247ba0ee95c55162a6",
+  "labels_committed_at": "2026-11-08T20:13:51-08:00"
+}

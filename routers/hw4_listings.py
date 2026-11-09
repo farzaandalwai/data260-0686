@@ -7,6 +7,7 @@ from database import get_db
 from hw5_schemas import ListingRequest, ListingResponse, ListingsPage
 from models import ListingNote, PropertyManager, RentalListing, User
 from routers.hw7_auth import current_user, require_roles
+from hw9_cache import bump_data_version
 
 
 router = APIRouter(prefix="/api/listings")
@@ -26,6 +27,7 @@ def check_manager(db, manager_id):
 
 def save_listing(db, listing):
     try:
+        bump_data_version(db)
         db.commit()
     except IntegrityError:
         db.rollback()
@@ -95,6 +97,7 @@ def delete_listing(
         raise HTTPException(status_code=409, detail="Listing has notes and cannot be deleted")
     db.delete(listing)
     try:
+        bump_data_version(db)
         db.commit()
     except IntegrityError:
         db.rollback()

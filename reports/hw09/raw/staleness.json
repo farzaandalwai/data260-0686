@@ -1,0 +1,52 @@
+{
+  "query": "How many available units does rental listing 2 currently have?",
+  "original_units": 1,
+  "initial": {
+    "query": "How many available units does rental listing 2 currently have?",
+    "listing_id": 2,
+    "field": "available_units",
+    "answer": "{\"listing_id\": 2, \"available_units\": 1}",
+    "is_cached": false,
+    "similarity_score": 0.0,
+    "data_version": 2,
+    "latency_ms": 1139.207,
+    "correlation_id": "9c14d5ac-39db-478d-bff4-94a37385e3ee",
+    "matched_query": "",
+    "threshold": 0.85
+  },
+  "changed_database": {
+    "listing_id": 2,
+    "available_units": 8
+  },
+  "stale_hit": {
+    "query": "How many available units does rental listing 2 currently have?",
+    "listing_id": 2,
+    "field": "available_units",
+    "answer": "{\"listing_id\": 2, \"available_units\": 1}",
+    "is_cached": true,
+    "similarity_score": 0.99999994,
+    "data_version": 2,
+    "latency_ms": 19.941,
+    "correlation_id": "9c14d5ac-39db-478d-bff4-94a37385e3ee",
+    "matched_query": "How many available units does rental listing 2 currently have?",
+    "threshold": 0.85
+  },
+  "new_version": 3,
+  "fresh_after_invalidation": {
+    "query": "How many available units does rental listing 2 currently have?",
+    "listing_id": 2,
+    "field": "available_units",
+    "answer": "{\"listing_id\": 2, \"available_units\": 8}",
+    "is_cached": false,
+    "similarity_score": 0.0,
+    "data_version": 3,
+    "latency_ms": 1179.305,
+    "correlation_id": "ee2a1d95-d106-4258-a672-014fd9469e2c",
+    "matched_query": "",
+    "threshold": 0.85
+  },
+  "restored_database": {
+    "listing_id": 2,
+    "available_units": 1
+  }
+}

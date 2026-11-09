@@ -1,0 +1,522 @@
+{
+  "homework": 9,
+  "sid4": "0686",
+  "port_base": 8686,
+  "prefix": "s0686",
+  "seed": 686,
+  "verify_seed": 260686,
+  "domain_id": 6,
+  "commit_hash": "0cdc5328e78881f95f5756247ba0ee95c55162a6",
+  "tested_tag": null,
+  "scope": "pre-commit working tree identified by source hashes",
+  "timestamp": "2026-11-09T05:35:30.357480+00:00",
+  "model": "llama3.2:latest",
+  "embedding_model": "nomic-embed-text:latest",
+  "checks": [
+    {
+      "name": "25 real view increments",
+      "passed": true,
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "name": "MySQL sync at 10 and 20 only",
+      "passed": true,
+      "actual": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "name": "counter restored",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "all 5000 rental records remain",
+      "passed": true,
+      "actual": 5000,
+      "expected": 5000
+    },
+    {
+      "name": "all original rental fields restored",
+      "passed": true,
+      "actual": {
+        "rows": 5000,
+        "sha256": "992fb523554a20337a31d94fbe7f7fdcbcbb809c7032c396f8e768563534cc0b"
+      },
+      "expected": {
+        "rows": 5000,
+        "sha256": "992fb523554a20337a31d94fbe7f7fdcbcbb809c7032c396f8e768563534cc0b"
+      }
+    },
+    {
+      "name": "all Redis keys use s0686 prefix",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "real Redis vector index",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "at least ten ingress requests",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "cache demo contains hits and misses",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "response score and measured latency",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "new miss actually runs pipeline",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "miss answer matches MySQL",
+      "passed": true,
+      "actual": {
+        "listing_id": 1,
+        "location": "Milpitas, CA"
+      },
+      "expected": {
+        "listing_id": 1,
+        "location": "Milpitas, CA"
+      }
+    },
+    {
+      "name": "exact hit returns same final answer",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "hit does not rerun Kafka pipeline",
+      "passed": true,
+      "actual": 111,
+      "expected": 111
+    },
+    {
+      "name": "HW8 three-stage miss journey",
+      "passed": true,
+      "actual": [
+        "planner",
+        "reviewer",
+        "writer"
+      ],
+      "expected": [
+        "planner",
+        "reviewer",
+        "writer"
+      ]
+    },
+    {
+      "name": "40 fixed balanced labeled cases",
+      "passed": true,
+      "actual": {
+        "paraphrase": 10,
+        "similar_different": 10,
+        "exact": 10,
+        "unrelated": 10
+      },
+      "expected": {
+        "exact": 10,
+        "paraphrase": 10,
+        "similar_different": 10,
+        "unrelated": 10
+      }
+    },
+    {
+      "name": "labels unchanged since pre-sweep commit",
+      "passed": true,
+      "actual": "777de55ec8aba136ebc8fc3f5a8a57a9a20351121011ff636af68ec6e2ea70a3",
+      "expected": "777de55ec8aba136ebc8fc3f5a8a57a9a20351121011ff636af68ec6e2ea70a3"
+    },
+    {
+      "name": "200 per-case threshold measurements",
+      "passed": true,
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "five required thresholds",
+      "passed": true,
+      "actual": [
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "expected": [
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ]
+    },
+    {
+      "name": "recalculated threshold 0.75",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "recalculated threshold 0.8",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "recalculated threshold 0.85",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "recalculated threshold 0.9",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "recalculated threshold 0.95",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ships minimum-cost threshold",
+      "passed": true,
+      "actual": 0.95,
+      "expected": 0.95
+    },
+    {
+      "name": "observed false hit has full evidence",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "actual stale hit",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "version invalidation causes fresh answer",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "stale test record restored",
+      "passed": true,
+      "actual": {
+        "listing_id": 2,
+        "available_units": 1
+      },
+      "expected": {
+        "listing_id": 2,
+        "available_units": 1
+      }
+    },
+    {
+      "name": "input datasets contain no answers",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "disjoint input questions",
+      "passed": true,
+      "actual": 18,
+      "expected": 18
+    },
+    {
+      "name": "controlled failure revised, reevaluated, and stopped at two",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "training-only memory-assisted controlled repair passes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "five required lesson fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "later question loads saved lesson",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation gate preserves correct answers",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "candidate kept only if accepted",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "four independent variants",
+      "passed": true,
+      "actual": [
+        "Baseline",
+        "Evaluator Repair",
+        "Lesson Memory",
+        "Validated Improvement"
+      ],
+      "expected": [
+        "Baseline",
+        "Evaluator Repair",
+        "Lesson Memory",
+        "Validated Improvement"
+      ]
+    },
+    {
+      "name": "Baseline held-out accounting",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Evaluator Repair held-out accounting",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Lesson Memory held-out accounting",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Validated Improvement held-out accounting",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "all reference facts still match MySQL",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing HW8 CREATE/GET still works",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing HW7 auth still requires token",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "HW9 ingress preserves JWT protection",
+      "passed": true,
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "FastAPI existing listing routes remain",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing HW8 freeform local-model path",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing authenticated MySQL endpoint",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing question CLI uses authenticated cache ingress",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing MongoDB document endpoint",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "existing MCP rental search",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    }
+  ],
+  "shipped_threshold": 0.95,
+  "source_sha256": {
+    "main.py": "789484769570a8596572c695fea150cd62e7b4ba9b26e55c9da23688eb3f356d",
+    "models.py": "13be9d6cc7da5f156aa241a1ad99341ead5b7214cc11ea92a82c6ca2378d928d",
+    "hw9_cache.py": "a32b1a33baeae7fb2c78f5dbebd10eec204383ba9337a047ae2d51b48e67c6a3",
+    "hw9_agents.py": "55cc0abc74be3e193962728a82c9d246a08670ce7975a968760b5f273f557591",
+    "hw8_pipeline.py": "b5a38714a3cc14296ad664bc09aa6cca0f01bc8fb9434f15bfff3c999ee05cbe",
+    "hw8_kafka.py": "a600494904aaade9e0f8301557928e75863b03a09f1d9b0a81f5108174185261",
+    "src/model_client.py": "1ab95e2afe72159ae0e7b7e42c62925a41e9d7ae7508c37fa2685a3a510bf4a8",
+    "routers/hw9_cache.py": "62e08d937b6eb17b21ef829bb507edba6b44f7dfc24ce19f23b2be3c20199eee",
+    "routers/hw4_listings.py": "f866e61ee206d1381f6e2314ee29e1cc80596c1d4e97d8b226255c573b594503",
+    "verify_hw09.py": "fedacfa22030547e1fba659c2f45a48ddcf9a98a2856ebf7b77048b3c3e304d2",
+    "run_hw9_agents.py": "6b1ac9d89346024cb858b4cac9f7d5758bdbd9dd8d7efcbbea1b491c0cccf700",
+    "run_hw9_cache.py": "2826b81c4a979f43c34a3eab925763a148d79b396776996c7cab8e7ed7b50c93",
+    "cache_cases.yaml": "777de55ec8aba136ebc8fc3f5a8a57a9a20351121011ff636af68ec6e2ea70a3",
+    "hw9_reference.json": "0e4f15d63cf5b82f32add342612d098932796057f98c6b7a54570f0fc3df9100",
+    "training_data.json": "a32012f5650d105f09ad52a69688a66cc4c11ff3cc91518894b012e268d30387",
+    "validation_data.json": "a9c7d4e84cc88466cdbd09a6112ac527b9da8e9ef6ec943dcd58e88571a4120d",
+    "test_data.json": "55febb6b3dcee689d0007b620eda2d9f411124088f4c9f4d110e02ce3103ed19",
+    "lessons.json": "a4721704d7aa86b8b04f34ea810fdb5a58e894cdbbb6d763ecb16d1596893da0",
+    "hw9_cache_config.json": "1527746be7bcb93feacb3d391bcedba4ba7467253950bd9f1c0282ee89eef116",
+    "compose.hw09.yml": "6adbf6020351b108d5ca2561157d47fbaa192b0f3c7dbb31f57ed602f2de053a",
+    "send_question.py": "141caa1620265a9ae7b4c0014e7a9846a26c938e3500de6c4f9ae4f17da27373",
+    "hw9_test_support.py": "cadfd44c2a383502eb2bb84903b05fcd0e96caa2be36c0db24e64e87a61a68b1",
+    "requirements.txt": "8fa89b2e081981e72df545cc3172703010ae0f17e36ff9ce85b0aac1d9789272",
+    "requirements-hw08.txt": "763858aa8a36d49b233660cef07e0f0672fc4a1e7379b767d0254cd2e5bb6ca1",
+    "Dockerfile.hw09": "d1baebada776606073163e11956b8f1ed2ace19aeeaa85e2b414c25ab78b08a6",
+    "scripts/hw9_setup.py": "1fd43e21f4197b6a524bbd8bcd9e20aec6da73eb583b16e273d46d297002b4e1",
+    "scripts/hw9_repair_with_memory.py": "f81abbf952d59f95523a915625404f53e6450e50d74671168e246d7f70930c84"
+  },
+  "passed": true
+}

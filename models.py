@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import CheckConstraint, Column, DateTime, ForeignKey, Integer, String, func
+from sqlalchemy import BigInteger, CheckConstraint, Column, DateTime, ForeignKey, Integer, String, func
 from sqlalchemy.orm import declarative_base, relationship
 
 
@@ -38,6 +38,7 @@ class RentalListing(Base):
     location = Column(String(255), nullable=False)
     listing_code = Column(String(50), nullable=False, unique=True)
     available_units = Column(Integer, nullable=False, default=1, server_default="1")
+    view_count = Column(BigInteger, nullable=False, default=0, server_default="0")
     property_manager_id = Column(Integer, ForeignKey("property_managers.id", ondelete="RESTRICT"), nullable=False)
     created_at = Column(DateTime, nullable=False, server_default=func.now())
     updated_at = Column(DateTime, nullable=False, server_default=func.now(), onupdate=lambda: datetime.now(timezone.utc).replace(tzinfo=None))

@@ -1,0 +1,74 @@
+[
+  {
+    "question": "For rental listing 32, report available_units from the supplied record; use null when not recorded.",
+    "listing_id": 32,
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": {},
+        "loaded_lessons": [],
+        "model": "llama3.2:latest",
+        "evaluation": {
+          "result": "REVISE",
+          "feedback": "Missing listing_id; reference value is 32; Missing available_units; reference value is 1"
+        }
+      },
+      {
+        "attempt": 2,
+        "answer": {
+          "listing_id": 32,
+          "available_units": "null"
+        },
+        "loaded_lessons": [],
+        "model": "llama3.2:latest",
+        "evaluation": {
+          "result": "REVISE",
+          "feedback": "Incorrect available_units; reference value is 1"
+        }
+      }
+    ],
+    "number_attempts": 2,
+    "final_answer": {
+      "listing_id": 32,
+      "available_units": "null"
+    },
+    "final_evaluation": "REVISE",
+    "latency_ms": 3663.787
+  },
+  {
+    "question": "For rental listing 33, report available_units from the supplied record; use null when not recorded.",
+    "listing_id": 33,
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": {},
+        "loaded_lessons": [],
+        "model": "llama3.2:latest",
+        "evaluation": {
+          "result": "REVISE",
+          "feedback": "Missing listing_id; reference value is 33; Missing available_units; reference value is 1"
+        }
+      },
+      {
+        "attempt": 2,
+        "answer": {
+          "listing_id": 33,
+          "available_units": "null"
+        },
+        "loaded_lessons": [],
+        "model": "llama3.2:latest",
+        "evaluation": {
+          "result": "REVISE",
+          "feedback": "Incorrect available_units; reference value is 1"
+        }
+      }
+    ],
+    "number_attempts": 2,
+    "final_answer": {
+      "listing_id": 33,
+      "available_units": "null"
+    },
+    "final_evaluation": "REVISE",
+    "latency_ms": 926.503
+  }
+]

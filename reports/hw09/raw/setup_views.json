@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-11-09T04:14:14.159589+00:00",
+  "backup_private": ".hw9_runtime/backups/s0686_rel_20261109T041413Z.sql",
+  "backup_bytes": 556552,
+  "backup_sha256": "ab68508ee49cfca0477aafa4bd26db04d3c4873e071c9103d0da56d2fd8968b5",
+  "database": "s0686_rel",
+  "rows_before": 5000,
+  "migration": "Added view_count using MySQL 8 instant DDL, after private backup",
+  "rows_after": 5000
+}

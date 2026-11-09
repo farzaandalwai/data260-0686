@@ -1,0 +1,986 @@
+{
+  "Baseline": {
+    "rows": [
+      {
+        "question": "For rental listing 42, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 42,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 42"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "available_units": 1
+        },
+        "final_evaluation": "REVISE",
+        "latency_ms": 475.469
+      },
+      {
+        "question": "For rental listing 43, report location from the supplied record; use null when not recorded.",
+        "listing_id": 43,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 43,
+              "location": "Santa Clara, CA"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 43,
+          "location": "Santa Clara, CA"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 614.673
+      },
+      {
+        "question": "For rental listing 44, report listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 44,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_code": "RH-0686-00044",
+              "listing_id": 44
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_code": "RH-0686-00044",
+          "listing_id": 44
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 798.389
+      },
+      {
+        "question": "For rental listing 45, report property_title from the supplied record; use null when not recorded.",
+        "listing_id": 45,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 45,
+              "property_title": "Rental Listing 0045",
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00045",
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 45,
+          "property_title": "Rental Listing 0045",
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00045",
+          "available_units": 1
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 1377.387
+      },
+      {
+        "question": "For rental listing 46, report available_units, location from the supplied record; use null when not recorded.",
+        "listing_id": 46,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1,
+              "listing_id": 46,
+              "location": "Santa Clara, CA"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "available_units": 1,
+          "listing_id": 46,
+          "location": "Santa Clara, CA"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 846.868
+      },
+      {
+        "question": "For rental listing 47, report pet_policy from the supplied record; use null when not recorded.",
+        "listing_id": 47,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 47,
+              "pet_policy": null
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 47,
+          "pet_policy": null
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 610.432
+      },
+      {
+        "question": "For rental listing 48, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 48,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 48"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "available_units": 1
+        },
+        "final_evaluation": "REVISE",
+        "latency_ms": 452.21
+      },
+      {
+        "question": "For rental listing 49, report location, listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 49,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 49,
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00049"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 49,
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00049"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 1030.291
+      }
+    ],
+    "test_sha256": "55febb6b3dcee689d0007b620eda2d9f411124088f4c9f4d110e02ce3103ed19",
+    "correct": 6,
+    "incorrect": 2,
+    "average_attempts": 1.0,
+    "average_latency_ms": 775.715,
+    "lesson_state_after": []
+  },
+  "Evaluator Repair": {
+    "rows": [
+      {
+        "question": "For rental listing 42, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 42,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 42"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": {
+              "available_units": 1,
+              "listing_id": 42
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 2,
+        "final_answer": {
+          "available_units": 1,
+          "listing_id": 42
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 735.809
+      },
+      {
+        "question": "For rental listing 43, report location from the supplied record; use null when not recorded.",
+        "listing_id": 43,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 43,
+              "location": "Santa Clara, CA"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 43,
+          "location": "Santa Clara, CA"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 425.079
+      },
+      {
+        "question": "For rental listing 44, report listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 44,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_code": "RH-0686-00044",
+              "listing_id": 44
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_code": "RH-0686-00044",
+          "listing_id": 44
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 504.987
+      },
+      {
+        "question": "For rental listing 45, report property_title from the supplied record; use null when not recorded.",
+        "listing_id": 45,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 45,
+              "property_title": "Rental Listing 0045",
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00045",
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 45,
+          "property_title": "Rental Listing 0045",
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00045",
+          "available_units": 1
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 1193.167
+      },
+      {
+        "question": "For rental listing 46, report available_units, location from the supplied record; use null when not recorded.",
+        "listing_id": 46,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1,
+              "listing_id": 46,
+              "location": "Santa Clara, CA"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "available_units": 1,
+          "listing_id": 46,
+          "location": "Santa Clara, CA"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 606.346
+      },
+      {
+        "question": "For rental listing 47, report pet_policy from the supplied record; use null when not recorded.",
+        "listing_id": 47,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 47,
+              "pet_policy": null
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 47,
+          "pet_policy": null
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 356.262
+      },
+      {
+        "question": "For rental listing 48, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 48,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 48"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": {
+              "available_units": 1,
+              "listing_id": 48
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 2,
+        "final_answer": {
+          "available_units": 1,
+          "listing_id": 48
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 781.765
+      },
+      {
+        "question": "For rental listing 49, report location, listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 49,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 49,
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00049"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 49,
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00049"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 759.439
+      }
+    ],
+    "test_sha256": "55febb6b3dcee689d0007b620eda2d9f411124088f4c9f4d110e02ce3103ed19",
+    "correct": 8,
+    "incorrect": 0,
+    "average_attempts": 1.25,
+    "average_latency_ms": 670.357,
+    "lesson_state_after": []
+  },
+  "Lesson Memory": {
+    "rows": [
+      {
+        "question": "For rental listing 42, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 42,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 42"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 42"
+            }
+          }
+        ],
+        "number_attempts": 2,
+        "final_answer": {
+          "available_units": 1
+        },
+        "final_evaluation": "REVISE",
+        "latency_ms": 736.406
+      },
+      {
+        "question": "For rental listing 43, report location from the supplied record; use null when not recorded.",
+        "listing_id": 43,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 43,
+              "location": "Santa Clara, CA"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 43,
+          "location": "Santa Clara, CA"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 424.82
+      },
+      {
+        "question": "For rental listing 44, report listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 44,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_code": "RH-0686-00044",
+              "listing_id": 44
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_code": "RH-0686-00044",
+          "listing_id": 44
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 550.228
+      },
+      {
+        "question": "For rental listing 45, report property_title from the supplied record; use null when not recorded.",
+        "listing_id": 45,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 45,
+              "property_title": "Rental Listing 0045",
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00045",
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 45,
+          "property_title": "Rental Listing 0045",
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00045",
+          "available_units": 1
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 1339.485
+      },
+      {
+        "question": "For rental listing 46, report available_units, location from the supplied record; use null when not recorded.",
+        "listing_id": 46,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1,
+              "location": "Santa Clara, CA",
+              "listing_id": 46
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "available_units": 1,
+          "location": "Santa Clara, CA",
+          "listing_id": 46
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 748.405
+      },
+      {
+        "question": "For rental listing 47, report pet_policy from the supplied record; use null when not recorded.",
+        "listing_id": 47,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 47,
+              "pet_policy": null
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 47,
+          "pet_policy": null
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 374.795
+      },
+      {
+        "question": "For rental listing 48, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 48,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 48,
+              "available_units": 1
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 48,
+          "available_units": 1
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 623.7
+      },
+      {
+        "question": "For rental listing 49, report location, listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 49,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 49,
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00049"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 49,
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00049"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 783.923
+      }
+    ],
+    "test_sha256": "55febb6b3dcee689d0007b620eda2d9f411124088f4c9f4d110e02ce3103ed19",
+    "correct": 7,
+    "incorrect": 1,
+    "average_attempts": 1.125,
+    "average_latency_ms": 697.72,
+    "lesson_state_after": [
+      {
+        "lesson_id": "lesson_001",
+        "failure_pattern": "Repeated omission of available_units",
+        "correction": "When available_units is requested, include its current reference value, including zero; do not omit it.",
+        "created_at": "2026-11-09T04:52:39.871970+00:00",
+        "use_count": 6
+      }
+    ]
+  },
+  "Validated Improvement": {
+    "rows": [
+      {
+        "question": "For rental listing 42, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 42,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 42"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": {
+              "available_units": 1
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "REVISE",
+              "feedback": "Missing listing_id; reference value is 42"
+            }
+          }
+        ],
+        "number_attempts": 2,
+        "final_answer": {
+          "available_units": 1
+        },
+        "final_evaluation": "REVISE",
+        "latency_ms": 792.325
+      },
+      {
+        "question": "For rental listing 43, report location from the supplied record; use null when not recorded.",
+        "listing_id": 43,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 43,
+              "location": "Santa Clara, CA"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 43,
+          "location": "Santa Clara, CA"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 448.661
+      },
+      {
+        "question": "For rental listing 44, report listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 44,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_code": "RH-0686-00044",
+              "listing_id": 44
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_code": "RH-0686-00044",
+          "listing_id": 44
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 531.433
+      },
+      {
+        "question": "For rental listing 45, report property_title from the supplied record; use null when not recorded.",
+        "listing_id": 45,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 45,
+              "property_title": "Rental Listing 0045",
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00045",
+              "available_units": 1
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 45,
+          "property_title": "Rental Listing 0045",
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00045",
+          "available_units": 1
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 1181.657
+      },
+      {
+        "question": "For rental listing 46, report available_units, location from the supplied record; use null when not recorded.",
+        "listing_id": 46,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "available_units": 1,
+              "location": "Santa Clara, CA",
+              "listing_id": 46
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "available_units": 1,
+          "location": "Santa Clara, CA",
+          "listing_id": 46
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 580.51
+      },
+      {
+        "question": "For rental listing 47, report pet_policy from the supplied record; use null when not recorded.",
+        "listing_id": 47,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 47,
+              "pet_policy": null
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 47,
+          "pet_policy": null
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 366.523
+      },
+      {
+        "question": "For rental listing 48, report available_units from the supplied record; use null when not recorded.",
+        "listing_id": 48,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 48,
+              "available_units": 1
+            },
+            "loaded_lessons": [
+              "lesson_001"
+            ],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 48,
+          "available_units": 1
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 486.222
+      },
+      {
+        "question": "For rental listing 49, report location, listing_code from the supplied record; use null when not recorded.",
+        "listing_id": 49,
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "listing_id": 49,
+              "location": "San Jose, CA",
+              "listing_code": "RH-0686-00049"
+            },
+            "loaded_lessons": [],
+            "model": "llama3.2:latest",
+            "evaluation": {
+              "result": "PASS",
+              "feedback": "Requested facts match the reference"
+            }
+          }
+        ],
+        "number_attempts": 1,
+        "final_answer": {
+          "listing_id": 49,
+          "location": "San Jose, CA",
+          "listing_code": "RH-0686-00049"
+        },
+        "final_evaluation": "PASS",
+        "latency_ms": 721.652
+      }
+    ],
+    "test_sha256": "55febb6b3dcee689d0007b620eda2d9f411124088f4c9f4d110e02ce3103ed19",
+    "correct": 7,
+    "incorrect": 1,
+    "average_attempts": 1.125,
+    "average_latency_ms": 638.623,
+    "lesson_state_after": [
+      {
+        "lesson_id": "lesson_001",
+        "failure_pattern": "Repeated omission of available_units",
+        "correction": "When available_units is requested, include its current reference value, including zero; do not omit it.",
+        "created_at": "2026-11-09T04:52:39.871970+00:00",
+        "use_count": 6
+      }
+    ]
+  }
+}

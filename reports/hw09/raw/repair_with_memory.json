@@ -1,0 +1,40 @@
+{
+  "question": "For rental listing 34, report available_units from the supplied record; use null when not recorded.",
+  "listing_id": 34,
+  "attempts": [
+    {
+      "attempt": 1,
+      "answer": {},
+      "loaded_lessons": [
+        "lesson_001"
+      ],
+      "model": "llama3.2:latest",
+      "evaluation": {
+        "result": "REVISE",
+        "feedback": "Missing listing_id; reference value is 34; Missing available_units; reference value is 1"
+      }
+    },
+    {
+      "attempt": 2,
+      "answer": {
+        "listing_id": 34,
+        "available_units": 1
+      },
+      "loaded_lessons": [
+        "lesson_001"
+      ],
+      "model": "llama3.2:latest",
+      "evaluation": {
+        "result": "PASS",
+        "feedback": "Requested facts match the reference"
+      }
+    }
+  ],
+  "number_attempts": 2,
+  "final_answer": {
+    "listing_id": 34,
+    "available_units": 1
+  },
+  "final_evaluation": "PASS",
+  "latency_ms": 1039.371
+}

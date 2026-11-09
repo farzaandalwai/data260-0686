@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/farzu/data260-0686/run_hw9_cache.py", line 156, in <module>
+    {"counter": counter, "requests": requests_demo, "sweep": sweep, "stale": stale}[args.part]()
+  File "/Users/farzu/data260-0686/run_hw9_cache.py", line 60, in requests_demo
+    response.raise_for_status()
+  File "/Users/farzu/data260-0686/.venv-hw7/lib/python3.11/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8686/api/hw9/ask

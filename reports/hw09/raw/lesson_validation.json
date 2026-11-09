@@ -1,0 +1,369 @@
+{
+  "before": [
+    {
+      "question": "For rental listing 36, report available_units from the supplied record; use null when not recorded.",
+      "listing_id": 36,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "available_units": 1,
+            "listing_id": 36
+          },
+          "loaded_lessons": [
+            "lesson_001"
+          ],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "available_units": 1,
+        "listing_id": 36
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 719.028
+    },
+    {
+      "question": "For rental listing 37, report available_units, location from the supplied record; use null when not recorded.",
+      "listing_id": 37,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "available_units": 1,
+            "location": "San Jose, CA",
+            "listing_id": 37
+          },
+          "loaded_lessons": [
+            "lesson_001"
+          ],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "available_units": 1,
+        "location": "San Jose, CA",
+        "listing_id": 37
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 847.016
+    },
+    {
+      "question": "For rental listing 38, report location from the supplied record; use null when not recorded.",
+      "listing_id": 38,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_id": 38,
+            "location": "Sunnyvale, CA"
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_id": 38,
+        "location": "Sunnyvale, CA"
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 660.607
+    },
+    {
+      "question": "For rental listing 39, report property_title from the supplied record; use null when not recorded.",
+      "listing_id": 39,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_id": 39,
+            "property_title": "Rental Listing 0039",
+            "location": "Sunnyvale, CA",
+            "listing_code": "RH-0686-00039",
+            "available_units": 1
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_id": 39,
+        "property_title": "Rental Listing 0039",
+        "location": "Sunnyvale, CA",
+        "listing_code": "RH-0686-00039",
+        "available_units": 1
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 1482.439
+    },
+    {
+      "question": "For rental listing 40, report listing_code from the supplied record; use null when not recorded.",
+      "listing_id": 40,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_code": "RH-0686-00040",
+            "listing_id": 40
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_code": "RH-0686-00040",
+        "listing_id": 40
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 790.545
+    },
+    {
+      "question": "For rental listing 41, report pet_policy from the supplied record; use null when not recorded.",
+      "listing_id": 41,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_id": 41,
+            "pet_policy": null
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_id": 41,
+        "pet_policy": null
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 558.98
+    }
+  ],
+  "after": [
+    {
+      "question": "For rental listing 36, report available_units from the supplied record; use null when not recorded.",
+      "listing_id": 36,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "available_units": 1
+          },
+          "loaded_lessons": [
+            "lesson_001"
+          ],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "REVISE",
+            "feedback": "Missing listing_id; reference value is 36"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "available_units": 1
+      },
+      "final_evaluation": "REVISE",
+      "latency_ms": 203.957
+    },
+    {
+      "question": "For rental listing 37, report available_units, location from the supplied record; use null when not recorded.",
+      "listing_id": 37,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "available_units": 1,
+            "location": "San Jose, CA",
+            "listing_id": 37
+          },
+          "loaded_lessons": [
+            "lesson_001"
+          ],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "available_units": 1,
+        "location": "San Jose, CA",
+        "listing_id": 37
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 638.519
+    },
+    {
+      "question": "For rental listing 38, report location from the supplied record; use null when not recorded.",
+      "listing_id": 38,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_id": 38,
+            "location": "Sunnyvale, CA"
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_id": 38,
+        "location": "Sunnyvale, CA"
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 475.437
+    },
+    {
+      "question": "For rental listing 39, report property_title from the supplied record; use null when not recorded.",
+      "listing_id": 39,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_id": 39,
+            "property_title": "Rental Listing 0039",
+            "location": "Sunnyvale, CA",
+            "listing_code": "RH-0686-00039",
+            "available_units": 1
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_id": 39,
+        "property_title": "Rental Listing 0039",
+        "location": "Sunnyvale, CA",
+        "listing_code": "RH-0686-00039",
+        "available_units": 1
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 1177.958
+    },
+    {
+      "question": "For rental listing 40, report listing_code from the supplied record; use null when not recorded.",
+      "listing_id": 40,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_code": "RH-0686-00040",
+            "listing_id": 40
+          },
+          "loaded_lessons": [],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_code": "RH-0686-00040",
+        "listing_id": 40
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 510.272
+    },
+    {
+      "question": "For rental listing 41, report pet_policy from the supplied record; use null when not recorded.",
+      "listing_id": 41,
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": {
+            "listing_id": 41,
+            "pet_policy": null
+          },
+          "loaded_lessons": [
+            "lesson_002"
+          ],
+          "model": "llama3.2:latest",
+          "evaluation": {
+            "result": "PASS",
+            "feedback": "Requested facts match the reference"
+          }
+        }
+      ],
+      "number_attempts": 1,
+      "final_answer": {
+        "listing_id": 41,
+        "pet_policy": null
+      },
+      "final_evaluation": "PASS",
+      "latency_ms": 546.156
+    }
+  ],
+  "no_regressions": false,
+  "failure_cases_no_worse": true,
+  "unrelated_supported": true,
+  "accepted": false,
+  "candidate": {
+    "lesson_id": "lesson_002",
+    "failure_pattern": "Unsupported values for unknown fields",
+    "correction": "For a requested field missing from the reference, return JSON null rather than assuming a housing policy.",
+    "created_at": "2026-11-09T04:52:40.751557+00:00",
+    "use_count": 0
+  },
+  "lessons_after": [
+    {
+      "lesson_id": "lesson_001",
+      "failure_pattern": "Repeated omission of available_units",
+      "correction": "When available_units is requested, include its current reference value, including zero; do not omit it.",
+      "created_at": "2026-11-09T04:52:39.871970+00:00",
+      "use_count": 4
+    },
+    {
+      "lesson_id": "lesson_002",
+      "failure_pattern": "Unsupported values for unknown fields",
+      "correction": "For a requested field missing from the reference, return JSON null rather than assuming a housing policy.",
+      "created_at": "2026-11-09T04:52:40.751557+00:00",
+      "use_count": 1
+    }
+  ]
+}

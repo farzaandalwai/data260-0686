@@ -1,0 +1,61 @@
+PASS 25 real view increments: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+PASS MySQL sync at 10 and 20 only: [0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20]
+PASS counter restored: 0
+PASS all 5000 rental records remain: 5000
+PASS all original rental fields restored: {'rows': 5000, 'sha256': '992fb523554a20337a31d94fbe7f7fdcbcbb809c7032c396f8e768563534cc0b'}
+PASS all Redis keys use s0686 prefix: True
+PASS real Redis vector index: True
+PASS at least ten ingress requests: True
+PASS cache demo contains hits and misses: True
+PASS response score and measured latency: True
+{"timestamp":"2026-11-09T05:35:23.024025+00:00","event":"pipeline_ingress","correlation_id":"a04ff1a4-6cc1-4c5e-97d2-61a00511da7c","query":"What is the location of rental listing 1?","topic":"s0686_inbox","partition":0,"offset":110}
+{"timestamp":"2026-11-09T05:35:26.482197+00:00","event":"pipeline_final","correlation_id":"a04ff1a4-6cc1-4c5e-97d2-61a00511da7c","status":"approved","answer":"{\"listing_id\": 1, \"location\": \"Milpitas, CA\"}","model":"llama3.2:latest"}
+{"timestamp":"2026-11-09T05:35:26.501442+00:00","event":"cache_miss","namespace":"verifye5b1d31ccb","query":"What is the location of rental listing 1?","listing_id":1,"field":"location","answer":"{\"listing_id\": 1, \"location\": \"Milpitas, CA\"}","is_cached":false,"similarity_score":0.0,"data_version":4,"latency_ms":4612.542,"correlation_id":"a04ff1a4-6cc1-4c5e-97d2-61a00511da7c","matched_query":"","threshold":0.85}
+{"timestamp":"2026-11-09T05:35:26.547085+00:00","event":"cache_hit","namespace":"verifye5b1d31ccb","query":"What is the location of rental listing 1?","listing_id":1,"field":"location","answer":"{\"listing_id\": 1, \"location\": \"Milpitas, CA\"}","is_cached":true,"similarity_score":1.0,"data_version":4,"latency_ms":35.927,"correlation_id":"a04ff1a4-6cc1-4c5e-97d2-61a00511da7c","matched_query":"What is the location of rental listing 1?","threshold":0.85}
+PASS new miss actually runs pipeline: True
+PASS miss answer matches MySQL: {'listing_id': 1, 'location': 'Milpitas, CA'}
+PASS exact hit returns same final answer: True
+PASS hit does not rerun Kafka pipeline: 111
+PASS HW8 three-stage miss journey: ['planner', 'reviewer', 'writer']
+PASS 40 fixed balanced labeled cases: {'paraphrase': 10, 'similar_different': 10, 'exact': 10, 'unrelated': 10}
+PASS labels unchanged since pre-sweep commit: 777de55ec8aba136ebc8fc3f5a8a57a9a20351121011ff636af68ec6e2ea70a3
+PASS 200 per-case threshold measurements: 200
+PASS five required thresholds: [0.75, 0.8, 0.85, 0.9, 0.95]
+PASS recalculated threshold 0.75: True
+PASS recalculated threshold 0.8: True
+PASS recalculated threshold 0.85: True
+PASS recalculated threshold 0.9: True
+PASS recalculated threshold 0.95: True
+PASS ships minimum-cost threshold: 0.95
+PASS observed false hit has full evidence: True
+PASS actual stale hit: True
+PASS version invalidation causes fresh answer: True
+PASS stale test record restored: {'listing_id': 2, 'available_units': 1}
+PASS input datasets contain no answers: True
+PASS disjoint input questions: 18
+PASS controlled failure revised, reevaluated, and stopped at two: True
+PASS training-only memory-assisted controlled repair passes: True
+PASS five required lesson fields: True
+PASS later question loads saved lesson: True
+PASS validation gate preserves correct answers: True
+PASS candidate kept only if accepted: False
+PASS four independent variants: ['Baseline', 'Evaluator Repair', 'Lesson Memory', 'Validated Improvement']
+PASS Baseline held-out accounting: True
+PASS Evaluator Repair held-out accounting: True
+PASS Lesson Memory held-out accounting: True
+PASS Validated Improvement held-out accounting: True
+PASS all reference facts still match MySQL: True
+{"timestamp":"2026-11-09T05:35:26.646845+00:00","event":"client_send","pid":14799,"topic":"s0686_entity_requests","message":{"correlation_id":"906c18c3-58f2-49d8-85ce-ee5471712690","reply_to":"s0686_entity_responses","operation":"CREATE_LISTING","data":{"propertyTitle":"HW8 San Jose apartment","location":"San Jose, CA","submitterEmail":"hw8@example.com","description":"A bright two-bedroom rental near campus.","propertyType":"Apartment","termsAccepted":true}},"correlation_id":"906c18c3-58f2-49d8-85ce-ee5471712690"}
+{"timestamp":"2026-11-09T05:35:27.260937+00:00","event":"client_receive","pid":14799,"topic":"s0686_entity_responses","message":{"correlation_id":"906c18c3-58f2-49d8-85ce-ee5471712690","success":true,"listing_id":"3a2a31a9-083f-44c0-992f-fa667277f0f3","message":"Listing created"},"correlation_id":"906c18c3-58f2-49d8-85ce-ee5471712690"}
+{"timestamp":"2026-11-09T05:35:27.268581+00:00","event":"client_send","pid":14799,"topic":"s0686_entity_requests","message":{"correlation_id":"d1d59ee5-c692-4d9b-9d4a-cf5c6cfdbae3","reply_to":"s0686_entity_responses","operation":"GET_LISTING","data":{"listing_id":"3a2a31a9-083f-44c0-992f-fa667277f0f3"}},"correlation_id":"d1d59ee5-c692-4d9b-9d4a-cf5c6cfdbae3"}
+{"timestamp":"2026-11-09T05:35:27.884238+00:00","event":"client_receive","pid":14799,"topic":"s0686_entity_responses","message":{"correlation_id":"d1d59ee5-c692-4d9b-9d4a-cf5c6cfdbae3","success":true,"listing":{"listing_id":"3a2a31a9-083f-44c0-992f-fa667277f0f3","propertyTitle":"HW8 San Jose apartment","location":"San Jose, CA","submitterEmail":"hw8@example.com","description":"A bright two-bedroom rental near campus.","propertyType":"Apartment","termsAccepted":true}},"correlation_id":"d1d59ee5-c692-4d9b-9d4a-cf5c6cfdbae3"}
+PASS existing HW8 CREATE/GET still works: True
+PASS existing HW7 auth still requires token: 401
+PASS HW9 ingress preserves JWT protection: 401
+PASS FastAPI existing listing routes remain: True
+PASS existing HW8 freeform local-model path: True
+PASS existing authenticated MySQL endpoint: True
+PASS existing question CLI uses authenticated cache ingress: True
+PASS existing MongoDB document endpoint: True
+PASS existing MCP rental search: True
+RESULT: 52/52

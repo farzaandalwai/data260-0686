@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-09T05:49:25.876426+00:00",
+  "pages": 16,
+  "native_screenshots": 15,
+  "all_pages_rendered_and_visually_inspected": true,
+  "font_sizes": {
+    "main_bold": 14,
+    "subheading_bold": 12,
+    "body": 11,
+    "code": 8.5
+  },
+  "text_bounds_checked": true,
+  "ai_use_matches_markdown": true,
+  "tables_match_raw": true,
+  "verified_application_source_hashes_match": true,
+  "report_sha256": "68d2e27250334dd889a7206d99889a02b26556207faf371abb3d1cbe629a331a",
+  "remaining_requirement": "Exact collaborator membership unconfirmed for the two required accounts; no access changes made."
+}

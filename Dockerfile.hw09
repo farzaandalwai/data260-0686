@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-hw08.txt .
+RUN pip install --no-cache-dir -r requirements-hw08.txt redis==8.1.0 PyYAML
+COPY . .
+ENV PYTHONUNBUFFERED=1
+CMD ["python", "hw8_start_api.py"]

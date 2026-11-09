@@ -1,0 +1,17 @@
+{
+  "correlation_id": "d34f4d55-e1d6-4fa9-91cf-44b56f8b8449",
+  "question": "Describe the known facts about this rental.",
+  "facts": {
+    "location": "San Jose",
+    "available_units": 2
+  },
+  "use_model": true,
+  "plan": [
+    "Read the supplied rental facts",
+    "Explain the facts without inventing details"
+  ],
+  "model": "llama3.2:latest",
+  "draft": "Based on the provided facts, here is a brief description of the known facts about the rental:\n\nThe rental is located in San Jose and has 2 available units.",
+  "status": "approved",
+  "answer": "Based on the provided facts, here is a brief description of the known facts about the rental:\n\nThe rental is located in San Jose and has 2 available units."
+}
