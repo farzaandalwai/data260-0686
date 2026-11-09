@@ -1,6 +1,6 @@
 # AI use
 
-1. I used ChatGPT/Codex to read the HW9 instructions, plan the experiments, implement and debug the code, create the datasets, run the checks, and operate my Mac for screenshots. I supplied the assignment, repository, and constraints. The assistant performed most of the technical work; I am responsible for reviewing the submission.
+1. I used ChatGPT to read and understand the HW9 instructions, clarify what each part required, and plan screenshots after the runs. I also used AI for code and debugging. I wrote much of the implementation, ran many checks, and captured screenshots through my Mac; I reviewed the results and requested revisions.
 
 2. The initial Redis parsing assumed RESP2, but the installed client returned RESP3. This produced a KeyError that the first HTTP wrapper incorrectly presented as a missing listing. The local model also initially omitted listing_id from JSON answers. An initial console tee ran before its output directory existed; the actual setup JSON and private backups were retained.
 
